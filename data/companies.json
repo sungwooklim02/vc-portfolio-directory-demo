@@ -1,0 +1,2304 @@
+{
+  "note": "FICTIONAL DATASET — every company, brand, and figure here is invented for a demo. Names are synthetic coinages.",
+  "sectors": [
+    {
+      "id": "fintech",
+      "en": "Fintech",
+      "ko": "핀테크"
+    },
+    {
+      "id": "saas",
+      "en": "Enterprise SaaS",
+      "ko": "엔터프라이즈 SaaS"
+    },
+    {
+      "id": "ai",
+      "en": "AI & Data",
+      "ko": "AI·데이터"
+    },
+    {
+      "id": "health",
+      "en": "Healthcare & Bio",
+      "ko": "헬스케어·바이오"
+    },
+    {
+      "id": "consumer",
+      "en": "Consumer",
+      "ko": "컨슈머"
+    },
+    {
+      "id": "climate",
+      "en": "Climate & Energy",
+      "ko": "기후·에너지"
+    },
+    {
+      "id": "logistics",
+      "en": "Mobility & Logistics",
+      "ko": "모빌리티·물류"
+    },
+    {
+      "id": "deeptech",
+      "en": "Deep Tech",
+      "ko": "딥테크"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "active",
+      "en": "Active",
+      "ko": "운영 중"
+    },
+    {
+      "id": "acquired",
+      "en": "Acquired",
+      "ko": "피인수"
+    },
+    {
+      "id": "ipo",
+      "en": "IPO",
+      "ko": "상장"
+    }
+  ],
+  "companies": [
+    {
+      "slug": "ledgerine",
+      "name": "Ledgerine",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2018,
+      "teamSize": 120,
+      "domain": "ledgerine.example",
+      "featured": true,
+      "location": {
+        "en": "Seoul, South Korea",
+        "ko": "대한민국 서울"
+      },
+      "en": {
+        "oneLiner": "Automated close and consolidation for multi-entity finance teams.",
+        "body": [
+          "Ledgerine builds close and consolidation software for finance teams that operate more than one entity. What starts as a two-day spreadsheet ritual at most companies — collecting trial balances, eliminating intercompany transactions, reconciling currencies — becomes a guided, auditable pipeline that closes the books in hours.",
+          "Founded in Seoul in 2018, the team deliberately sells to controllers rather than CFOs: the people who actually run the close. That focus shows up in the product's obsession with edge cases — partial ownership, mid-year acquisitions, mismatched fiscal calendars — the places where generic accounting tools quietly give up."
+        ]
+      },
+      "ko": {
+        "oneLiner": "다법인 재무팀을 위한 결산·연결 자동화 플랫폼.",
+        "body": [
+          "레저린(Ledgerine)은 두 개 이상의 법인을 운영하는 재무팀을 위한 결산·연결 소프트웨어를 만듭니다. 시산표 취합, 내부거래 제거, 환율 조정처럼 스프레드시트로 이틀 걸리던 결산 의식을, 감사 추적이 남는 파이프라인으로 바꿔 몇 시간 안에 마감하게 합니다.",
+          "2018년 서울에서 창업한 팀은 CFO가 아니라 실제로 결산을 굴리는 회계 실무 책임자에게 먼저 파는 전략을 고집해 왔습니다. 부분 지분, 연중 인수, 어긋난 회계연도처럼 범용 회계 도구가 조용히 포기하는 구석을 집요하게 다루는 것이 제품의 정체성입니다."
+        ]
+      }
+    },
+    {
+      "slug": "payvorn",
+      "name": "Payvorn",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2014,
+      "teamSize": 128,
+      "domain": "payvorn.example",
+      "featured": false,
+      "location": {
+        "en": "Seoul, South Korea",
+        "ko": "대한민국 서울"
+      },
+      "en": {
+        "oneLiner": "Cross-border payout rails for marketplaces and creator platforms.",
+        "body": [
+          "Payvorn builds cross-border payout rails for marketplaces and creator platforms. Founded in 2014 and based in Seoul, South Korea, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "Rather than chasing platform breadth, Payvorn ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "마켓플레이스·크리에이터 플랫폼을 위한 국경 간 정산 인프라.",
+        "body": [
+          "2014년 대한민국 서울에서 시작한 이 회사의 주력 제품은 '마켓플레이스·크리에이터 플랫폼을 위한 국경 간 정산 인프라'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "finomere",
+      "name": "Finomere",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 158,
+      "domain": "finomere.example",
+      "featured": false,
+      "location": {
+        "en": "San Francisco, USA",
+        "ko": "미국 샌프란시스코"
+      },
+      "en": {
+        "oneLiner": "Cash-flow forecasting built for seasonal small businesses.",
+        "body": [
+          "Finomere builds cash-flow forecasting built for seasonal small businesses. Founded in 2019 and based in San Francisco, USA, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "Rather than chasing platform breadth, Finomere ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "계절성 소상공인에 맞춘 현금흐름 예측 서비스.",
+        "body": [
+          "2019년 미국 샌프란시스코에서 시작한 이 회사의 주력 제품은 '계절성 소상공인에 맞춘 현금흐름 예측 서비스'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "trestapay",
+      "name": "Trestapay",
+      "sector": "fintech",
+      "status": "acquired",
+      "founded": 2017,
+      "teamSize": 260,
+      "domain": "trestapay.example",
+      "featured": false,
+      "location": {
+        "en": "Seoul, South Korea",
+        "ko": "대한민국 서울"
+      },
+      "en": {
+        "oneLiner": "One-tap recurring billing for subscription-first commerce.",
+        "body": [
+          "Trestapay builds one-tap recurring billing for subscription-first commerce. Founded in 2017 and based in Seoul, South Korea, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "Rather than chasing platform breadth, Trestapay ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "구독형 커머스를 위한 원탭 반복 결제 솔루션.",
+        "body": [
+          "2017년 대한민국 서울에서 시작한 이 회사의 주력 제품은 '구독형 커머스를 위한 원탭 반복 결제 솔루션'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "vaultrine",
+      "name": "Vaultrine",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 313,
+      "domain": "vaultrine.example",
+      "featured": false,
+      "location": {
+        "en": "London, United Kingdom",
+        "ko": "영국 런던"
+      },
+      "en": {
+        "oneLiner": "Treasury dashboards that unify bank, card, and wallet balances.",
+        "body": [
+          "Vaultrine builds treasury dashboards that unify bank, card, and wallet balances. Founded in 2017 and based in London, United Kingdom, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "Vaultrine sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "은행·카드·월렛 잔액을 한 화면에 모으는 트레저리 대시보드.",
+        "body": [
+          "2017년 영국 런던에서 시작한 이 회사의 주력 제품은 '은행·카드·월렛 잔액을 한 화면에 모으는 트레저리 대시보드'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "credorna",
+      "name": "Credorna",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2023,
+      "teamSize": 163,
+      "domain": "credorna.example",
+      "featured": false,
+      "location": {
+        "en": "Singapore",
+        "ko": "싱가포르"
+      },
+      "en": {
+        "oneLiner": "Credit scoring from operational data for thin-file merchants.",
+        "body": [
+          "Credorna builds credit scoring from operational data for thin-file merchants. Founded in 2023 and based in Singapore, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Credorna serves teams across East and Southeast Asia, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "금융 이력이 얇은 사업자를 위한 운영 데이터 기반 신용평가.",
+        "body": [
+          "2023년 싱가포르에서 시작한 이 회사의 주력 제품은 '금융 이력이 얇은 사업자를 위한 운영 데이터 기반 신용평가'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 동아시아·동남아 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "remitello",
+      "name": "Remitello",
+      "sector": "fintech",
+      "status": "ipo",
+      "founded": 2015,
+      "teamSize": 360,
+      "domain": "remitello.example",
+      "featured": false,
+      "location": {
+        "en": "Toronto, Canada",
+        "ko": "캐나다 토론토"
+      },
+      "en": {
+        "oneLiner": "Payroll and remittance for distributed teams in twelve currencies.",
+        "body": [
+          "Remitello builds payroll and remittance for distributed teams in twelve currencies. Founded in 2015 and based in Toronto, Canada, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Remitello serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well. The company later listed publicly and continues to expand internationally."
+        ]
+      },
+      "ko": {
+        "oneLiner": "12개 통화를 지원하는 분산 팀 급여·송금 서비스.",
+        "body": [
+          "2015년 캐나다 토론토에서 시작한 이 회사의 주력 제품은 '12개 통화를 지원하는 분산 팀 급여·송금 서비스'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다. 이후 기업공개(IPO)를 거쳐 해외 시장으로 확장을 이어가고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "bursella",
+      "name": "Bursella",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2014,
+      "teamSize": 103,
+      "domain": "bursella.example",
+      "featured": false,
+      "location": {
+        "en": "Singapore",
+        "ko": "싱가포르"
+      },
+      "en": {
+        "oneLiner": "Expense cards with policy checks that run before the swipe.",
+        "body": [
+          "Bursella builds expense cards with policy checks that run before the swipe. Founded in 2014 and based in Singapore, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "Rather than chasing platform breadth, Bursella ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "결제 전에 정책을 검사하는 법인 경비 카드.",
+        "body": [
+          "2014년 싱가포르에서 시작한 이 회사의 주력 제품은 '결제 전에 정책을 검사하는 법인 경비 카드'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "yieldarn",
+      "name": "Yieldarn",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2015,
+      "teamSize": 63,
+      "domain": "yieldarn.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Idle-cash allocation tools for startup treasuries.",
+        "body": [
+          "Yieldarn builds idle-cash allocation tools for startup treasuries. Founded in 2015 and based in Austin, USA, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "Rather than chasing platform breadth, Yieldarn ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "스타트업 유휴 자금 운용을 돕는 트레저리 도구.",
+        "body": [
+          "2015년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '스타트업 유휴 자금 운용을 돕는 트레저리 도구'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "monvarra",
+      "name": "Monvarra",
+      "sector": "fintech",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 123,
+      "domain": "monvarra.example",
+      "featured": false,
+      "location": {
+        "en": "London, United Kingdom",
+        "ko": "영국 런던"
+      },
+      "en": {
+        "oneLiner": "Reconciliation engine that matches invoices to payments overnight.",
+        "body": [
+          "Monvarra builds reconciliation engine that matches invoices to payments overnight. Founded in 2017 and based in London, United Kingdom, the team has stayed deliberately close to the unglamorous plumbing of money movement.",
+          "Monvarra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "송장과 입금을 야간 일괄 대사하는 정산 엔진.",
+        "body": [
+          "2017년 영국 런던에서 시작한 이 회사의 주력 제품은 '송장과 입금을 야간 일괄 대사하는 정산 엔진'입니다. 창업 이후 줄곧 돈이 오가는 길목의 보이지 않는 배관을 정비하는 일에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "opslune",
+      "name": "Opslune",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 85,
+      "domain": "opslune.example",
+      "featured": true,
+      "location": {
+        "en": "Singapore",
+        "ko": "싱가포르"
+      },
+      "en": {
+        "oneLiner": "Runbook automation that turns incident response into checklists.",
+        "body": [
+          "Opslune turns incident response into something a team can actually rehearse. Runbooks live next to the alerting stack, stay executable instead of rotting in a wiki, and every step — who did what, when — is recorded for the postmortem without anyone taking notes.",
+          "The company was founded in Singapore in 2019 by engineers who kept rebuilding the same internal tooling at successive jobs. Opslune's customers tend to be mid-sized platform teams: big enough to have real incidents, small enough that nobody's full-time job is writing process documents."
+        ]
+      },
+      "ko": {
+        "oneLiner": "장애 대응을 체크리스트로 바꾸는 런북 자동화 도구.",
+        "body": [
+          "옵스룬(Opslune)은 장애 대응을 '연습 가능한 것'으로 만듭니다. 런북이 위키에서 썩는 대신 알림 스택 옆에서 실행 가능한 상태로 살아 있고, 누가 언제 무엇을 했는지가 기록으로 남아 포스트모템 때 따로 받아 적을 필요가 없습니다.",
+          "2019년 싱가포르에서, 이직할 때마다 같은 내부 도구를 다시 만들던 엔지니어들이 창업했습니다. 주 고객은 실제 장애를 겪을 만큼 크지만 프로세스 문서만 쓰는 전담자를 둘 만큼 크지는 않은 중간 규모 플랫폼 팀입니다."
+        ]
+      }
+    },
+    {
+      "slug": "taskovia",
+      "name": "Taskovia",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2018,
+      "teamSize": 33,
+      "domain": "taskovia.example",
+      "featured": false,
+      "location": {
+        "en": "London, United Kingdom",
+        "ko": "영국 런던"
+      },
+      "en": {
+        "oneLiner": "Cross-team task orchestration with dependency-aware scheduling.",
+        "body": [
+          "Taskovia builds cross-team task orchestration with dependency-aware scheduling. Founded in 2018 and based in London, United Kingdom, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Rather than chasing platform breadth, Taskovia ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across Europe before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "의존성을 인식하는 팀 간 업무 오케스트레이션.",
+        "body": [
+          "2018년 영국 런던에서 시작한 이 회사의 주력 제품은 '의존성을 인식하는 팀 간 업무 오케스트레이션'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 유럽의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "quorvane",
+      "name": "Quorvane",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2022,
+      "teamSize": 228,
+      "domain": "quorvane.example",
+      "featured": false,
+      "location": {
+        "en": "Sydney, Australia",
+        "ko": "호주 시드니"
+      },
+      "en": {
+        "oneLiner": "Board and committee workflows for mid-market companies.",
+        "body": [
+          "Quorvane builds board and committee workflows for mid-market companies. Founded in 2022 and based in Sydney, Australia, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Rather than chasing platform breadth, Quorvane ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across the Asia-Pacific region before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "중견기업을 위한 이사회·위원회 워크플로 관리.",
+        "body": [
+          "2022년 호주 시드니에서 시작한 이 회사의 주력 제품은 '중견기업을 위한 이사회·위원회 워크플로 관리'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 아시아·태평양 지역의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "formyra",
+      "name": "Formyra",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2014,
+      "teamSize": 403,
+      "domain": "formyra.example",
+      "featured": false,
+      "location": {
+        "en": "Helsinki, Finland",
+        "ko": "핀란드 헬싱키"
+      },
+      "en": {
+        "oneLiner": "Form pipelines that route submissions into existing systems.",
+        "body": [
+          "Formyra builds form pipelines that route submissions into existing systems. Founded in 2014 and based in Helsinki, Finland, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Formyra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "제출 데이터를 기존 시스템으로 라우팅하는 폼 파이프라인.",
+        "body": [
+          "2014년 핀란드 헬싱키에서 시작한 이 회사의 주력 제품은 '제출 데이터를 기존 시스템으로 라우팅하는 폼 파이프라인'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "docurella",
+      "name": "Docurella",
+      "sector": "saas",
+      "status": "acquired",
+      "founded": 2018,
+      "teamSize": 240,
+      "domain": "docurella.example",
+      "featured": false,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Contract lifecycle management with clause-level tracking.",
+        "body": [
+          "Docurella builds contract lifecycle management with clause-level tracking. Founded in 2018 and based in Tokyo, Japan, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Docurella sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across East and Southeast Asia cite reliability and support quality as the reasons they stay. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "조항 단위 추적이 가능한 계약 수명주기 관리.",
+        "body": [
+          "2018년 일본 도쿄에서 시작한 이 회사의 주력 제품은 '조항 단위 추적이 가능한 계약 수명주기 관리'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 동아시아·동남아 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "meetrino",
+      "name": "Meetrino",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2021,
+      "teamSize": 48,
+      "domain": "meetrino.example",
+      "featured": false,
+      "location": {
+        "en": "Sydney, Australia",
+        "ko": "호주 시드니"
+      },
+      "en": {
+        "oneLiner": "Meeting notes that assign owners and follow up automatically.",
+        "body": [
+          "Meetrino builds meeting notes that assign owners and follow up automatically. Founded in 2021 and based in Sydney, Australia, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Meetrino sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across the Asia-Pacific region cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "담당자 지정과 후속 알림까지 자동화한 회의록 서비스.",
+        "body": [
+          "2021년 호주 시드니에서 시작한 이 회사의 주력 제품은 '담당자 지정과 후속 알림까지 자동화한 회의록 서비스'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 아시아·태평양 지역 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "planovae",
+      "name": "Planovae",
+      "sector": "saas",
+      "status": "ipo",
+      "founded": 2014,
+      "teamSize": 870,
+      "domain": "planovae.example",
+      "featured": false,
+      "location": {
+        "en": "Rotterdam, Netherlands",
+        "ko": "네덜란드 로테르담"
+      },
+      "en": {
+        "oneLiner": "Headcount and budget planning in one shared model.",
+        "body": [
+          "Planovae builds headcount and budget planning in one shared model. Founded in 2014 and based in Rotterdam, Netherlands, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Planovae serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well. The company later listed publicly and continues to expand internationally."
+        ]
+      },
+      "ko": {
+        "oneLiner": "인력·예산 계획을 하나의 모델로 통합하는 플래닝 툴.",
+        "body": [
+          "2014년 네덜란드 로테르담에서 시작한 이 회사의 주력 제품은 '인력·예산 계획을 하나의 모델로 통합하는 플래닝 툴'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다. 이후 기업공개(IPO)를 거쳐 해외 시장으로 확장을 이어가고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "deskarna",
+      "name": "Deskarna",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2014,
+      "teamSize": 238,
+      "domain": "deskarna.example",
+      "featured": false,
+      "location": {
+        "en": "Taipei, Taiwan",
+        "ko": "대만 타이베이"
+      },
+      "en": {
+        "oneLiner": "Internal helpdesk that deflects tickets with living FAQs.",
+        "body": [
+          "Deskarna builds internal helpdesk that deflects tickets with living FAQs. Founded in 2014 and based in Taipei, Taiwan, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Rather than chasing platform breadth, Deskarna ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "살아있는 FAQ로 티켓을 줄이는 사내 헬프데스크.",
+        "body": [
+          "2014년 대만 타이베이에서 시작한 이 회사의 주력 제품은 '살아있는 FAQ로 티켓을 줄이는 사내 헬프데스크'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "flowbern",
+      "name": "Flowbern",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2016,
+      "teamSize": 128,
+      "domain": "flowbern.example",
+      "featured": false,
+      "location": {
+        "en": "Toronto, Canada",
+        "ko": "캐나다 토론토"
+      },
+      "en": {
+        "oneLiner": "No-code approval flows for procurement and finance.",
+        "body": [
+          "Flowbern builds no-code approval flows for procurement and finance. Founded in 2016 and based in Toronto, Canada, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Rather than chasing platform breadth, Flowbern ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "구매·재무 결재를 노코드로 설계하는 승인 플로.",
+        "body": [
+          "2016년 캐나다 토론토에서 시작한 이 회사의 주력 제품은 '구매·재무 결재를 노코드로 설계하는 승인 플로'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "stagerly",
+      "name": "Stagerly",
+      "sector": "saas",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 228,
+      "domain": "stagerly.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Release management for teams shipping weekly.",
+        "body": [
+          "Stagerly builds release management for teams shipping weekly. Founded in 2017 and based in Austin, USA, the team has stayed deliberately close to workflows that teams actually run every week.",
+          "Rather than chasing platform breadth, Stagerly ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "주 단위 배포 팀을 위한 릴리스 관리 도구.",
+        "body": [
+          "2017년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '주 단위 배포 팀을 위한 릴리스 관리 도구'입니다. 창업 이후 줄곧 팀이 실제로 매주 굴리는 워크플로에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "modelyn",
+      "name": "Modelyn",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2021,
+      "teamSize": 60,
+      "domain": "modelyn.example",
+      "featured": true,
+      "location": {
+        "en": "Berlin, Germany",
+        "ko": "독일 베를린"
+      },
+      "en": {
+        "oneLiner": "Evaluation infrastructure for teams shipping ML in production.",
+        "body": [
+          "Modelyn builds evaluation infrastructure for teams running machine learning in production. Instead of a dashboard of proxy metrics, it gives teams versioned eval suites that run on every model change — the same discipline software engineers expect from CI, applied to models.",
+          "Based in Berlin since 2021, the company grew out of consulting work for industrial ML teams and kept the same sensibility: evals are written against real failure cases, not benchmarks. Customers use Modelyn to answer one question with confidence — did this change make the model better, or just different?"
+        ]
+      },
+      "ko": {
+        "oneLiner": "프로덕션 ML 팀을 위한 평가 인프라.",
+        "body": [
+          "모델린(Modelyn)은 프로덕션에서 머신러닝을 운영하는 팀을 위한 평가 인프라를 만듭니다. 대리 지표 대시보드 대신, 모델이 바뀔 때마다 자동 실행되는 버전 관리된 평가 스위트를 제공합니다 — 소프트웨어 엔지니어가 CI에 기대하는 규율을 모델에 적용한 셈입니다.",
+          "2021년부터 베를린에 자리 잡은 이 회사는 산업용 ML 팀 컨설팅에서 출발했고, 그 감각을 그대로 유지합니다. 평가는 벤치마크가 아니라 실제 실패 사례를 기준으로 작성합니다. 고객들이 모델린으로 확신을 갖고 답하려는 질문은 하나입니다 — 이번 변경으로 모델이 좋아졌는가, 아니면 그냥 달라졌는가."
+        ]
+      }
+    },
+    {
+      "slug": "vectorna",
+      "name": "Vectorna",
+      "sector": "ai",
+      "status": "ipo",
+      "founded": 2013,
+      "teamSize": 690,
+      "domain": "vectorna.example",
+      "featured": false,
+      "location": {
+        "en": "San Francisco, USA",
+        "ko": "미국 샌프란시스코"
+      },
+      "en": {
+        "oneLiner": "Vector search that stays fast past a billion embeddings.",
+        "body": [
+          "Vectorna builds vector search that stays fast past a billion embeddings. Founded in 2013 and based in San Francisco, USA, the team has stayed deliberately close to the operational layer of machine learning.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Vectorna serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well. The company later listed publicly and continues to expand internationally."
+        ]
+      },
+      "ko": {
+        "oneLiner": "10억 임베딩 규모에서도 빠른 벡터 검색 엔진.",
+        "body": [
+          "2013년 미국 샌프란시스코에서 시작한 이 회사의 주력 제품은 '10억 임베딩 규모에서도 빠른 벡터 검색 엔진'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다. 이후 기업공개(IPO)를 거쳐 해외 시장으로 확장을 이어가고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "inferrix",
+      "name": "Inferrix",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2023,
+      "teamSize": 188,
+      "domain": "inferrix.example",
+      "featured": false,
+      "location": {
+        "en": "Sydney, Australia",
+        "ko": "호주 시드니"
+      },
+      "en": {
+        "oneLiner": "Inference cost optimization across GPU fleets.",
+        "body": [
+          "Inferrix builds inference cost optimization across GPU fleets. Founded in 2023 and based in Sydney, Australia, the team has stayed deliberately close to the operational layer of machine learning.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Inferrix serves teams across the Asia-Pacific region, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "GPU 클러스터의 추론 비용 최적화 플랫폼.",
+        "body": [
+          "2023년 호주 시드니에서 시작한 이 회사의 주력 제품은 'GPU 클러스터의 추론 비용 최적화 플랫폼'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 아시아·태평양 지역 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "tensorel",
+      "name": "Tensorel",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2016,
+      "teamSize": 173,
+      "domain": "tensorel.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Feature stores with lineage you can actually audit.",
+        "body": [
+          "Tensorel builds feature stores with lineage you can actually audit. Founded in 2016 and based in Austin, USA, the team has stayed deliberately close to the operational layer of machine learning.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Tensorel serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "감사 가능한 계보를 갖춘 피처 스토어.",
+        "body": [
+          "2016년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '감사 가능한 계보를 갖춘 피처 스토어'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "datyrra",
+      "name": "Datyrra",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 8,
+      "domain": "datyrra.example",
+      "featured": false,
+      "location": {
+        "en": "Toronto, Canada",
+        "ko": "캐나다 토론토"
+      },
+      "en": {
+        "oneLiner": "Data quality monitors that catch schema drift early.",
+        "body": [
+          "Datyrra builds data quality monitors that catch schema drift early. Founded in 2019 and based in Toronto, Canada, the team has stayed deliberately close to the operational layer of machine learning.",
+          "Datyrra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across North America cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "스키마 드리프트를 조기에 잡는 데이터 품질 모니터링.",
+        "body": [
+          "2019년 캐나다 토론토에서 시작한 이 회사의 주력 제품은 '스키마 드리프트를 조기에 잡는 데이터 품질 모니터링'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 북미 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "corveil",
+      "name": "Corveil",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 223,
+      "domain": "corveil.example",
+      "featured": false,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Privacy-preserving analytics for regulated industries.",
+        "body": [
+          "Corveil builds privacy-preserving analytics for regulated industries. Founded in 2017 and based in Tokyo, Japan, the team has stayed deliberately close to the operational layer of machine learning.",
+          "Rather than chasing platform breadth, Corveil ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "규제 산업을 위한 프라이버시 보존 분석.",
+        "body": [
+          "2017년 일본 도쿄에서 시작한 이 회사의 주력 제품은 '규제 산업을 위한 프라이버시 보존 분석'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "annotara",
+      "name": "Annotara",
+      "sector": "ai",
+      "status": "acquired",
+      "founded": 2015,
+      "teamSize": 190,
+      "domain": "annotara.example",
+      "featured": false,
+      "location": {
+        "en": "Berlin, Germany",
+        "ko": "독일 베를린"
+      },
+      "en": {
+        "oneLiner": "Managed labeling workflows with reviewer consensus built in.",
+        "body": [
+          "Annotara builds managed labeling workflows with reviewer consensus built in. Founded in 2015 and based in Berlin, Germany, the team has stayed deliberately close to the operational layer of machine learning.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Annotara serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "검수자 합의 절차를 내장한 데이터 라벨링 워크플로.",
+        "body": [
+          "2015년 독일 베를린에서 시작한 이 회사의 주력 제품은 '검수자 합의 절차를 내장한 데이터 라벨링 워크플로'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "queryna",
+      "name": "Queryna",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2016,
+      "teamSize": 348,
+      "domain": "queryna.example",
+      "featured": false,
+      "location": {
+        "en": "Boston, USA",
+        "ko": "미국 보스턴"
+      },
+      "en": {
+        "oneLiner": "Natural-language querying over governed warehouses.",
+        "body": [
+          "Queryna builds natural-language querying over governed warehouses. Founded in 2016 and based in Boston, USA, the team has stayed deliberately close to the operational layer of machine learning.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Queryna serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "거버넌스가 적용된 웨어하우스 대상 자연어 질의.",
+        "body": [
+          "2016년 미국 보스턴에서 시작한 이 회사의 주력 제품은 '거버넌스가 적용된 웨어하우스 대상 자연어 질의'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "embedra",
+      "name": "Embedra",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2015,
+      "teamSize": 303,
+      "domain": "embedra.example",
+      "featured": false,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Document understanding APIs for long, messy PDFs.",
+        "body": [
+          "Embedra builds document understanding APIs for long, messy PDFs. Founded in 2015 and based in Tokyo, Japan, the team has stayed deliberately close to the operational layer of machine learning.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Embedra serves teams across East and Southeast Asia, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "길고 지저분한 PDF를 이해하는 문서 처리 API.",
+        "body": [
+          "2015년 일본 도쿄에서 시작한 이 회사의 주력 제품은 '길고 지저분한 PDF를 이해하는 문서 처리 API'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 동아시아·동남아 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "synthemis",
+      "name": "Synthemis",
+      "sector": "ai",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 43,
+      "domain": "synthemis.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Synthetic tabular data for safer model development.",
+        "body": [
+          "Synthemis builds synthetic tabular data for safer model development. Founded in 2017 and based in Austin, USA, the team has stayed deliberately close to the operational layer of machine learning.",
+          "Rather than chasing platform breadth, Synthemis ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "안전한 모델 개발을 위한 합성 테이블 데이터.",
+        "body": [
+          "2017년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '안전한 모델 개발을 위한 합성 테이블 데이터'입니다. 창업 이후 줄곧 머신러닝의 운영 계층에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "medrovia",
+      "name": "Medrovia",
+      "sector": "health",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 210,
+      "domain": "medrovia.example",
+      "featured": true,
+      "location": {
+        "en": "Boston, USA",
+        "ko": "미국 보스턴"
+      },
+      "en": {
+        "oneLiner": "Clinic operations platform covering intake to follow-up.",
+        "body": [
+          "Medrovia is an operations platform for outpatient clinics, covering the unglamorous span from intake forms to follow-up reminders. It replaces the fax-and-clipboard layer that still runs much of ambulatory care, without asking clinics to rip out their existing medical records.",
+          "Founded in Boston in 2017, the company earned its early growth clinic by clinic, shadowing front-desk staff to understand where minutes actually go. That fieldwork shaped a product principle that still holds: every automated step must be visibly faster than the paper version it replaced, or it goes back to the drawing board."
+        ]
+      },
+      "ko": {
+        "oneLiner": "접수부터 사후 관리까지 아우르는 클리닉 운영 플랫폼.",
+        "body": [
+          "메드로비아(Medrovia)는 외래 클리닉을 위한 운영 플랫폼입니다. 접수 서류부터 사후 안내까지, 아직도 팩스와 클립보드로 굴러가는 외래 진료의 화려하지 않은 구간을 대체하되, 기존 의무기록 시스템을 걷어내라고 요구하지 않습니다.",
+          "2017년 보스턴에서 창업해, 접수 데스크 직원의 하루를 따라다니며 시간이 실제로 어디로 새는지 관찰하는 방식으로 클리닉을 한 곳씩 늘려 왔습니다. 그 현장 경험이 지금도 유지되는 제품 원칙을 만들었습니다 — 자동화된 모든 단계는 그것이 대체한 종이 절차보다 눈에 띄게 빨라야 하며, 아니면 다시 설계합니다."
+        ]
+      }
+    },
+    {
+      "slug": "curalyn",
+      "name": "Curalyn",
+      "sector": "health",
+      "status": "active",
+      "founded": 2018,
+      "teamSize": 173,
+      "domain": "curalyn.example",
+      "featured": false,
+      "location": {
+        "en": "Toronto, Canada",
+        "ko": "캐나다 토론토"
+      },
+      "en": {
+        "oneLiner": "Care-plan adherence tools for chronic condition programs.",
+        "body": [
+          "Curalyn builds care-plan adherence tools for chronic condition programs. Founded in 2018 and based in Toronto, Canada, the team has stayed deliberately close to software that respects clinical reality.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Curalyn serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "만성질환 프로그램의 치료 계획 이행을 돕는 도구.",
+        "body": [
+          "2018년 캐나다 토론토에서 시작한 이 회사의 주력 제품은 '만성질환 프로그램의 치료 계획 이행을 돕는 도구'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "genotrella",
+      "name": "Genotrella",
+      "sector": "health",
+      "status": "acquired",
+      "founded": 2016,
+      "teamSize": 340,
+      "domain": "genotrella.example",
+      "featured": false,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Genomic report interpretation for community hospitals.",
+        "body": [
+          "Genotrella builds genomic report interpretation for community hospitals. Founded in 2016 and based in Tokyo, Japan, the team has stayed deliberately close to software that respects clinical reality.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Genotrella serves teams across East and Southeast Asia, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "지역 병원을 위한 유전체 리포트 해석 서비스.",
+        "body": [
+          "2016년 일본 도쿄에서 시작한 이 회사의 주력 제품은 '지역 병원을 위한 유전체 리포트 해석 서비스'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 동아시아·동남아 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "vitarnelle",
+      "name": "Vitarnelle",
+      "sector": "health",
+      "status": "active",
+      "founded": 2016,
+      "teamSize": 283,
+      "domain": "vitarnelle.example",
+      "featured": false,
+      "location": {
+        "en": "Rotterdam, Netherlands",
+        "ko": "네덜란드 로테르담"
+      },
+      "en": {
+        "oneLiner": "Remote vitals monitoring with clinician-grade alerts.",
+        "body": [
+          "Vitarnelle builds remote vitals monitoring with clinician-grade alerts. Founded in 2016 and based in Rotterdam, Netherlands, the team has stayed deliberately close to software that respects clinical reality.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Vitarnelle serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "임상 수준 알림을 갖춘 원격 생체신호 모니터링.",
+        "body": [
+          "2016년 네덜란드 로테르담에서 시작한 이 회사의 주력 제품은 '임상 수준 알림을 갖춘 원격 생체신호 모니터링'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "somnovia",
+      "name": "Somnovia",
+      "sector": "health",
+      "status": "active",
+      "founded": 2020,
+      "teamSize": 153,
+      "domain": "somnovia.example",
+      "featured": false,
+      "location": {
+        "en": "Busan, South Korea",
+        "ko": "대한민국 부산"
+      },
+      "en": {
+        "oneLiner": "Digital sleep therapy programs prescribed by clinics.",
+        "body": [
+          "Somnovia builds digital sleep therapy programs prescribed by clinics. Founded in 2020 and based in Busan, South Korea, the team has stayed deliberately close to software that respects clinical reality.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Somnovia serves teams across East and Southeast Asia, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "클리닉이 처방하는 디지털 수면 치료 프로그램.",
+        "body": [
+          "2020년 대한민국 부산에서 시작한 이 회사의 주력 제품은 '클리닉이 처방하는 디지털 수면 치료 프로그램'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 동아시아·동남아 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "nurvatek",
+      "name": "Nurvatek",
+      "sector": "health",
+      "status": "active",
+      "founded": 2022,
+      "teamSize": 303,
+      "domain": "nurvatek.example",
+      "featured": false,
+      "location": {
+        "en": "Boston, USA",
+        "ko": "미국 보스턴"
+      },
+      "en": {
+        "oneLiner": "Scheduling and acuity tools for nursing teams.",
+        "body": [
+          "Nurvatek builds scheduling and acuity tools for nursing teams. Founded in 2022 and based in Boston, USA, the team has stayed deliberately close to software that respects clinical reality.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Nurvatek serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "간호 인력 배치·중증도 관리 도구.",
+        "body": [
+          "2022년 미국 보스턴에서 시작한 이 회사의 주력 제품은 '간호 인력 배치·중증도 관리 도구'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "wellstrome",
+      "name": "Wellstrome",
+      "sector": "health",
+      "status": "ipo",
+      "founded": 2014,
+      "teamSize": 850,
+      "domain": "wellstrome.example",
+      "featured": false,
+      "location": {
+        "en": "Stockholm, Sweden",
+        "ko": "스웨덴 스톡홀름"
+      },
+      "en": {
+        "oneLiner": "Employer wellness benefits with measurable outcomes.",
+        "body": [
+          "Wellstrome builds employer wellness benefits with measurable outcomes. Founded in 2014 and based in Stockholm, Sweden, the team has stayed deliberately close to software that respects clinical reality.",
+          "Rather than chasing platform breadth, Wellstrome ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across Europe before each release. The company later listed publicly and continues to expand internationally."
+        ]
+      },
+      "ko": {
+        "oneLiner": "성과를 측정할 수 있는 기업 웰니스 복지 플랫폼.",
+        "body": [
+          "2014년 스웨덴 스톡홀름에서 시작한 이 회사의 주력 제품은 '성과를 측정할 수 있는 기업 웰니스 복지 플랫폼'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 유럽의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다. 이후 기업공개(IPO)를 거쳐 해외 시장으로 확장을 이어가고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "rehalyn",
+      "name": "Rehalyn",
+      "sector": "health",
+      "status": "active",
+      "founded": 2024,
+      "teamSize": 298,
+      "domain": "rehalyn.example",
+      "featured": false,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Home rehabilitation coaching with motion tracking.",
+        "body": [
+          "Rehalyn builds home rehabilitation coaching with motion tracking. Founded in 2024 and based in Tokyo, Japan, the team has stayed deliberately close to software that respects clinical reality.",
+          "Rehalyn sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across East and Southeast Asia cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "동작 인식을 활용한 재택 재활 코칭.",
+        "body": [
+          "2024년 일본 도쿄에서 시작한 이 회사의 주력 제품은 '동작 인식을 활용한 재택 재활 코칭'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 동아시아·동남아 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "dosierra",
+      "name": "Dosierra",
+      "sector": "health",
+      "status": "acquired",
+      "founded": 2018,
+      "teamSize": 300,
+      "domain": "dosierra.example",
+      "featured": false,
+      "location": {
+        "en": "San Francisco, USA",
+        "ko": "미국 샌프란시스코"
+      },
+      "en": {
+        "oneLiner": "Medication adherence packaging with smart reminders.",
+        "body": [
+          "Dosierra builds medication adherence packaging with smart reminders. Founded in 2018 and based in San Francisco, USA, the team has stayed deliberately close to software that respects clinical reality.",
+          "Dosierra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across North America cite reliability and support quality as the reasons they stay. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "스마트 알림을 결합한 복약 순응 패키징.",
+        "body": [
+          "2018년 미국 샌프란시스코에서 시작한 이 회사의 주력 제품은 '스마트 알림을 결합한 복약 순응 패키징'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 북미 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "panomedra",
+      "name": "Panomedra",
+      "sector": "health",
+      "status": "active",
+      "founded": 2014,
+      "teamSize": 298,
+      "domain": "panomedra.example",
+      "featured": false,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Imaging workflow software for outpatient radiology.",
+        "body": [
+          "Panomedra builds imaging workflow software for outpatient radiology. Founded in 2014 and based in Tokyo, Japan, the team has stayed deliberately close to software that respects clinical reality.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Panomedra serves teams across East and Southeast Asia, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "외래 영상의학을 위한 영상 워크플로 소프트웨어.",
+        "body": [
+          "2014년 일본 도쿄에서 시작한 이 회사의 주력 제품은 '외래 영상의학을 위한 영상 워크플로 소프트웨어'입니다. 창업 이후 줄곧 임상 현장의 현실을 존중하는 소프트웨어에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 동아시아·동남아 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "snackerly",
+      "name": "Snackerly",
+      "sector": "consumer",
+      "status": "ipo",
+      "founded": 2015,
+      "teamSize": 640,
+      "domain": "snackerly.example",
+      "featured": true,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Regional snack subscriptions sourced from independent makers.",
+        "body": [
+          "Snackerly curates monthly boxes of regional snacks sourced directly from independent makers — the small workshops that rarely reach shelves outside their own prefecture or province. Members choose a region and a spice tolerance; Snackerly handles discovery, import paperwork, and the story cards that explain what they're eating.",
+          "Founded in Tokyo in 2015, the company listed publicly after building a sourcing network that now spans hundreds of independent producers across East Asia. The model stays deliberately maker-friendly: minimum order commitments and upfront payment, in exchange for exclusives that keep the boxes worth opening."
+        ]
+      },
+      "ko": {
+        "oneLiner": "독립 생산자의 지역 간식을 모은 구독 서비스.",
+        "body": [
+          "스내커리(Snackerly)는 독립 생산자의 지역 간식을 매달 큐레이션해 배송하는 구독 서비스입니다. 자기 지역 밖 매대에는 좀처럼 오르지 못하는 작은 공방들의 제품을 발굴하고, 수입 서류 작업과 '지금 먹고 있는 것'의 이야기를 담은 카드까지 대신 챙깁니다.",
+          "2015년 도쿄에서 창업했고, 동아시아 수백 곳의 독립 생산자를 잇는 소싱 네트워크를 구축한 뒤 기업공개(IPO)를 마쳤습니다. 최소 주문 약정과 선지급을 제공하는 대신 박스를 열어볼 가치가 있게 하는 독점 제품을 확보하는, 생산자 친화적인 모델을 의도적으로 유지합니다."
+        ]
+      }
+    },
+    {
+      "slug": "wardovia",
+      "name": "Wardovia",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2021,
+      "teamSize": 288,
+      "domain": "wardovia.example",
+      "featured": false,
+      "location": {
+        "en": "Sydney, Australia",
+        "ko": "호주 시드니"
+      },
+      "en": {
+        "oneLiner": "Capsule wardrobe planning with resale built in.",
+        "body": [
+          "Wardovia builds capsule wardrobe planning with resale built in. Founded in 2021 and based in Sydney, Australia, the team has stayed deliberately close to products people invite into their daily routines.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Wardovia serves teams across the Asia-Pacific region, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "리세일 기능을 내장한 캡슐 옷장 플래너.",
+        "body": [
+          "2021년 호주 시드니에서 시작한 이 회사의 주력 제품은 '리세일 기능을 내장한 캡슐 옷장 플래너'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 아시아·태평양 지역 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "playmerra",
+      "name": "Playmerra",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2024,
+      "teamSize": 308,
+      "domain": "playmerra.example",
+      "featured": false,
+      "location": {
+        "en": "New York, USA",
+        "ko": "미국 뉴욕"
+      },
+      "en": {
+        "oneLiner": "Co-op puzzle games for families across devices.",
+        "body": [
+          "Playmerra builds co-op puzzle games for families across devices. Founded in 2024 and based in New York, USA, the team has stayed deliberately close to products people invite into their daily routines.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Playmerra serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "가족이 기기 상관없이 함께 즐기는 협동 퍼즐 게임.",
+        "body": [
+          "2024년 미국 뉴욕에서 시작한 이 회사의 주력 제품은 '가족이 기기 상관없이 함께 즐기는 협동 퍼즐 게임'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "tastelyn",
+      "name": "Tastelyn",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 103,
+      "domain": "tastelyn.example",
+      "featured": false,
+      "location": {
+        "en": "Singapore",
+        "ko": "싱가포르"
+      },
+      "en": {
+        "oneLiner": "Home-cook recipe boxes with local seasonal produce.",
+        "body": [
+          "Tastelyn builds home-cook recipe boxes with local seasonal produce. Founded in 2019 and based in Singapore, the team has stayed deliberately close to products people invite into their daily routines.",
+          "Rather than chasing platform breadth, Tastelyn ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "지역 제철 식재료로 구성한 레시피 박스.",
+        "body": [
+          "2019년 싱가포르에서 시작한 이 회사의 주력 제품은 '지역 제철 식재료로 구성한 레시피 박스'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "roomverra",
+      "name": "Roomverra",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2021,
+      "teamSize": 158,
+      "domain": "roomverra.example",
+      "featured": false,
+      "location": {
+        "en": "Boston, USA",
+        "ko": "미국 보스턴"
+      },
+      "en": {
+        "oneLiner": "Furniture try-before-you-buy with AR previews.",
+        "body": [
+          "Roomverra builds furniture try-before-you-buy with AR previews. Founded in 2021 and based in Boston, USA, the team has stayed deliberately close to products people invite into their daily routines.",
+          "Rather than chasing platform breadth, Roomverra ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "AR 미리보기로 가구를 먼저 배치해 보는 서비스.",
+        "body": [
+          "2021년 미국 보스턴에서 시작한 이 회사의 주력 제품은 'AR 미리보기로 가구를 먼저 배치해 보는 서비스'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "petarno",
+      "name": "Petarno",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2015,
+      "teamSize": 408,
+      "domain": "petarno.example",
+      "featured": false,
+      "location": {
+        "en": "Sydney, Australia",
+        "ko": "호주 시드니"
+      },
+      "en": {
+        "oneLiner": "Preventive pet care plans with tele-vet check-ins.",
+        "body": [
+          "Petarno builds preventive pet care plans with tele-vet check-ins. Founded in 2015 and based in Sydney, Australia, the team has stayed deliberately close to products people invite into their daily routines.",
+          "Petarno sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across the Asia-Pacific region cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "원격 수의 상담을 포함한 반려동물 예방 케어 플랜.",
+        "body": [
+          "2015년 호주 시드니에서 시작한 이 회사의 주력 제품은 '원격 수의 상담을 포함한 반려동물 예방 케어 플랜'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 아시아·태평양 지역 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "fandelle",
+      "name": "Fandelle",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2016,
+      "teamSize": 398,
+      "domain": "fandelle.example",
+      "featured": false,
+      "location": {
+        "en": "Tokyo, Japan",
+        "ko": "일본 도쿄"
+      },
+      "en": {
+        "oneLiner": "Membership tools for independent creators and their fans.",
+        "body": [
+          "Fandelle builds membership tools for independent creators and their fans. Founded in 2016 and based in Tokyo, Japan, the team has stayed deliberately close to products people invite into their daily routines.",
+          "Rather than chasing platform breadth, Fandelle ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "독립 크리에이터와 팬을 잇는 멤버십 도구.",
+        "body": [
+          "2016년 일본 도쿄에서 시작한 이 회사의 주력 제품은 '독립 크리에이터와 팬을 잇는 멤버십 도구'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "grocevia",
+      "name": "Grocevia",
+      "sector": "consumer",
+      "status": "acquired",
+      "founded": 2018,
+      "teamSize": 70,
+      "domain": "grocevia.example",
+      "featured": false,
+      "location": {
+        "en": "Amsterdam, Netherlands",
+        "ko": "네덜란드 암스테르담"
+      },
+      "en": {
+        "oneLiner": "Neighborhood group-buying for weekly groceries.",
+        "body": [
+          "Grocevia builds neighborhood group-buying for weekly groceries. Founded in 2018 and based in Amsterdam, Netherlands, the team has stayed deliberately close to products people invite into their daily routines.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Grocevia serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "동네 단위 장보기 공동구매 플랫폼.",
+        "body": [
+          "2018년 네덜란드 암스테르담에서 시작한 이 회사의 주력 제품은 '동네 단위 장보기 공동구매 플랫폼'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "trippara",
+      "name": "Trippara",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2020,
+      "teamSize": 368,
+      "domain": "trippara.example",
+      "featured": false,
+      "location": {
+        "en": "Stockholm, Sweden",
+        "ko": "스웨덴 스톡홀름"
+      },
+      "en": {
+        "oneLiner": "Slow-travel itineraries built around rail routes.",
+        "body": [
+          "Trippara builds slow-travel itineraries built around rail routes. Founded in 2020 and based in Stockholm, Sweden, the team has stayed deliberately close to products people invite into their daily routines.",
+          "Rather than chasing platform breadth, Trippara ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across Europe before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "철도 노선 중심의 슬로 트래블 일정 서비스.",
+        "body": [
+          "2020년 스웨덴 스톡홀름에서 시작한 이 회사의 주력 제품은 '철도 노선 중심의 슬로 트래블 일정 서비스'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 유럽의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "souvenelle",
+      "name": "Souvenelle",
+      "sector": "consumer",
+      "status": "active",
+      "founded": 2021,
+      "teamSize": 203,
+      "domain": "souvenelle.example",
+      "featured": false,
+      "location": {
+        "en": "Helsinki, Finland",
+        "ko": "핀란드 헬싱키"
+      },
+      "en": {
+        "oneLiner": "Personalized gift curation from local workshops.",
+        "body": [
+          "Souvenelle builds personalized gift curation from local workshops. Founded in 2021 and based in Helsinki, Finland, the team has stayed deliberately close to products people invite into their daily routines.",
+          "Souvenelle sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "지역 공방과 연결한 맞춤 선물 큐레이션.",
+        "body": [
+          "2021년 핀란드 헬싱키에서 시작한 이 회사의 주력 제품은 '지역 공방과 연결한 맞춤 선물 큐레이션'입니다. 창업 이후 줄곧 일상 루틴에 자연스럽게 스며드는 제품에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "voltarna",
+      "name": "Voltarna",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2020,
+      "teamSize": 95,
+      "domain": "voltarna.example",
+      "featured": true,
+      "location": {
+        "en": "Helsinki, Finland",
+        "ko": "핀란드 헬싱키"
+      },
+      "en": {
+        "oneLiner": "Battery analytics that extend fleet and storage lifespan.",
+        "body": [
+          "Voltarna builds analytics that extend the useful life of battery fleets — buses, delivery vans, and grid storage. By modeling degradation from charge patterns and thermal history, it tells operators which packs to rotate, rest, or retire before failures get expensive.",
+          "The company started in Helsinki in 2020, close to the Nordic bus fleets that became its first customers. Voltarna's wedge is honesty about uncertainty: predictions ship with confidence bands, and the product is designed around decisions operators make weekly, not lab-grade precision they can't act on."
+        ]
+      },
+      "ko": {
+        "oneLiner": "배터리 플릿의 수명을 늘리는 운영 분석 플랫폼.",
+        "body": [
+          "볼타르나(Voltarna)는 버스, 배송 밴, 계통 저장장치까지 배터리 플릿의 수명을 늘리는 분석 도구를 만듭니다. 충전 패턴과 열 이력으로 열화를 모델링해, 어떤 팩을 교대·휴지·퇴역시켜야 고장이 비싸지기 전에 막을 수 있는지 운영자에게 알려 줍니다.",
+          "2020년 헬싱키에서 시작해, 첫 고객이 된 북유럽 버스 플릿 가까이에서 성장했습니다. 볼타르나의 강점은 불확실성에 대한 정직함입니다 — 예측에는 신뢰 구간이 함께 제공되고, 제품은 실험실 수준의 정밀도가 아니라 운영자가 매주 실제로 내리는 결정을 중심으로 설계됩니다."
+        ]
+      }
+    },
+    {
+      "slug": "sunverra",
+      "name": "Sunverra",
+      "sector": "climate",
+      "status": "acquired",
+      "founded": 2012,
+      "teamSize": 350,
+      "domain": "sunverra.example",
+      "featured": false,
+      "location": {
+        "en": "London, United Kingdom",
+        "ko": "영국 런던"
+      },
+      "en": {
+        "oneLiner": "Rooftop solar design and permitting automation.",
+        "body": [
+          "Sunverra builds rooftop solar design and permitting automation. Founded in 2012 and based in London, United Kingdom, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Rather than chasing platform breadth, Sunverra ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across Europe before each release. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "지붕형 태양광 설계·인허가 자동화.",
+        "body": [
+          "2012년 영국 런던에서 시작한 이 회사의 주력 제품은 '지붕형 태양광 설계·인허가 자동화'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 유럽의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "gridelle",
+      "name": "Gridelle",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 283,
+      "domain": "gridelle.example",
+      "featured": false,
+      "location": {
+        "en": "Helsinki, Finland",
+        "ko": "핀란드 헬싱키"
+      },
+      "en": {
+        "oneLiner": "Demand-response orchestration for commercial buildings.",
+        "body": [
+          "Gridelle builds demand-response orchestration for commercial buildings. Founded in 2017 and based in Helsinki, Finland, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Gridelle sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "상업 건물 수요반응(DR) 오케스트레이션.",
+        "body": [
+          "2017년 핀란드 헬싱키에서 시작한 이 회사의 주력 제품은 '상업 건물 수요반응(DR) 오케스트레이션'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "emberlyn",
+      "name": "Emberlyn",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2022,
+      "teamSize": 113,
+      "domain": "emberlyn.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Wildfire risk mapping for utilities and insurers.",
+        "body": [
+          "Emberlyn builds wildfire risk mapping for utilities and insurers. Founded in 2022 and based in Austin, USA, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Rather than chasing platform breadth, Emberlyn ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "전력사·보험사를 위한 산불 리스크 매핑.",
+        "body": [
+          "2022년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '전력사·보험사를 위한 산불 리스크 매핑'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "thermovia",
+      "name": "Thermovia",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2022,
+      "teamSize": 368,
+      "domain": "thermovia.example",
+      "featured": false,
+      "location": {
+        "en": "Singapore",
+        "ko": "싱가포르"
+      },
+      "en": {
+        "oneLiner": "Industrial heat-pump retrofits as a service.",
+        "body": [
+          "Thermovia builds industrial heat-pump retrofits as a service. Founded in 2022 and based in Singapore, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Rather than chasing platform breadth, Thermovia ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "산업용 히트펌프 전환 구독 서비스.",
+        "body": [
+          "2022년 싱가포르에서 시작한 이 회사의 주력 제품은 '산업용 히트펌프 전환 구독 서비스'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "aeolyra",
+      "name": "Aeolyra",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2021,
+      "teamSize": 68,
+      "domain": "aeolyra.example",
+      "featured": false,
+      "location": {
+        "en": "Amsterdam, Netherlands",
+        "ko": "네덜란드 암스테르담"
+      },
+      "en": {
+        "oneLiner": "Small-wind site assessment with acoustic modeling.",
+        "body": [
+          "Aeolyra builds small-wind site assessment with acoustic modeling. Founded in 2021 and based in Amsterdam, Netherlands, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Aeolyra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "소형 풍력 입지 평가·소음 모델링.",
+        "body": [
+          "2021년 네덜란드 암스테르담에서 시작한 이 회사의 주력 제품은 '소형 풍력 입지 평가·소음 모델링'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "hydrenna",
+      "name": "Hydrenna",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2022,
+      "teamSize": 358,
+      "domain": "hydrenna.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Leak detection for aging municipal water networks.",
+        "body": [
+          "Hydrenna builds leak detection for aging municipal water networks. Founded in 2022 and based in Austin, USA, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Rather than chasing platform breadth, Hydrenna ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "노후 상수도망 누수 감지 솔루션.",
+        "body": [
+          "2022년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '노후 상수도망 누수 감지 솔루션'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "circulyn",
+      "name": "Circulyn",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2023,
+      "teamSize": 358,
+      "domain": "circulyn.example",
+      "featured": false,
+      "location": {
+        "en": "Singapore",
+        "ko": "싱가포르"
+      },
+      "en": {
+        "oneLiner": "Reverse logistics for electronics reuse and refurbishing.",
+        "body": [
+          "Circulyn builds reverse logistics for electronics reuse and refurbishing. Founded in 2023 and based in Singapore, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Rather than chasing platform breadth, Circulyn ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "전자기기 재사용·리퍼비시 역물류 플랫폼.",
+        "body": [
+          "2023년 싱가포르에서 시작한 이 회사의 주력 제품은 '전자기기 재사용·리퍼비시 역물류 플랫폼'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "fluxella",
+      "name": "Fluxella",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2021,
+      "teamSize": 198,
+      "domain": "fluxella.example",
+      "featured": false,
+      "location": {
+        "en": "Berlin, Germany",
+        "ko": "독일 베를린"
+      },
+      "en": {
+        "oneLiner": "Real-time carbon accounting wired into ERP data.",
+        "body": [
+          "Fluxella builds real-time carbon accounting wired into ERP data. Founded in 2021 and based in Berlin, Germany, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Fluxella serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "ERP 데이터와 연동되는 실시간 탄소 회계.",
+        "body": [
+          "2021년 독일 베를린에서 시작한 이 회사의 주력 제품은 'ERP 데이터와 연동되는 실시간 탄소 회계'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "kelverra",
+      "name": "Kelverra",
+      "sector": "climate",
+      "status": "active",
+      "founded": 2024,
+      "teamSize": 123,
+      "domain": "kelverra.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Kelp-based packaging materials for food brands.",
+        "body": [
+          "Kelverra builds kelp-based packaging materials for food brands. Founded in 2024 and based in Austin, USA, the team has stayed deliberately close to measurable, deployable decarbonization.",
+          "Rather than chasing platform breadth, Kelverra ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "식품 브랜드를 위한 해조류 기반 포장재.",
+        "body": [
+          "2024년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '식품 브랜드를 위한 해조류 기반 포장재'입니다. 창업 이후 줄곧 측정 가능하고 실제 배치 가능한 탈탄소에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "fleetara",
+      "name": "Fleetara",
+      "sector": "logistics",
+      "status": "acquired",
+      "founded": 2016,
+      "teamSize": 180,
+      "domain": "fleetara.example",
+      "featured": true,
+      "location": {
+        "en": "Rotterdam, Netherlands",
+        "ko": "네덜란드 로테르담"
+      },
+      "en": {
+        "oneLiner": "Mid-mile fleet orchestration for regional carriers.",
+        "body": [
+          "Fleetara orchestrates mid-mile trucking for regional carriers — the runs between warehouses and distribution hubs that are too structured for the spot market and too dynamic for annual contracts. Dispatchers get load building, driver hours, and dock windows in one view.",
+          "Founded in Rotterdam in 2016, the company grew across Benelux and northern Germany before being acquired by a larger logistics platform. The product continues to operate under the Fleetara name, and the founding team's scheduling engine now routes a much larger network than it started with."
+        ]
+      },
+      "ko": {
+        "oneLiner": "지역 운송사를 위한 미드마일 차량 오케스트레이션.",
+        "body": [
+          "플리타라(Fleetara)는 지역 운송사의 미드마일 트럭 운송을 오케스트레이션합니다. 창고와 물류 허브 사이 구간은 스팟 시장에 맡기기엔 정형적이고 연간 계약으로 묶기엔 유동적입니다 — 배차 담당자는 적재 구성, 운전자 근무시간, 도크 시간창을 한 화면에서 관리합니다.",
+          "2016년 로테르담에서 창업해 베네룩스와 북부 독일로 확장한 뒤, 더 큰 물류 플랫폼에 인수되었습니다. 제품은 지금도 플리타라라는 이름으로 운영되고 있으며, 창업팀이 만든 스케줄링 엔진은 시작할 때보다 훨씬 큰 네트워크의 경로를 계산하고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "cargolyn",
+      "name": "Cargolyn",
+      "sector": "logistics",
+      "status": "ipo",
+      "founded": 2016,
+      "teamSize": 520,
+      "domain": "cargolyn.example",
+      "featured": false,
+      "location": {
+        "en": "London, United Kingdom",
+        "ko": "영국 런던"
+      },
+      "en": {
+        "oneLiner": "Digital freight forwarding for intra-Asia lanes.",
+        "body": [
+          "Cargolyn builds digital freight forwarding for intra-Asia lanes. Founded in 2016 and based in London, United Kingdom, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "Rather than chasing platform breadth, Cargolyn ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across Europe before each release. The company later listed publicly and continues to expand internationally."
+        ]
+      },
+      "ko": {
+        "oneLiner": "아시아 역내 항로 디지털 포워딩.",
+        "body": [
+          "2016년 영국 런던에서 시작한 이 회사의 주력 제품은 '아시아 역내 항로 디지털 포워딩'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 유럽의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다. 이후 기업공개(IPO)를 거쳐 해외 시장으로 확장을 이어가고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "routella",
+      "name": "Routella",
+      "sector": "logistics",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 23,
+      "domain": "routella.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Route optimization for last-mile with live constraints.",
+        "body": [
+          "Routella builds route optimization for last-mile with live constraints. Founded in 2019 and based in Austin, USA, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Routella serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "실시간 제약을 반영한 라스트마일 경로 최적화.",
+        "body": [
+          "2019년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '실시간 제약을 반영한 라스트마일 경로 최적화'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "dockverra",
+      "name": "Dockverra",
+      "sector": "logistics",
+      "status": "active",
+      "founded": 2022,
+      "teamSize": 368,
+      "domain": "dockverra.example",
+      "featured": false,
+      "location": {
+        "en": "Busan, South Korea",
+        "ko": "대한민국 부산"
+      },
+      "en": {
+        "oneLiner": "Dock scheduling that kills warehouse wait times.",
+        "body": [
+          "Dockverra builds dock scheduling that kills warehouse wait times. Founded in 2022 and based in Busan, South Korea, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "Dockverra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across East and Southeast Asia cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "창고 대기 시간을 줄이는 도크 예약 시스템.",
+        "body": [
+          "2022년 대한민국 부산에서 시작한 이 회사의 주력 제품은 '창고 대기 시간을 줄이는 도크 예약 시스템'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 동아시아·동남아 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "lanevia",
+      "name": "Lanevia",
+      "sector": "logistics",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 183,
+      "domain": "lanevia.example",
+      "featured": false,
+      "location": {
+        "en": "Stockholm, Sweden",
+        "ko": "스웨덴 스톡홀름"
+      },
+      "en": {
+        "oneLiner": "Rate benchmarking and tendering for shippers.",
+        "body": [
+          "Lanevia builds rate benchmarking and tendering for shippers. Founded in 2019 and based in Stockholm, Sweden, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Lanevia serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "화주를 위한 운임 벤치마크·입찰 플랫폼.",
+        "body": [
+          "2019년 스웨덴 스톡홀름에서 시작한 이 회사의 주력 제품은 '화주를 위한 운임 벤치마크·입찰 플랫폼'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "portelyn",
+      "name": "Portelyn",
+      "sector": "logistics",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 408,
+      "domain": "portelyn.example",
+      "featured": false,
+      "location": {
+        "en": "Berlin, Germany",
+        "ko": "독일 베를린"
+      },
+      "en": {
+        "oneLiner": "Port drayage visibility with automated appointment booking.",
+        "body": [
+          "Portelyn builds port drayage visibility with automated appointment booking. Founded in 2019 and based in Berlin, Germany, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "Portelyn sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "항만 셔틀 운송 가시성·예약 자동화.",
+        "body": [
+          "2019년 독일 베를린에서 시작한 이 회사의 주력 제품은 '항만 셔틀 운송 가시성·예약 자동화'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "movarra",
+      "name": "Movarra",
+      "sector": "logistics",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 383,
+      "domain": "movarra.example",
+      "featured": false,
+      "location": {
+        "en": "Rotterdam, Netherlands",
+        "ko": "네덜란드 로테르담"
+      },
+      "en": {
+        "oneLiner": "Corporate relocation logistics in one workspace.",
+        "body": [
+          "Movarra builds corporate relocation logistics in one workspace. Founded in 2017 and based in Rotterdam, Netherlands, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Movarra serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "기업 이전 물류를 한 화면에서 관리하는 워크스페이스.",
+        "body": [
+          "2017년 네덜란드 로테르담에서 시작한 이 회사의 주력 제품은 '기업 이전 물류를 한 화면에서 관리하는 워크스페이스'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "transelle",
+      "name": "Transelle",
+      "sector": "logistics",
+      "status": "acquired",
+      "founded": 2014,
+      "teamSize": 150,
+      "domain": "transelle.example",
+      "featured": false,
+      "location": {
+        "en": "Taipei, Taiwan",
+        "ko": "대만 타이베이"
+      },
+      "en": {
+        "oneLiner": "Cold-chain monitoring with disposable smart sensors.",
+        "body": [
+          "Transelle builds cold-chain monitoring with disposable smart sensors. Founded in 2014 and based in Taipei, Taiwan, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "Transelle sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across East and Southeast Asia cite reliability and support quality as the reasons they stay. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "일회용 스마트 센서 기반 콜드체인 모니터링.",
+        "body": [
+          "2014년 대만 타이베이에서 시작한 이 회사의 주력 제품은 '일회용 스마트 센서 기반 콜드체인 모니터링'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 동아시아·동남아 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "haulenna",
+      "name": "Haulenna",
+      "sector": "logistics",
+      "status": "active",
+      "founded": 2020,
+      "teamSize": 233,
+      "domain": "haulenna.example",
+      "featured": false,
+      "location": {
+        "en": "Helsinki, Finland",
+        "ko": "핀란드 헬싱키"
+      },
+      "en": {
+        "oneLiner": "Backhaul matching that fills empty return trips.",
+        "body": [
+          "Haulenna builds backhaul matching that fills empty return trips. Founded in 2020 and based in Helsinki, Finland, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Haulenna serves teams across Europe, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "공차 회송을 채우는 복화 매칭 서비스.",
+        "body": [
+          "2020년 핀란드 헬싱키에서 시작한 이 회사의 주력 제품은 '공차 회송을 채우는 복화 매칭 서비스'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 유럽 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "velomerra",
+      "name": "Velomerra",
+      "sector": "logistics",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 388,
+      "domain": "velomerra.example",
+      "featured": false,
+      "location": {
+        "en": "Sydney, Australia",
+        "ko": "호주 시드니"
+      },
+      "en": {
+        "oneLiner": "Cargo-bike delivery networks for dense city centers.",
+        "body": [
+          "Velomerra builds cargo-bike delivery networks for dense city centers. Founded in 2017 and based in Sydney, Australia, the team has stayed deliberately close to the coordination problems of the physical world.",
+          "Velomerra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across the Asia-Pacific region cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "도심 카고바이크 배송 네트워크.",
+        "body": [
+          "2017년 호주 시드니에서 시작한 이 회사의 주력 제품은 '도심 카고바이크 배송 네트워크'입니다. 창업 이후 줄곧 물리 세계의 조율 문제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 아시아·태평양 지역 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "quantrelle",
+      "name": "Quantrelle",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 45,
+      "domain": "quantrelle.example",
+      "featured": true,
+      "location": {
+        "en": "Toronto, Canada",
+        "ko": "캐나다 토론토"
+      },
+      "en": {
+        "oneLiner": "Photonic sensing modules for precision manufacturing.",
+        "body": [
+          "Quantrelle designs photonic sensing modules for precision manufacturing lines — measuring vibration, alignment, and surface defects at speeds where mechanical sensors stop being useful. The modules are built to survive factory floors, not just optics benches.",
+          "Founded in Toronto in 2019 by a team out of an academic photonics lab, the company took the slow road: two years of pilots with instrument makers before the first production order. That patience bought Quantrelle something rare in hardware — reference customers who run its modules around the clock."
+        ]
+      },
+      "ko": {
+        "oneLiner": "정밀 제조를 위한 광학 센싱 모듈.",
+        "body": [
+          "퀀트렐(Quantrelle)은 정밀 제조 라인을 위한 광학 센싱 모듈을 설계합니다. 기계식 센서가 무력해지는 속도 영역에서 진동, 정렬, 표면 결함을 측정하며, 광학 벤치가 아니라 실제 공장 바닥에서 버티도록 만들어집니다.",
+          "2019년 토론토에서 광학 연구실 출신 팀이 창업했고, 일부러 느린 길을 택했습니다 — 첫 양산 수주 전까지 계측기 제조사들과 2년간 파일럿을 돌렸습니다. 그 인내가 하드웨어 분야에서 드문 자산을 만들어 주었습니다. 퀀트렐의 모듈을 24시간 돌리는 레퍼런스 고객입니다."
+        ]
+      }
+    },
+    {
+      "slug": "photonyra",
+      "name": "Photonyra",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2024,
+      "teamSize": 13,
+      "domain": "photonyra.example",
+      "featured": false,
+      "location": {
+        "en": "Berlin, Germany",
+        "ko": "독일 베를린"
+      },
+      "en": {
+        "oneLiner": "Free-space optical links for campus-scale networks.",
+        "body": [
+          "Photonyra builds free-space optical links for campus-scale networks. Founded in 2024 and based in Berlin, Germany, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Rather than chasing platform breadth, Photonyra ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across Europe before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "캠퍼스 규모 네트워크용 자유공간 광통신.",
+        "body": [
+          "2024년 독일 베를린에서 시작한 이 회사의 주력 제품은 '캠퍼스 규모 네트워크용 자유공간 광통신'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 유럽의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    },
+    {
+      "slug": "nanovelle",
+      "name": "Nanovelle",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2014,
+      "teamSize": 223,
+      "domain": "nanovelle.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Nanocoating processes that replace hazardous plating.",
+        "body": [
+          "Nanovelle builds nanocoating processes that replace hazardous plating. Founded in 2014 and based in Austin, USA, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Nanovelle sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across North America cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "유해 도금을 대체하는 나노 코팅 공정.",
+        "body": [
+          "2014년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '유해 도금을 대체하는 나노 코팅 공정'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 북미 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "semilyra",
+      "name": "Semilyra",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 123,
+      "domain": "semilyra.example",
+      "featured": false,
+      "location": {
+        "en": "London, United Kingdom",
+        "ko": "영국 런던"
+      },
+      "en": {
+        "oneLiner": "Yield analytics for compound semiconductor fabs.",
+        "body": [
+          "Semilyra builds yield analytics for compound semiconductor fabs. Founded in 2019 and based in London, United Kingdom, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Semilyra sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across Europe cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "화합물 반도체 팹 수율 분석.",
+        "body": [
+          "2019년 영국 런던에서 시작한 이 회사의 주력 제품은 '화합물 반도체 팹 수율 분석'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 유럽 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "orbitanna",
+      "name": "Orbitanna",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2015,
+      "teamSize": 163,
+      "domain": "orbitanna.example",
+      "featured": false,
+      "location": {
+        "en": "Taipei, Taiwan",
+        "ko": "대만 타이베이"
+      },
+      "en": {
+        "oneLiner": "Attitude control systems for small satellites.",
+        "body": [
+          "Orbitanna builds attitude control systems for small satellites. Founded in 2015 and based in Taipei, Taiwan, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Orbitanna sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across East and Southeast Asia cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "소형 위성용 자세 제어 시스템.",
+        "body": [
+          "2015년 대만 타이베이에서 시작한 이 회사의 주력 제품은 '소형 위성용 자세 제어 시스템'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 동아시아·동남아 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "lidarelle",
+      "name": "Lidarelle",
+      "sector": "deeptech",
+      "status": "acquired",
+      "founded": 2018,
+      "teamSize": 110,
+      "domain": "lidarelle.example",
+      "featured": false,
+      "location": {
+        "en": "Taipei, Taiwan",
+        "ko": "대만 타이베이"
+      },
+      "en": {
+        "oneLiner": "Solid-state lidar for industrial safety zones.",
+        "body": [
+          "Lidarelle builds solid-state lidar for industrial safety zones. Founded in 2018 and based in Taipei, Taiwan, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Rather than chasing platform breadth, Lidarelle ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across East and Southeast Asia before each release. The company was later acquired by a larger platform in its space; the product continues to operate under the same name."
+        ]
+      },
+      "ko": {
+        "oneLiner": "산업 안전 구역용 고정형 라이다.",
+        "body": [
+          "2018년 대만 타이베이에서 시작한 이 회사의 주력 제품은 '산업 안전 구역용 고정형 라이다'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 동아시아·동남아의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다. 이후 동종 분야의 더 큰 플랫폼에 인수되었으며, 제품은 같은 이름으로 계속 운영되고 있습니다."
+        ]
+      }
+    },
+    {
+      "slug": "fuselyn",
+      "name": "Fuselyn",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2016,
+      "teamSize": 33,
+      "domain": "fuselyn.example",
+      "featured": false,
+      "location": {
+        "en": "San Francisco, USA",
+        "ko": "미국 샌프란시스코"
+      },
+      "en": {
+        "oneLiner": "Diagnostics instrumentation for fusion research labs.",
+        "body": [
+          "Fuselyn builds diagnostics instrumentation for fusion research labs. Founded in 2016 and based in San Francisco, USA, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Fuselyn sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across North America cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "핵융합 연구를 위한 진단 계측 장비.",
+        "body": [
+          "2016년 미국 샌프란시스코에서 시작한 이 회사의 주력 제품은 '핵융합 연구를 위한 진단 계측 장비'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 북미 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "cryovanna",
+      "name": "Cryovanna",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2022,
+      "teamSize": 228,
+      "domain": "cryovanna.example",
+      "featured": false,
+      "location": {
+        "en": "Austin, USA",
+        "ko": "미국 오스틴"
+      },
+      "en": {
+        "oneLiner": "Compact cryocoolers for quantum and imaging hardware.",
+        "body": [
+          "Cryovanna builds compact cryocoolers for quantum and imaging hardware. Founded in 2022 and based in Austin, USA, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Cryovanna sells to practitioners first — the people who feel the problem daily — and expands account by account. Customers across North America cite reliability and support quality as the reasons they stay."
+        ]
+      },
+      "ko": {
+        "oneLiner": "양자·이미징 장비용 소형 극저온 냉각기.",
+        "body": [
+          "2022년 미국 오스틴에서 시작한 이 회사의 주력 제품은 '양자·이미징 장비용 소형 극저온 냉각기'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "문제를 매일 체감하는 실무자에게 먼저 팔고, 계정 단위로 확장하는 전략을 씁니다. 북미 고객들은 안정성과 지원 품질을 계속 쓰는 이유로 꼽습니다."
+        ]
+      }
+    },
+    {
+      "slug": "matterine",
+      "name": "Matterine",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2019,
+      "teamSize": 78,
+      "domain": "matterine.example",
+      "featured": false,
+      "location": {
+        "en": "Boston, USA",
+        "ko": "미국 보스턴"
+      },
+      "en": {
+        "oneLiner": "Simulation-driven alloy discovery for additive manufacturing.",
+        "body": [
+          "Matterine builds simulation-driven alloy discovery for additive manufacturing. Founded in 2019 and based in Boston, USA, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "The product started as an internal tool and grew through word of mouth among early customers. Today Matterine serves teams across North America, and the roadmap stays intentionally narrow: do a small number of jobs exceptionally well."
+        ]
+      },
+      "ko": {
+        "oneLiner": "적층 제조용 합금을 탐색하는 시뮬레이션 플랫폼.",
+        "body": [
+          "2019년 미국 보스턴에서 시작한 이 회사의 주력 제품은 '적층 제조용 합금을 탐색하는 시뮬레이션 플랫폼'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "제품은 초기 고객의 입소문으로 성장했습니다. 현재 북미 곳곳의 팀이 사용하고 있으며, 로드맵은 의도적으로 좁게 유지합니다 — 적은 수의 일을 아주 잘하는 것이 원칙입니다."
+        ]
+      }
+    },
+    {
+      "slug": "servomere",
+      "name": "Servomere",
+      "sector": "deeptech",
+      "status": "active",
+      "founded": 2017,
+      "teamSize": 73,
+      "domain": "servomere.example",
+      "featured": false,
+      "location": {
+        "en": "San Francisco, USA",
+        "ko": "미국 샌프란시스코"
+      },
+      "en": {
+        "oneLiner": "High-torque actuators for collaborative robotics.",
+        "body": [
+          "Servomere builds high-torque actuators for collaborative robotics. Founded in 2017 and based in San Francisco, USA, the team has stayed deliberately close to hardware problems most teams avoid.",
+          "Rather than chasing platform breadth, Servomere ships depth: fewer features, tuned to the daily reality of its users. The company works closely with a small group of design partners across North America before each release."
+        ]
+      },
+      "ko": {
+        "oneLiner": "협동 로봇용 고토크 액추에이터.",
+        "body": [
+          "2017년 미국 샌프란시스코에서 시작한 이 회사의 주력 제품은 '협동 로봇용 고토크 액추에이터'입니다. 창업 이후 줄곧 대부분의 팀이 피해 가는 하드웨어 난제에 집중해 왔습니다.",
+          "기능의 폭을 넓히는 대신 깊이를 팝니다. 릴리스마다 북미의 소수 디자인 파트너와 밀착해 검증한 뒤 배포합니다."
+        ]
+      }
+    }
+  ]
+}

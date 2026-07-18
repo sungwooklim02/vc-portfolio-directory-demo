@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* class-based dark mode (toggled on <html> by ThemeScript/ThemeToggle) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* 100% system font stack — zero webfont bytes (KR glyphs from OS fonts).
+     A production build would self-host via next/font instead. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Malgun Gothic",
+    "Noto Sans KR", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+/* honor reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
