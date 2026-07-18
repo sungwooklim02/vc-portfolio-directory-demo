@@ -70,18 +70,27 @@ offers no TTL/invalidation control — a production build would use an edge CDN
 with explicit invalidation (e.g., S3 + CloudFront) for the same architecture
 with operational control.
 
-### Results (2026-07-18, UTC — see measurement notes for exact timestamps)
+### Results (2026-07-18 00:33 UTC, single run — recorded as observed)
 
-| Region | Cold TTFB | Cold x-cache | Warm TTFB | Warm x-cache |
+| Region (probe city) | Cold TTFB | Cold x-cache | Warm TTFB | Warm x-cache |
 |---|---|---|---|---|
-| KR | _see ttfb-globalping.json_ | | | |
-| JP | | | | |
-| SG | | | | |
-| US | | | | |
-| DE | | | | |
-| GB | | | | |
+| KR (Chuncheon → Seoul¹) | 258 ms | HIT | 205 ms | MISS |
+| JP (Tokyo) | 186 ms | MISS | **5 ms** | HIT |
+| SG (Singapore) | 260 ms | MISS | **3 ms** | HIT |
+| US (Buffalo) | 57 ms | MISS | **18 ms** | HIT |
+| DE (Falkenstein) | 124 ms | MISS | **17 ms** | HIT |
+| GB (London) | 94 ms | MISS | 107 ms | MISS² |
 
-(The table is filled from the committed raw JSON after each measurement run.)
+¹ globalping assigned a different KR probe on pass 2 (Chuncheon → Seoul), so
+the warm pass was effectively another cold hit on a different POP.
+² Same-city probe but the second request still missed (different POP or
+eviction) — kept as observed.
+
+Reading: warm HITs of **3–18 ms** show what static + edge delivery does for
+overseas users. The MISS rows show the flip side of a free-tier edge: no
+control over POP routing or TTL. A production build keeps the same
+architecture but adds operational control (e.g., S3 + CloudFront with explicit
+invalidation and a Seoul edge location).
 
 ## License
 
