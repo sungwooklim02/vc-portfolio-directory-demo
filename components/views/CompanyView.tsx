@@ -65,6 +65,7 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
             <StatusBadge status={c.status} label={statusLabel(c.status, locale)} />
           </div>
           <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+            {locale === "ko" ? `${c.koName} · ` : ""}
             {sectorLabel(c.sector, locale)} · {c.location[locale]}
           </p>
         </div>

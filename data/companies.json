@@ -63,6 +63,7 @@
     {
       "slug": "ledgerine",
       "name": "Ledgerine",
+      "koName": "레저린",
       "sector": "fintech",
       "status": "active",
       "founded": 2018,
@@ -91,6 +92,7 @@
     {
       "slug": "payvorn",
       "name": "Payvorn",
+      "koName": "페이본",
       "sector": "fintech",
       "status": "active",
       "founded": 2014,
@@ -119,6 +121,7 @@
     {
       "slug": "finomere",
       "name": "Finomere",
+      "koName": "피노미어",
       "sector": "fintech",
       "status": "active",
       "founded": 2019,
@@ -147,6 +150,7 @@
     {
       "slug": "trestapay",
       "name": "Trestapay",
+      "koName": "트레스타페이",
       "sector": "fintech",
       "status": "acquired",
       "founded": 2017,
@@ -175,6 +179,7 @@
     {
       "slug": "vaultrine",
       "name": "Vaultrine",
+      "koName": "볼트린",
       "sector": "fintech",
       "status": "active",
       "founded": 2017,
@@ -203,6 +208,7 @@
     {
       "slug": "credorna",
       "name": "Credorna",
+      "koName": "크레도나",
       "sector": "fintech",
       "status": "active",
       "founded": 2023,
@@ -231,6 +237,7 @@
     {
       "slug": "remitello",
       "name": "Remitello",
+      "koName": "레미텔로",
       "sector": "fintech",
       "status": "ipo",
       "founded": 2015,
@@ -259,6 +266,7 @@
     {
       "slug": "bursella",
       "name": "Bursella",
+      "koName": "버셀라",
       "sector": "fintech",
       "status": "active",
       "founded": 2014,
@@ -287,6 +295,7 @@
     {
       "slug": "yieldarn",
       "name": "Yieldarn",
+      "koName": "일드아른",
       "sector": "fintech",
       "status": "active",
       "founded": 2015,
@@ -315,6 +324,7 @@
     {
       "slug": "monvarra",
       "name": "Monvarra",
+      "koName": "몬바라",
       "sector": "fintech",
       "status": "active",
       "founded": 2017,
@@ -343,6 +353,7 @@
     {
       "slug": "opslune",
       "name": "Opslune",
+      "koName": "옵스룬",
       "sector": "saas",
       "status": "active",
       "founded": 2019,
@@ -371,6 +382,7 @@
     {
       "slug": "taskovia",
       "name": "Taskovia",
+      "koName": "태스코비아",
       "sector": "saas",
       "status": "active",
       "founded": 2018,
@@ -399,6 +411,7 @@
     {
       "slug": "quorvane",
       "name": "Quorvane",
+      "koName": "쿼베인",
       "sector": "saas",
       "status": "active",
       "founded": 2022,
@@ -427,6 +440,7 @@
     {
       "slug": "formyra",
       "name": "Formyra",
+      "koName": "포마이라",
       "sector": "saas",
       "status": "active",
       "founded": 2014,
@@ -455,6 +469,7 @@
     {
       "slug": "docurella",
       "name": "Docurella",
+      "koName": "도큐렐라",
       "sector": "saas",
       "status": "acquired",
       "founded": 2018,
@@ -483,6 +498,7 @@
     {
       "slug": "meetrino",
       "name": "Meetrino",
+      "koName": "미트리노",
       "sector": "saas",
       "status": "active",
       "founded": 2021,
@@ -511,6 +527,7 @@
     {
       "slug": "planovae",
       "name": "Planovae",
+      "koName": "플라노베이",
       "sector": "saas",
       "status": "ipo",
       "founded": 2014,
@@ -539,6 +556,7 @@
     {
       "slug": "deskarna",
       "name": "Deskarna",
+      "koName": "데스카나",
       "sector": "saas",
       "status": "active",
       "founded": 2014,
@@ -567,6 +585,7 @@
     {
       "slug": "flowbern",
       "name": "Flowbern",
+      "koName": "플로우번",
       "sector": "saas",
       "status": "active",
       "founded": 2016,
@@ -595,6 +614,7 @@
     {
       "slug": "stagerly",
       "name": "Stagerly",
+      "koName": "스테이절리",
       "sector": "saas",
       "status": "active",
       "founded": 2017,
@@ -623,6 +643,7 @@
     {
       "slug": "modelyn",
       "name": "Modelyn",
+      "koName": "모델린",
       "sector": "ai",
       "status": "active",
       "founded": 2021,
@@ -651,6 +672,7 @@
     {
       "slug": "vectorna",
       "name": "Vectorna",
+      "koName": "벡토나",
       "sector": "ai",
       "status": "ipo",
       "founded": 2013,
@@ -679,6 +701,7 @@
     {
       "slug": "inferrix",
       "name": "Inferrix",
+      "koName": "인페릭스",
       "sector": "ai",
       "status": "active",
       "founded": 2023,
@@ -707,6 +730,7 @@
     {
       "slug": "tensorel",
       "name": "Tensorel",
+      "koName": "텐소렐",
       "sector": "ai",
       "status": "active",
       "founded": 2016,
@@ -735,6 +759,7 @@
     {
       "slug": "datyrra",
       "name": "Datyrra",
+      "koName": "다티라",
       "sector": "ai",
       "status": "active",
       "founded": 2019,
@@ -763,6 +788,7 @@
     {
       "slug": "corveil",
       "name": "Corveil",
+      "koName": "코베일",
       "sector": "ai",
       "status": "active",
       "founded": 2017,
@@ -791,6 +817,7 @@
     {
       "slug": "annotara",
       "name": "Annotara",
+      "koName": "아노타라",
       "sector": "ai",
       "status": "acquired",
       "founded": 2015,
@@ -819,6 +846,7 @@
     {
       "slug": "queryna",
       "name": "Queryna",
+      "koName": "쿼리나",
       "sector": "ai",
       "status": "active",
       "founded": 2016,
@@ -847,6 +875,7 @@
     {
       "slug": "embedra",
       "name": "Embedra",
+      "koName": "엠베드라",
       "sector": "ai",
       "status": "active",
       "founded": 2015,
@@ -875,6 +904,7 @@
     {
       "slug": "synthemis",
       "name": "Synthemis",
+      "koName": "신테미스",
       "sector": "ai",
       "status": "active",
       "founded": 2017,
@@ -903,6 +933,7 @@
     {
       "slug": "medrovia",
       "name": "Medrovia",
+      "koName": "메드로비아",
       "sector": "health",
       "status": "active",
       "founded": 2017,
@@ -931,6 +962,7 @@
     {
       "slug": "curalyn",
       "name": "Curalyn",
+      "koName": "큐라린",
       "sector": "health",
       "status": "active",
       "founded": 2018,
@@ -959,6 +991,7 @@
     {
       "slug": "genotrella",
       "name": "Genotrella",
+      "koName": "제노트렐라",
       "sector": "health",
       "status": "acquired",
       "founded": 2016,
@@ -987,6 +1020,7 @@
     {
       "slug": "vitarnelle",
       "name": "Vitarnelle",
+      "koName": "비타넬",
       "sector": "health",
       "status": "active",
       "founded": 2016,
@@ -1015,6 +1049,7 @@
     {
       "slug": "somnovia",
       "name": "Somnovia",
+      "koName": "솜노비아",
       "sector": "health",
       "status": "active",
       "founded": 2020,
@@ -1043,6 +1078,7 @@
     {
       "slug": "nurvatek",
       "name": "Nurvatek",
+      "koName": "너바텍",
       "sector": "health",
       "status": "active",
       "founded": 2022,
@@ -1071,6 +1107,7 @@
     {
       "slug": "wellstrome",
       "name": "Wellstrome",
+      "koName": "웰스트롬",
       "sector": "health",
       "status": "ipo",
       "founded": 2014,
@@ -1099,6 +1136,7 @@
     {
       "slug": "rehalyn",
       "name": "Rehalyn",
+      "koName": "리할린",
       "sector": "health",
       "status": "active",
       "founded": 2024,
@@ -1127,6 +1165,7 @@
     {
       "slug": "dosierra",
       "name": "Dosierra",
+      "koName": "도시에라",
       "sector": "health",
       "status": "acquired",
       "founded": 2018,
@@ -1155,6 +1194,7 @@
     {
       "slug": "panomedra",
       "name": "Panomedra",
+      "koName": "파노메드라",
       "sector": "health",
       "status": "active",
       "founded": 2014,
@@ -1183,6 +1223,7 @@
     {
       "slug": "snackerly",
       "name": "Snackerly",
+      "koName": "스내커리",
       "sector": "consumer",
       "status": "ipo",
       "founded": 2015,
@@ -1211,6 +1252,7 @@
     {
       "slug": "wardovia",
       "name": "Wardovia",
+      "koName": "워도비아",
       "sector": "consumer",
       "status": "active",
       "founded": 2021,
@@ -1239,6 +1281,7 @@
     {
       "slug": "playmerra",
       "name": "Playmerra",
+      "koName": "플레이메라",
       "sector": "consumer",
       "status": "active",
       "founded": 2024,
@@ -1267,6 +1310,7 @@
     {
       "slug": "tastelyn",
       "name": "Tastelyn",
+      "koName": "테이스틀린",
       "sector": "consumer",
       "status": "active",
       "founded": 2019,
@@ -1295,6 +1339,7 @@
     {
       "slug": "roomverra",
       "name": "Roomverra",
+      "koName": "룸베라",
       "sector": "consumer",
       "status": "active",
       "founded": 2021,
@@ -1323,6 +1368,7 @@
     {
       "slug": "petarno",
       "name": "Petarno",
+      "koName": "페타르노",
       "sector": "consumer",
       "status": "active",
       "founded": 2015,
@@ -1351,6 +1397,7 @@
     {
       "slug": "fandelle",
       "name": "Fandelle",
+      "koName": "팬델",
       "sector": "consumer",
       "status": "active",
       "founded": 2016,
@@ -1379,6 +1426,7 @@
     {
       "slug": "grocevia",
       "name": "Grocevia",
+      "koName": "그로세비아",
       "sector": "consumer",
       "status": "acquired",
       "founded": 2018,
@@ -1407,6 +1455,7 @@
     {
       "slug": "trippara",
       "name": "Trippara",
+      "koName": "트리파라",
       "sector": "consumer",
       "status": "active",
       "founded": 2020,
@@ -1435,6 +1484,7 @@
     {
       "slug": "souvenelle",
       "name": "Souvenelle",
+      "koName": "수브넬",
       "sector": "consumer",
       "status": "active",
       "founded": 2021,
@@ -1463,6 +1513,7 @@
     {
       "slug": "voltarna",
       "name": "Voltarna",
+      "koName": "볼타르나",
       "sector": "climate",
       "status": "active",
       "founded": 2020,
@@ -1491,6 +1542,7 @@
     {
       "slug": "sunverra",
       "name": "Sunverra",
+      "koName": "선베라",
       "sector": "climate",
       "status": "acquired",
       "founded": 2012,
@@ -1519,6 +1571,7 @@
     {
       "slug": "gridelle",
       "name": "Gridelle",
+      "koName": "그리델",
       "sector": "climate",
       "status": "active",
       "founded": 2017,
@@ -1547,6 +1600,7 @@
     {
       "slug": "emberlyn",
       "name": "Emberlyn",
+      "koName": "엠버린",
       "sector": "climate",
       "status": "active",
       "founded": 2022,
@@ -1575,6 +1629,7 @@
     {
       "slug": "thermovia",
       "name": "Thermovia",
+      "koName": "서모비아",
       "sector": "climate",
       "status": "active",
       "founded": 2022,
@@ -1603,6 +1658,7 @@
     {
       "slug": "aeolyra",
       "name": "Aeolyra",
+      "koName": "에올리라",
       "sector": "climate",
       "status": "active",
       "founded": 2021,
@@ -1631,6 +1687,7 @@
     {
       "slug": "hydrenna",
       "name": "Hydrenna",
+      "koName": "하이드레나",
       "sector": "climate",
       "status": "active",
       "founded": 2022,
@@ -1659,6 +1716,7 @@
     {
       "slug": "circulyn",
       "name": "Circulyn",
+      "koName": "서큘린",
       "sector": "climate",
       "status": "active",
       "founded": 2023,
@@ -1687,6 +1745,7 @@
     {
       "slug": "fluxella",
       "name": "Fluxella",
+      "koName": "플럭셀라",
       "sector": "climate",
       "status": "active",
       "founded": 2021,
@@ -1715,6 +1774,7 @@
     {
       "slug": "kelverra",
       "name": "Kelverra",
+      "koName": "켈베라",
       "sector": "climate",
       "status": "active",
       "founded": 2024,
@@ -1743,6 +1803,7 @@
     {
       "slug": "fleetara",
       "name": "Fleetara",
+      "koName": "플리타라",
       "sector": "logistics",
       "status": "acquired",
       "founded": 2016,
@@ -1771,6 +1832,7 @@
     {
       "slug": "cargolyn",
       "name": "Cargolyn",
+      "koName": "카고린",
       "sector": "logistics",
       "status": "ipo",
       "founded": 2016,
@@ -1799,6 +1861,7 @@
     {
       "slug": "routella",
       "name": "Routella",
+      "koName": "루텔라",
       "sector": "logistics",
       "status": "active",
       "founded": 2019,
@@ -1827,6 +1890,7 @@
     {
       "slug": "dockverra",
       "name": "Dockverra",
+      "koName": "도크베라",
       "sector": "logistics",
       "status": "active",
       "founded": 2022,
@@ -1855,6 +1919,7 @@
     {
       "slug": "lanevia",
       "name": "Lanevia",
+      "koName": "레인비아",
       "sector": "logistics",
       "status": "active",
       "founded": 2019,
@@ -1883,6 +1948,7 @@
     {
       "slug": "portelyn",
       "name": "Portelyn",
+      "koName": "포틀린",
       "sector": "logistics",
       "status": "active",
       "founded": 2019,
@@ -1911,6 +1977,7 @@
     {
       "slug": "movarra",
       "name": "Movarra",
+      "koName": "모바라",
       "sector": "logistics",
       "status": "active",
       "founded": 2017,
@@ -1939,6 +2006,7 @@
     {
       "slug": "transelle",
       "name": "Transelle",
+      "koName": "트랜셀",
       "sector": "logistics",
       "status": "acquired",
       "founded": 2014,
@@ -1967,6 +2035,7 @@
     {
       "slug": "haulenna",
       "name": "Haulenna",
+      "koName": "하울레나",
       "sector": "logistics",
       "status": "active",
       "founded": 2020,
@@ -1995,6 +2064,7 @@
     {
       "slug": "velomerra",
       "name": "Velomerra",
+      "koName": "벨로메라",
       "sector": "logistics",
       "status": "active",
       "founded": 2017,
@@ -2023,6 +2093,7 @@
     {
       "slug": "quantrelle",
       "name": "Quantrelle",
+      "koName": "퀀트렐",
       "sector": "deeptech",
       "status": "active",
       "founded": 2019,
@@ -2051,6 +2122,7 @@
     {
       "slug": "photonyra",
       "name": "Photonyra",
+      "koName": "포토니라",
       "sector": "deeptech",
       "status": "active",
       "founded": 2024,
@@ -2079,6 +2151,7 @@
     {
       "slug": "nanovelle",
       "name": "Nanovelle",
+      "koName": "나노벨",
       "sector": "deeptech",
       "status": "active",
       "founded": 2014,
@@ -2107,6 +2180,7 @@
     {
       "slug": "semilyra",
       "name": "Semilyra",
+      "koName": "세밀리라",
       "sector": "deeptech",
       "status": "active",
       "founded": 2019,
@@ -2135,6 +2209,7 @@
     {
       "slug": "orbitanna",
       "name": "Orbitanna",
+      "koName": "오비타나",
       "sector": "deeptech",
       "status": "active",
       "founded": 2015,
@@ -2163,6 +2238,7 @@
     {
       "slug": "lidarelle",
       "name": "Lidarelle",
+      "koName": "리다렐",
       "sector": "deeptech",
       "status": "acquired",
       "founded": 2018,
@@ -2191,6 +2267,7 @@
     {
       "slug": "fuselyn",
       "name": "Fuselyn",
+      "koName": "퓨즐린",
       "sector": "deeptech",
       "status": "active",
       "founded": 2016,
@@ -2219,6 +2296,7 @@
     {
       "slug": "cryovanna",
       "name": "Cryovanna",
+      "koName": "크라이오바나",
       "sector": "deeptech",
       "status": "active",
       "founded": 2022,
@@ -2247,6 +2325,7 @@
     {
       "slug": "matterine",
       "name": "Matterine",
+      "koName": "매터린",
       "sector": "deeptech",
       "status": "active",
       "founded": 2019,
@@ -2275,6 +2354,7 @@
     {
       "slug": "servomere",
       "name": "Servomere",
+      "koName": "서보미어",
       "sector": "deeptech",
       "status": "active",
       "founded": 2017,

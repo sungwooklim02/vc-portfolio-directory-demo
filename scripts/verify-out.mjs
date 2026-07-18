@@ -46,7 +46,7 @@ for (const file of htmlFiles(OUT)) {
   const wantLang = isKo ? '<html lang="ko"' : '<html lang="en"';
   if (!html.includes(wantLang)) problems.push(`${rel}: missing ${wantLang}`);
   if (!html.includes("data-demo-badge")) problems.push(`${rel}: missing [DEMO] badge`);
-  const notice = isKo ? "모든 기업·브랜드·로고·데이터는 가상" : "is fictional. Not a client deliverable";
+  const notice = isKo ? "모든 기업·브랜드·로고·인물·데이터는 가상" : "is fictional. Not a client deliverable";
   if (!html.includes(notice)) problems.push(`${rel}: missing footer demo notice`);
   const ogLocale = isKo ? "ko_KR" : "en_US";
   if (!html.includes(ogLocale)) problems.push(`${rel}: missing og:locale ${ogLocale}`);

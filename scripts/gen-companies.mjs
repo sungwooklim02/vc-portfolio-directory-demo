@@ -201,6 +201,35 @@ const COMPANIES = {
   ],
 };
 
+/* ------------------------------------------------ Korean name renderings */
+// Hangul transliterations — searchable on /ko/ and shown on KO detail pages.
+const KO_NAMES = {
+  ledgerine: "레저린", payvorn: "페이본", finomere: "피노미어", trestapay: "트레스타페이",
+  vaultrine: "볼트린", credorna: "크레도나", remitello: "레미텔로", bursella: "버셀라",
+  yieldarn: "일드아른", monvarra: "몬바라",
+  opslune: "옵스룬", taskovia: "태스코비아", quorvane: "쿼베인", formyra: "포마이라",
+  docurella: "도큐렐라", meetrino: "미트리노", planovae: "플라노베이", deskarna: "데스카나",
+  flowbern: "플로우번", stagerly: "스테이절리",
+  modelyn: "모델린", vectorna: "벡토나", inferrix: "인페릭스", tensorel: "텐소렐",
+  datyrra: "다티라", corveil: "코베일", annotara: "아노타라", queryna: "쿼리나",
+  embedra: "엠베드라", synthemis: "신테미스",
+  medrovia: "메드로비아", curalyn: "큐라린", genotrella: "제노트렐라", vitarnelle: "비타넬",
+  somnovia: "솜노비아", nurvatek: "너바텍", wellstrome: "웰스트롬", rehalyn: "리할린",
+  dosierra: "도시에라", panomedra: "파노메드라",
+  snackerly: "스내커리", wardovia: "워도비아", playmerra: "플레이메라", tastelyn: "테이스틀린",
+  roomverra: "룸베라", petarno: "페타르노", fandelle: "팬델", grocevia: "그로세비아",
+  trippara: "트리파라", souvenelle: "수브넬",
+  voltarna: "볼타르나", sunverra: "선베라", gridelle: "그리델", emberlyn: "엠버린",
+  thermovia: "서모비아", aeolyra: "에올리라", hydrenna: "하이드레나", circulyn: "서큘린",
+  fluxella: "플럭셀라", kelverra: "켈베라",
+  fleetara: "플리타라", cargolyn: "카고린", routella: "루텔라", dockverra: "도크베라",
+  lanevia: "레인비아", portelyn: "포틀린", movarra: "모바라", transelle: "트랜셀",
+  haulenna: "하울레나", velomerra: "벨로메라",
+  quantrelle: "퀀트렐", photonyra: "포토니라", nanovelle: "나노벨", semilyra: "세밀리라",
+  orbitanna: "오비타나", lidarelle: "리다렐", fuselyn: "퓨즐린", cryovanna: "크라이오바나",
+  matterine: "매터린", servomere: "서보미어",
+};
+
 /* --------------------------------------------------- status assignments */
 const ACQUIRED = new Set([
   "fleetara", "trestapay", "docurella", "annotara", "genotrella",
@@ -385,9 +414,11 @@ for (const sector of SECTORS) {
       bodyKo = [p1Ko, p2Ko];
     }
 
+    if (!KO_NAMES[slug]) throw new Error(`missing KO name for ${slug}`);
     companies.push({
       slug,
       name,
+      koName: KO_NAMES[slug],
       sector: sector.id,
       status,
       founded,

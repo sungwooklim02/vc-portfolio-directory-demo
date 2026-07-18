@@ -34,21 +34,28 @@ interface Props {
   statuses: TaxonomyItem[];
 }
 
+type SortKey = "default" | "name" | "founded";
+
 export function Directory({ locale, items, sectors, statuses }: Props) {
   const s = t(locale);
   const [query, setQuery] = useState("");
   const [sector, setSector] = useState("all");
   const [status, setStatus] = useState("all");
+  const [sort, setSort] = useState<SortKey>("default");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return items.filter((c) => {
+    const list = items.filter((c) => {
       if (sector !== "all" && c.sector !== sector) return false;
       if (status !== "all" && c.status !== status) return false;
-      if (q && !`${c.name} ${c.oneLiner}`.toLowerCase().includes(q)) return false;
+      // haystack includes the Hangul name rendering on the KO locale
+      if (q && !`${c.name} ${c.koName ?? ""} ${c.oneLiner}`.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [items, query, sector, status]);
+    if (sort === "name") return [...list].sort((a, b) => a.name.localeCompare(b.name, "en"));
+    if (sort === "founded") return [...list].sort((a, b) => b.founded - a.founded);
+    return list;
+  }, [items, query, sector, status, sort]);
 
   const statusLabelOf = (id: string) => statuses.find((x) => x.id === id)?.label ?? id;
   const sectorLabelOf = (id: string) => sectors.find((x) => x.id === id)?.label ?? id;
@@ -64,6 +71,8 @@ export function Directory({ locale, items, sectors, statuses }: Props) {
 
   return (
     <section aria-label={s.directoryTitle}>
+      {/* keeps heading order sequential (h1 hero -> h2 section -> h3 cards) */}
+      <h2 className="sr-only">{s.directoryHeading}</h2>
       {/* filter bar */}
       <div className="flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-3">
@@ -84,6 +93,18 @@ export function Directory({ locale, items, sectors, statuses }: Props) {
               placeholder={s.searchPlaceholder}
               className="w-full rounded-lg border border-zinc-300 bg-white py-2 pl-9 pr-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-500"
             />
+          </label>
+          <label className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
+            <span className="font-medium uppercase tracking-wide text-zinc-400 dark:text-zinc-500">{s.sortLabel}</span>
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value as SortKey)}
+              className="rounded-md border border-zinc-300 bg-white py-1.5 pl-2 pr-6 text-xs text-zinc-700 focus:border-zinc-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200"
+            >
+              <option value="default">{s.sortDefault}</option>
+              <option value="name">{s.sortName}</option>
+              <option value="founded">{s.sortFounded}</option>
+            </select>
           </label>
           <p className="text-xs tabular-nums text-zinc-500 dark:text-zinc-400" aria-live="polite">
             {locale === "en"

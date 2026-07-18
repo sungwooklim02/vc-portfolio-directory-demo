@@ -15,6 +15,8 @@ export interface StatusDef {
 export interface Company {
   slug: string;
   name: string;
+  /** Hangul rendering of the name — searchable/displayed on KO pages. */
+  koName: string;
   sector: string;
   status: StatusId;
   founded: number;
@@ -62,16 +64,21 @@ export function statusLabel(id: StatusId, locale: Locale): string {
 export interface CardData {
   slug: string;
   name: string;
+  /** Hangul name — present on KO locale only (search matching). */
+  koName?: string;
   oneLiner: string;
   sector: string;
   status: StatusId;
+  founded: number;
 }
 export function cardData(locale: Locale): CardData[] {
   return companies.map((c) => ({
     slug: c.slug,
     name: c.name,
+    ...(locale === "ko" ? { koName: c.koName } : {}),
     oneLiner: c[locale].oneLiner,
     sector: c.sector,
     status: c.status,
+    founded: c.founded,
   }));
 }
