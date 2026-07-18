@@ -62,8 +62,8 @@ region (KR · JP · SG · US · DE · GB), two passes:
 - **Pass 2 "warm"**: repeated within ~60 s (Pages serves `cache-control:
   max-age=600`, so a HIT is expected on the same POP).
 
-Raw JSON for both passes is committed as measurement evidence
-(`ttfb-globalping.json` in the application run records). Numbers are recorded
+Raw JSON for both passes is committed as measurement evidence:
+[`ttfb-globalping.json`](./ttfb-globalping.json) in this repository. Numbers are recorded
 as observed — no cherry-picking. Limitations: single point in time, probes may
 land on different POPs between passes, and a free-tier edge (GitHub Pages)
 offers no TTL/invalidation control — a production build would use an edge CDN
