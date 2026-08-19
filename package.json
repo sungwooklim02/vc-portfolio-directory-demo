@@ -2,7 +2,7 @@
   "name": "vc-portfolio-directory-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "[DEMO] Bilingual (EN/KO) VC portfolio directory built as a static Next.js export. All companies and data are fictional.",
+  "description": "Bilingual (EN/KO) VC portfolio directory built as a static Next.js export. All companies and data are fictional.",
   "scripts": {
     "gen": "node scripts/gen-companies.mjs",
     "dev": "next dev",

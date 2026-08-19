@@ -28,11 +28,11 @@ export function Header({ locale }: { locale: Locale }) {
             {s.brand}
           </span>
           <span
-            data-demo-badge
-            title={s.demoBadgeTitle}
+            data-fiction-badge
+            title={s.fictionBadgeTitle}
             className="rounded-full border border-amber-400/60 bg-amber-50 px-2 py-0.5 text-[10px] font-bold tracking-widest text-amber-700 dark:border-amber-500/40 dark:bg-amber-950 dark:text-amber-400"
           >
-            {s.demoBadge}
+            {s.fictionBadge}
           </span>
         </Link>
         <nav aria-label="Main" className="order-3 flex w-full items-center gap-4 sm:order-none sm:w-auto sm:flex-1">
@@ -43,7 +43,7 @@ export function Header({ locale }: { locale: Locale }) {
             {s.navAbout}
           </Link>
           <Link href={p("/demo/")} className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100">
-            {s.navDemoNotes}
+            {s.navSiteNotes}
           </Link>
         </nav>
         <div className="ml-auto flex items-center gap-2 sm:ml-0">

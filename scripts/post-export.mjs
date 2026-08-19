@@ -34,7 +34,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>404 — Page not found · Velmara Ventures [DEMO]</title>
+<title>404 — Page not found · Velmara Ventures</title>
 <link rel="icon" href="${BASE}/favicon.svg">
 <style>
   :root { color-scheme: light; }
@@ -63,7 +63,7 @@ const html = `<!doctype html>
 </head>
 <body>
 <main>
-  <span class="badge">DEMO</span>
+  <span class="badge">FICTIONAL</span>
   <h1>404</h1>
   <p>This page does not exist.</p>
   <p lang="ko">존재하지 않는 페이지입니다.</p>

@@ -2,8 +2,8 @@ export const SITE_ORIGIN = "https://sungwooklim02.github.io";
 export const BASE_PATH = "/vc-portfolio-directory-demo";
 export const SITE_URL = `${SITE_ORIGIN}${BASE_PATH}`;
 export const REPO_URL = "https://github.com/sungwooklim02/vc-portfolio-directory-demo";
-export const SITE_NAME_EN = "Velmara Ventures [DEMO]";
-export const SITE_NAME_KO = "벨마라 벤처스 [데모]";
+export const SITE_NAME_EN = "Velmara Ventures";
+export const SITE_NAME_KO = "벨마라 벤처스";
 
 /** Absolute URL for a site path ("/", "/companies/x/", "/ko/about/", ...). */
 export function abs(path: string): string {

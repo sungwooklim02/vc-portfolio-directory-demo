@@ -7,11 +7,11 @@ import { withBase } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    default: "Velmara Ventures — [DEMO] VC Portfolio Directory",
-    template: "%s · Velmara Ventures [DEMO]",
+    default: "Velmara Ventures — VC Portfolio Directory",
+    template: "%s · Velmara Ventures",
   },
   description:
-    "A fictional bilingual VC portfolio directory built as a static demo. All companies and data are fictional.",
+    "A fictional bilingual VC portfolio directory built as a static site. All companies and data are fictional.",
   icons: { icon: withBase("/favicon.svg") },
 };
 

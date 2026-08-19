@@ -7,18 +7,18 @@ export function demoNotesMeta(locale: Locale): Metadata {
   return pageMeta(
     locale,
     "/demo/",
-    locale === "en" ? "About this demo" : "데모 안내",
+    locale === "en" ? "About this site" : "사이트 안내",
     locale === "en"
-      ? "What this demo is, three deliberate design points, and what is intentionally out of scope."
-      : "이 데모의 범위, 의도된 설계 포인트 3가지, 그리고 일부러 범위 밖에 둔 것들.",
+      ? "What this site is, three deliberate design points, and what is intentionally out of scope."
+      : "이 사이트의 범위, 의도된 설계 포인트 3가지, 그리고 일부러 범위 밖에 둔 것들.",
   );
 }
 
 const copy = {
   en: {
-    title: "About this demo",
+    title: "About this site",
     intro:
-      "This site is a self-built demo, not a client deliverable. It exists to demonstrate, with a working artifact, one specific slice: a bilingual (English-main / Korean) portfolio directory — 80 companies, grid, instant search, sector/status filters, and detail pages — built as a fully static site. Every company, brand, logo, and figure is fictional.",
+      "This site exists to show, with a working artifact rather than a description, one specific slice: a bilingual (English-main / Korean) portfolio directory — 80 companies, grid, instant search, sector/status filters, and detail pages — built as a fully static site. Every company, brand, logo, and figure is fictional.",
     pointsTitle: "Three deliberate design points",
     points: [
       {
@@ -31,15 +31,15 @@ const copy = {
       },
       {
         title: "Both-languages-complete seeding",
-        body: "This demo seeds English and Korean content at 100% for every company. Real content collection will not look like this: some companies won't provide English text. That case needs an explicit policy — hold the company from the English site, or fall back to Korean — and it is a planning decision, not a technical detail.",
+        body: "This site seeds English and Korean content at 100% for every company. Real content collection will not look like this: some companies won't provide English text. That case needs an explicit policy — hold the company from the English site, or fall back to Korean — and it is a planning decision, not a technical detail.",
       },
     ],
     scopeTitle: "Intentionally out of scope",
     scope: [
-      "Admin CMS, account issuance, and login of any kind — this demo is the visitor-facing screen only, and no such UI appears anywhere.",
+      "Admin CMS, account issuance, and login of any kind — this site is the visitor-facing screen only, and no such UI appears anywhere.",
       "Approval/review workflow for submitted content.",
       "Automatic locale redirect (kept to the standard explicit-path i18n so every URL is verifiable).",
-      "Real external links — company websites are fictional, so the button shows a demo notice instead of navigating.",
+      "Real external links — company websites are fictional, so the button shows a notice instead of navigating.",
       "Any backend: the site is a static export with zero server code.",
     ],
     verifyTitle: "Verify it yourself",
@@ -48,9 +48,9 @@ const copy = {
     verifyLink: "Source & measurement notes on GitHub",
   },
   ko: {
-    title: "데모 안내",
+    title: "사이트 안내",
     intro:
-      "이 사이트는 자체 제작한 데모이며, 클라이언트 납품물이 아닙니다. '영문 메인 + 국문'의 이중 언어 포트폴리오 디렉토리 — 80개사 그리드, 즉시 검색, 섹터·상태 필터, 상세 페이지 — 를 완전 정적 사이트로 만들면 어떤 모습인지, 서술이 아닌 실물로 보여 주기 위해 존재합니다. 등장하는 모든 기업·브랜드·로고·수치는 가상입니다.",
+      "이 사이트는 '영문 메인 + 국문'의 이중 언어 포트폴리오 디렉토리 — 80개사 그리드, 즉시 검색, 섹터·상태 필터, 상세 페이지 — 를 완전 정적 사이트로 만들면 어떤 모습인지, 서술이 아닌 실물로 보여 주기 위해 존재합니다. 등장하는 모든 기업·브랜드·로고·수치는 가상입니다.",
     pointsTitle: "의도된 설계 포인트 3가지",
     points: [
       {
@@ -63,15 +63,15 @@ const copy = {
       },
       {
         title: "양 언어 완비 시딩",
-        body: "이 데모는 모든 기업의 영문·국문 콘텐츠를 100% 채워 시딩했습니다. 실제 수집은 이렇게 흘러가지 않습니다 — 영문 소개를 주지 않는 기업이 반드시 나옵니다. 그 경우를 위한 명시적 정책(영문 사이트에서 노출 보류 또는 국문 대체 표기)이 별도로 필요하며, 이것은 기술 문제가 아니라 기획 결정입니다.",
+        body: "이 사이트는 모든 기업의 영문·국문 콘텐츠를 100% 채워 시딩했습니다. 실제 수집은 이렇게 흘러가지 않습니다 — 영문 소개를 주지 않는 기업이 반드시 나옵니다. 그 경우를 위한 명시적 정책(영문 사이트에서 노출 보류 또는 국문 대체 표기)이 별도로 필요하며, 이것은 기술 문제가 아니라 기획 결정입니다.",
       },
     ],
     scopeTitle: "일부러 범위 밖에 둔 것",
     scope: [
-      "관리자 CMS·계정 발급·로그인 일체 — 이 데모는 방문자 화면만 다루며, 그런 UI는 어디에도 두지 않았습니다.",
+      "관리자 CMS·계정 발급·로그인 일체 — 이 사이트는 방문자 화면만 다루며, 그런 UI는 어디에도 두지 않았습니다.",
       "등록 콘텐츠의 승인·검수 워크플로.",
       "언어 자동 리다이렉트(모든 URL을 검증 가능하게 유지하려고 표준 명시 경로 i18n만 사용).",
-      "실제 외부 링크 — 기업 웹사이트가 가상이므로, 버튼은 이동 대신 데모 안내를 표시합니다.",
+      "실제 외부 링크 — 기업 웹사이트가 가상이므로, 버튼은 이동 대신 안내 문구를 표시합니다.",
       "백엔드 일체 — 이 사이트는 서버 코드 0줄의 정적 export입니다.",
     ],
     verifyTitle: "직접 검증하기",

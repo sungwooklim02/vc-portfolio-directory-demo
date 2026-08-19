@@ -9,11 +9,11 @@ export function homeMeta(locale: Locale): Metadata {
     locale,
     "/",
     locale === "en"
-      ? "Velmara Ventures — [DEMO] VC Portfolio Directory"
-      : "벨마라 벤처스 — [데모] VC 포트폴리오 디렉토리",
+      ? "Velmara Ventures — VC Portfolio Directory"
+      : "벨마라 벤처스 — VC 포트폴리오 디렉토리",
     locale === "en"
-      ? `A fictional VC portfolio directory demo: ${stats.companies} companies with sector and status filters, instant search, and full English/Korean pages.`
-      : `가상 VC 포트폴리오 디렉토리 데모 — ${stats.companies}개사 그리드, 섹터·상태 필터, 즉시 검색, 영문/국문 페이지.`,
+      ? `A fictional VC portfolio directory: ${stats.companies} companies with sector and status filters, instant search, and full English/Korean pages.`
+      : `가상 VC 포트폴리오 디렉토리 — ${stats.companies}개사 그리드, 섹터·상태 필터, 즉시 검색, 영문/국문 페이지.`,
   );
 }
 
@@ -29,7 +29,7 @@ export function HomeView({ locale }: { locale: Locale }) {
       {/* compact hero — badge, one-line declaration, stat tiles; grid starts in first viewport */}
       <section className="pb-6 pt-8 sm:pt-10">
         <p
-          data-demo-badge
+          data-fiction-badge
           className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/60 bg-amber-50 px-3 py-1 text-[11px] font-semibold tracking-wide text-amber-700 dark:border-amber-500/40 dark:bg-amber-950 dark:text-amber-400"
         >
           <span aria-hidden="true">●</span>

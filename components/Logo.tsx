@@ -35,7 +35,7 @@ export function Logo({ slug, name, className }: { slug: string; name: string; cl
     <svg
       viewBox={`0 0 ${w} ${ht}`}
       role="img"
-      aria-label={`${name} logo (auto-generated demo monogram)`}
+      aria-label={`${name} logo (auto-generated monogram)`}
       className={className}
     >
       <rect width={w} height={ht} rx={rounded ? Math.min(w, ht) * 0.22 : Math.min(w, ht) * 0.5} fill={p.bg} />

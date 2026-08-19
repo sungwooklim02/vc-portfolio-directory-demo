@@ -441,7 +441,7 @@ if (slugs.size !== 80) throw new Error("duplicate slugs detected");
 console.log(`companies: ${companies.length} | sectors: ${SECTORS.length} | status:`, counts);
 
 const payload = {
-  note: "FICTIONAL DATASET — every company, brand, and figure here is invented for a demo. Names are synthetic coinages.",
+  note: "FICTIONAL DATASET — every company, brand, and figure here is invented. Names are synthetic coinages.",
   sectors: SECTORS.map(({ id, en, ko }) => ({ id, en, ko })),
   statuses: STATUSES,
   companies,

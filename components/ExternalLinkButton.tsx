@@ -5,7 +5,7 @@ import { t, type Locale } from "@/lib/i18n";
 
 /**
  * "Visit website" button for fictional companies — never navigates.
- * Shows an honest "[DEMO] fictional company" toast instead.
+ * Shows an honest "fictional company" toast instead.
  */
 export function ExternalLinkButton({ locale }: { locale: Locale }) {
   const s = t(locale);

@@ -1,7 +1,7 @@
 /**
  * verify-out.mjs — mechanical checks over the exported out/ directory.
  * Fails the build if any page misses: hreflang triple (en/ko/x-default),
- * correct <html lang>, the [DEMO] badge, or the fictional-data footer notice.
+ * correct <html lang>, the fictional-data badge, or the fictional-data footer notice.
  * Also asserts out/.nojekyll and out/404.html exist.
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
@@ -45,9 +45,9 @@ for (const file of htmlFiles(OUT)) {
   }
   const wantLang = isKo ? '<html lang="ko"' : '<html lang="en"';
   if (!html.includes(wantLang)) problems.push(`${rel}: missing ${wantLang}`);
-  if (!html.includes("data-demo-badge")) problems.push(`${rel}: missing [DEMO] badge`);
-  const notice = isKo ? "모든 기업·브랜드·로고·인물·데이터는 가상" : "is fictional. Not a client deliverable";
-  if (!html.includes(notice)) problems.push(`${rel}: missing footer demo notice`);
+  if (!html.includes("data-fiction-badge")) problems.push(`${rel}: missing fictional-data badge`);
+  const notice = isKo ? "모든 기업·브랜드·로고·인물·데이터는 가상" : "data point on this site is fictional";
+  if (!html.includes(notice)) problems.push(`${rel}: missing footer fictional-data notice`);
   const ogLocale = isKo ? "ko_KR" : "en_US";
   if (!html.includes(ogLocale)) problems.push(`${rel}: missing og:locale ${ogLocale}`);
 }
@@ -58,4 +58,4 @@ if (problems.length > 0) {
   for (const p of problems.slice(0, 40)) console.error("  " + p);
   process.exit(1);
 }
-console.log("PASS — hreflang x3, lang attr, DEMO badge, footer notice, og:locale on every page");
+console.log("PASS — hreflang x3, lang attr, fictional-data badge, footer notice, og:locale on every page");

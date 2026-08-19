@@ -1,9 +1,8 @@
-# [DEMO] VC Portfolio Directory — bilingual static export
+# VC Portfolio Directory — bilingual static export
 
-> **This is a self-built demo, not a client deliverable.** Every company,
-> brand, logo, and figure on the site is fictional (synthetic coinages).
-> 자체 제작 데모입니다. 클라이언트 수주·납품 실적이 아니며, 등장하는 투자사명·80개
-> 기업·데이터는 전부 가상입니다.
+> **Fictional dataset.** Every company, brand, logo, and figure on the site
+> is fictional (synthetic coinages).
+> 등장하는 투자사명·80개 기업·데이터는 전부 가상입니다.
 
 **Live**: https://sungwooklim02.github.io/vc-portfolio-directory-demo/
 (EN main · [한국어](https://sungwooklim02.github.io/vc-portfolio-directory-demo/ko/))
@@ -24,8 +23,8 @@ static site in two languages (English main at `/`, Korean at `/ko/`).
 
 Honest scope: **visitor-facing screens only.** No admin CMS, no accounts, no
 login UI anywhere, no backend. Company "websites" are fictional, so external
-link buttons show a demo notice instead of navigating. See the in-site page
-[About this demo](https://sungwooklim02.github.io/vc-portfolio-directory-demo/demo/).
+link buttons show a notice instead of navigating. See the in-site page
+[About this site](https://sungwooklim02.github.io/vc-portfolio-directory-demo/demo/).
 
 ## Stack
 
@@ -34,7 +33,7 @@ Next.js (App Router) + TypeScript + Tailwind CSS · `output: "export"` ·
 (`<html lang="en">` / `<html lang="ko">`) · all route files are thin wrappers
 that inject a locale into shared view components.
 
-Note on fonts: this demo deliberately ships **0 KB of webfonts** to keep the
+Note on fonts: this site deliberately ships **0 KB of webfonts** to keep the
 performance evidence clean (Korean webfonts are hundreds of KB). A production
 build would self-host a brand font via `next/font`.
 
@@ -46,8 +45,8 @@ npm run build   # gen data -> next build -> 404/.nojekyll -> mechanical verifica
 ```
 
 `scripts/verify-out.mjs` fails the build unless every exported page has the
-hreflang triple, the correct `<html lang>`, the DEMO badge, the fictional-data
-footer notice, and `og:locale`.
+hreflang triple, the correct `<html lang>`, the fictional-data badge, the
+fictional-data footer notice, and `og:locale`.
 
 Deploy: `npm run deploy` (local build → `gh-pages -d out --dotfiles`).
 
@@ -94,4 +93,4 @@ invalidation and a Seoul edge location).
 
 ## License
 
-MIT — demo/portfolio purposes. Fictional dataset included.
+MIT — portfolio purposes. Fictional dataset included.

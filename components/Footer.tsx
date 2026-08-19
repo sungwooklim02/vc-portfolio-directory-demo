@@ -6,7 +6,7 @@ export function Footer({ locale }: { locale: Locale }) {
   return (
     <footer className="border-t border-zinc-200 bg-zinc-100/60 dark:border-zinc-800 dark:bg-zinc-900/40">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-        <p data-demo-notice className="max-w-3xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        <p data-fiction-notice className="max-w-3xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
           {s.footerNotice}
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-zinc-500 dark:text-zinc-500">

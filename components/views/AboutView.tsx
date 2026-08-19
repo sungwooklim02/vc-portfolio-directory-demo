@@ -10,8 +10,8 @@ export function aboutMeta(locale: Locale): Metadata {
     "/about/",
     locale === "en" ? "About" : "소개",
     locale === "en"
-      ? "About Velmara Ventures — thesis, team, and history of a fictional early-stage firm created for this demo."
-      : "벨마라 벤처스 소개 — 본 데모를 위해 만든 가상 초기 투자사의 철학·팀·연혁입니다.",
+      ? "About Velmara Ventures — thesis, team, and history of a fictional early-stage firm."
+      : "벨마라 벤처스 소개 — 가상 초기 투자사의 철학·팀·연혁입니다.",
   );
 }
 
@@ -112,7 +112,7 @@ const copy = {
     factsTitle: "Firm facts",
     teamTitle: "Team",
     teamNote:
-      "All team members are fictional characters created for this demo — synthetic names, SVG initials, no photographs.",
+      "All team members are fictional characters — synthetic names, SVG initials, no photographs.",
     historyTitle: "History",
     history: [
       { year: "2016", text: "Firm founded in Seoul; first close of Fund I." },
@@ -127,7 +127,7 @@ const copy = {
       { city: "Singapore", address: "Level 12, 5 Quayreth Lane, Singapore" },
     ],
     officesNote:
-      "Addresses are fictional. General inquiries are outside this demo's scope — no contact form is provided.",
+      "Addresses are fictional. General inquiries are outside this site's scope — no contact form is provided.",
     portfolioLabel: "companies",
     sectorsLabel: "sectors",
   },
@@ -140,7 +140,7 @@ const copy = {
     ],
     factsTitle: "펌 개요",
     teamTitle: "팀",
-    teamNote: "팀 구성원은 모두 본 데모를 위해 만든 가상 인물입니다 — 합성 조어 이름과 SVG 이니셜만 사용하며 사진은 없습니다.",
+    teamNote: "팀 구성원은 모두 가상 인물입니다 — 합성 조어 이름과 SVG 이니셜만 사용하며 사진은 없습니다.",
     historyTitle: "연혁",
     history: [
       { year: "2016", text: "서울에서 창업, 1호 펀드 1차 클로징." },
@@ -154,7 +154,7 @@ const copy = {
       { city: "서울 (본사)", address: "서울 강남구 벨마라길 27, 16층" },
       { city: "싱가포르", address: "퀘이레스 레인 5, 12층, 싱가포르" },
     ],
-    officesNote: "주소는 가상입니다. 문의 접수는 데모 범위 밖이라 별도 양식을 두지 않았습니다.",
+    officesNote: "주소는 가상입니다. 문의 접수는 이 사이트의 범위 밖이라 별도 양식을 두지 않았습니다.",
     portfolioLabel: "개사",
     sectorsLabel: "개 분야",
   },

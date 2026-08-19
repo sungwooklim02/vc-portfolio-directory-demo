@@ -77,7 +77,7 @@ export function CoverArt({ slug, className }: { slug: string; className?: string
       viewBox="0 0 800 320"
       preserveAspectRatio="xMidYMid slice"
       role="img"
-      aria-label="Auto-generated cover artwork (demo)"
+      aria-label="Auto-generated cover artwork"
       className={className}
     >
       <rect width="800" height="320" fill={light} />
