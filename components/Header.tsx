@@ -7,7 +7,7 @@ export function Header({ locale }: { locale: Locale }) {
   const s = t(locale);
   const p = (path: string) => (locale === "en" ? path : path === "/" ? "/ko/" : `/ko${path}`);
   return (
-    <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/85 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/85">
+    <header className="venture-header sticky top-0 z-40 border-b border-zinc-200 bg-white/85 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/85">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-1 px-4 py-2.5 sm:px-6">
         <Link
           href={p("/")}

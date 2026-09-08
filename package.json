@@ -6,6 +6,7 @@
   "scripts": {
     "gen": "node scripts/gen-companies.mjs",
     "dev": "next dev",
+    "start": "node server.mjs",
     "build": "node scripts/gen-companies.mjs && next build && node scripts/post-export.mjs && node scripts/verify-out.mjs",
     "verify": "node scripts/verify-out.mjs",
     "deploy": "npm run build && gh-pages -d out --dotfiles"

@@ -142,13 +142,14 @@ export function Directory({ locale, items, sectors, statuses }: Props) {
 
       {/* grid */}
       {filtered.length > 0 ? (
-        <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <ul className="venture-grid mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filtered.map((c) => (
             <li key={c.slug}>
               <Link
                 href={detailPath(c.slug)}
                 className="group flex h-full flex-col rounded-xl border border-zinc-200 bg-white p-4 transition-colors hover:border-zinc-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600"
               >
+                <span className="venture-arrow" aria-hidden="true">↗</span>
                 <div className="flex items-center gap-3">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-200 dark:bg-zinc-800 dark:ring-zinc-700">
                     <Logo slug={c.slug} name={c.name} className="max-h-8 max-w-9" />

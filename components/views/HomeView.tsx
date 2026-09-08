@@ -25,9 +25,11 @@ export function HomeView({ locale }: { locale: Locale }) {
     { value: stats.exits, label: s.statExits },
   ];
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <div className="venture-home mx-auto max-w-6xl px-4 sm:px-6">
       {/* compact hero — badge, one-line declaration, stat tiles; grid starts in first viewport */}
-      <section className="pb-6 pt-8 sm:pt-10">
+      <section className="venture-hero pb-6 pt-8 sm:pt-10">
+        <p className="venture-eyebrow">BUILDING WHAT'S NEXT</p>
+        <div className="venture-orbit" aria-hidden="true"><i></i><i></i><i></i><span>V.</span></div>
         <p
           data-fiction-badge
           className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/60 bg-amber-50 px-3 py-1 text-[11px] font-semibold tracking-wide text-amber-700 dark:border-amber-500/40 dark:bg-amber-950 dark:text-amber-400"
@@ -35,10 +37,11 @@ export function HomeView({ locale }: { locale: Locale }) {
           <span aria-hidden="true">●</span>
           {s.heroBadge}
         </p>
-        <h1 className="mt-3 max-w-2xl text-2xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">
-          {s.heroLine}
+        <h1 className="venture-title mt-3 max-w-2xl text-2xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">
+          {locale === "en" ? <>Great ideas.<br /><em>Greater possibilities.</em></> : <>새로운 가능성,<br /><em>다음의 기준.</em></>}
         </h1>
-        <dl className="mt-5 grid max-w-xl grid-cols-3 gap-3">
+        <p className="venture-deck">{s.heroLine}</p>
+        <dl className="venture-stats mt-5 grid max-w-xl grid-cols-3 gap-3">
           {tiles.map((tile) => (
             <div
               key={tile.label}
@@ -53,7 +56,8 @@ export function HomeView({ locale }: { locale: Locale }) {
         </dl>
       </section>
 
-      <div className="pb-16">
+      <div className="venture-directory pb-16">
+        <div className="venture-section-label"><span>{locale === "en" ? "Explore our companies" : "포트폴리오 둘러보기"}</span><span>01 — {stats.companies}</span></div>
         <Directory
           locale={locale}
           items={cardData(locale)}
