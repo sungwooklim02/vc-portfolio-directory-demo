@@ -76,7 +76,7 @@ export function Directory({ locale, items, sectors, statuses }: Props) {
       {/* filter bar */}
       <div className="flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-3">
-          <label className="relative min-w-0 flex-1 sm:max-w-sm">
+          <label className="relative min-w-0 w-full flex-none sm:w-auto sm:flex-1 sm:max-w-sm">
             <span className="sr-only">{s.searchLabel}</span>
             <svg
               viewBox="0 0 24 24"
