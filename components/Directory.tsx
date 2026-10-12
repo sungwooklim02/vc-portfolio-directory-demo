@@ -144,6 +144,9 @@ export function Directory({ locale, items, sectors, statuses }: Props) {
   };
   const closeSheet = () => {
     const finish = () => {
+      // overlayOut commits its end keyframe (translateY(100%)) inline; drop it so the
+      // same element renders in place as the >=640px desktop chip bar.
+      sheetRef.current?.style.removeProperty("transform");
       setSheetOpen(false);
       filterBtnRef.current?.focus({ preventScroll: true });
     };
@@ -180,7 +183,10 @@ export function Directory({ locale, items, sectors, statuses }: Props) {
     };
     const mq = window.matchMedia("(min-width: 640px)");
     const onMq = () => {
-      if (mq.matches) setSheetOpen(false);
+      if (mq.matches) {
+        sheetRef.current?.style.removeProperty("transform");
+        setSheetOpen(false);
+      }
     };
     document.addEventListener("keydown", onKey);
     mq.addEventListener?.("change", onMq);
