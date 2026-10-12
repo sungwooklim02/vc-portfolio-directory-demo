@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { t, type Locale } from "@/lib/i18n";
 import { LangSwitch } from "./LangSwitch";
+import { NavLinks } from "./NavLinks";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Header({ locale }: { locale: Locale }) {
@@ -35,17 +36,13 @@ export function Header({ locale }: { locale: Locale }) {
             {s.fictionBadge}
           </span>
         </Link>
-        <nav aria-label="Main" className="order-3 flex w-full items-center gap-4 sm:order-none sm:w-auto sm:flex-1">
-          <Link href={p("/")} className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100">
-            {s.navPortfolio}
-          </Link>
-          <Link href={p("/about/")} className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100">
-            {s.navAbout}
-          </Link>
-          <Link href={p("/demo/")} className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100">
-            {s.navSiteNotes}
-          </Link>
-        </nav>
+        <NavLinks
+          items={[
+            { href: p("/"), label: s.navPortfolio },
+            { href: p("/about/"), label: s.navAbout },
+            { href: p("/demo/"), label: s.navSiteNotes },
+          ]}
+        />
         <div className="ml-auto flex items-center gap-2 sm:ml-0">
           <LangSwitch locale={locale} />
           <ThemeToggle locale={locale} />

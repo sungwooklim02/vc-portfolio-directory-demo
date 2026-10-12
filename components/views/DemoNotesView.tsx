@@ -84,13 +84,13 @@ export function DemoNotesView({ locale }: { locale: Locale }) {
   const c = copy[locale];
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <h1 className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">{c.title}</h1>
-      <p className="mt-5 text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">{c.intro}</p>
+      <h1 data-mk-enter className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">{c.title}</h1>
+      <p data-mk-enter className="mt-5 text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">{c.intro}</p>
 
       <h2 className="mt-10 text-lg font-semibold text-zinc-900 dark:text-zinc-100">{c.pointsTitle}</h2>
       <ol className="mt-4 space-y-4">
         {c.points.map((point, i) => (
-          <li key={point.title} className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
+          <li key={point.title} data-mk-reveal className="vpd-lift rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="flex items-baseline gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
               <span className="text-zinc-400 dark:text-zinc-500">{i + 1}.</span>
               {point.title}
@@ -103,7 +103,7 @@ export function DemoNotesView({ locale }: { locale: Locale }) {
       <h2 className="mt-10 text-lg font-semibold text-zinc-900 dark:text-zinc-100">{c.scopeTitle}</h2>
       <ul className="mt-4 space-y-2">
         {c.scope.map((item) => (
-          <li key={item.slice(0, 24)} className="flex gap-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+          <li key={item.slice(0, 24)} data-mk-reveal className="flex gap-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
             <span aria-hidden="true" className="mt-0.5 text-zinc-400 dark:text-zinc-600">—</span>
             {item}
           </li>

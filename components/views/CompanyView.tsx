@@ -47,7 +47,8 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10">
       <Link
         href={backHref}
-        className="inline-flex items-center gap-1 text-sm text-zinc-500 transition-colors hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100"
+        data-mk-enter
+        className="vpd-back inline-flex items-center gap-1 text-sm text-zinc-500 transition-colors hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:text-zinc-400 dark:hover:text-zinc-100"
       >
         <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="m15 18-6-6 6-6" />
@@ -55,8 +56,8 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
         {s.backToDirectory}
       </Link>
 
-      <header className="mt-5 flex items-start gap-4">
-        <span className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-zinc-50 ring-1 ring-inset ring-zinc-200 dark:bg-zinc-800 dark:ring-zinc-700">
+      <header className="mt-5 flex items-start gap-4" data-mk-enter>
+        <span className="vpd-detail-logo flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-zinc-50 ring-1 ring-inset ring-zinc-200 dark:bg-zinc-800 dark:ring-zinc-700">
           <Logo slug={c.slug} name={c.name} className="max-h-11 max-w-12" />
         </span>
         <div className="min-w-0">
@@ -71,9 +72,9 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
         </div>
       </header>
 
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">{copy.oneLiner}</p>
+      <p data-mk-enter className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">{copy.oneLiner}</p>
 
-      <figure className="mt-6">
+      <figure className="mt-6" data-mk-wipe>
         <CoverArt slug={c.slug} className="h-44 w-full rounded-xl sm:h-56" />
         <figcaption className="mt-1.5 text-xs text-zinc-400 dark:text-zinc-500">{s.coverCaption}</figcaption>
       </figure>
@@ -81,10 +82,10 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
       <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_240px]">
         <div className="space-y-4 text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">
           {copy.body.map((para) => (
-            <p key={para.slice(0, 32)}>{para}</p>
+            <p key={para.slice(0, 32)} data-mk-reveal>{para}</p>
           ))}
         </div>
-        <aside aria-label={locale === "en" ? "Company facts" : "기업 정보"}>
+        <aside data-mk-reveal aria-label={locale === "en" ? "Company facts" : "기업 정보"}>
           <dl className="space-y-3 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
             {facts.map((f) => (
               <div key={f.label}>
@@ -101,7 +102,7 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
         </aside>
       </div>
 
-      <div className="mt-10 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm dark:border-zinc-800 dark:bg-zinc-900/60">
+      <div data-mk-reveal className="mt-10 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm dark:border-zinc-800 dark:bg-zinc-900/60">
         <span className="text-zinc-500 dark:text-zinc-400">{s.crossLangHint} </span>
         <Link
           href={crossHref}

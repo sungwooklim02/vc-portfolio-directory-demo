@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Directory } from "@/components/Directory";
-import { cardData, sectors, statuses, stats } from "@/lib/companies";
+import { PortfolioOrbit } from "@/components/PortfolioOrbit";
+import { cardData, companies, sectors, statuses, stats } from "@/lib/companies";
 import { t, type Locale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
 
@@ -28,10 +29,14 @@ export function HomeView({ locale }: { locale: Locale }) {
     <div className="venture-home mx-auto max-w-6xl px-4 sm:px-6">
       {/* compact hero — badge, one-line declaration, stat tiles; grid starts in first viewport */}
       <section className="venture-hero pb-6 pt-8 sm:pt-10">
-        <p className="venture-eyebrow">BUILDING WHAT'S NEXT</p>
-        <div className="venture-orbit" aria-hidden="true"><i></i><i></i><i></i><span>V.</span></div>
+        <p className="venture-eyebrow" data-mk-enter>BUILDING WHAT'S NEXT</p>
+        <PortfolioOrbit
+          dots={companies.map((c) => ({ slug: c.slug, sector: c.sector, status: c.status }))}
+          sectorIds={sectors.map((x) => x.id)}
+        />
         <p
           data-fiction-badge
+          data-mk-enter
           className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/60 bg-amber-50 px-3 py-1 text-[11px] font-semibold tracking-wide text-amber-700 dark:border-amber-500/40 dark:bg-amber-950 dark:text-amber-400"
         >
           <span aria-hidden="true">●</span>
@@ -40,14 +45,15 @@ export function HomeView({ locale }: { locale: Locale }) {
         <h1 className="venture-title mt-3 max-w-2xl text-2xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">
           {locale === "en" ? <>Great ideas.<br /><em>Greater possibilities.</em></> : <>새로운 가능성,<br /><em>다음의 기준.</em></>}
         </h1>
-        <p className="venture-deck">{s.heroLine}</p>
+        <p className="venture-deck" data-mk-enter>{s.heroLine}</p>
         <dl className="venture-stats mt-5 grid max-w-xl grid-cols-3 gap-3">
           {tiles.map((tile) => (
             <div
               key={tile.label}
+              data-mk-enter
               className="rounded-lg border border-zinc-200 bg-white px-3 py-2.5 dark:border-zinc-800 dark:bg-zinc-900"
             >
-              <dd className="text-xl font-bold tabular-nums tracking-tight text-zinc-900 dark:text-zinc-100">
+              <dd data-mk-count={tile.value} className="text-xl font-bold tabular-nums tracking-tight text-zinc-900 dark:text-zinc-100">
                 {tile.value}
               </dd>
               <dt className="mt-0.5 text-[11px] leading-tight text-zinc-500 dark:text-zinc-400">{tile.label}</dt>
@@ -57,7 +63,7 @@ export function HomeView({ locale }: { locale: Locale }) {
       </section>
 
       <div className="venture-directory pb-16">
-        <div className="venture-section-label"><span>{locale === "en" ? "Explore our companies" : "포트폴리오 둘러보기"}</span><span>01 — {stats.companies}</span></div>
+        <div className="venture-section-label" data-mk-reveal><span>{locale === "en" ? "Explore our companies" : "포트폴리오 둘러보기"}</span><span>01 — {stats.companies}</span></div>
         <Directory
           locale={locale}
           items={cardData(locale)}

@@ -1,0 +1,182 @@
+/* ── Motion retrofit 2026-10-12 (ADR 0065 Amend (3), demo-design.md 10-3) ──────────────────
+   Imported by both root layouts right after globals.css.
+   Tokens + press/hover states + mobile filter sheet + View Transition choreography.
+   Floors: everything that moves is disabled under prefers-reduced-motion (globals.css block +
+   public/mk/motion-kit.css) and body.capture-mode (block at the end of this file + kit).
+   Pre-hiding happens only under html.mk-boot / .mk-pre, which JS adds only when motion is on;
+   motion-only layers are scoped to html.mk-on (also JS-added, motion on only). */
+
+:root {
+  --dur-1: 120ms; --dur-2: 220ms; --dur-3: 360ms; --dur-4: 640ms; --dur-5: 1100ms; --stagger: 45ms;
+  --ease-out: cubic-bezier(.2,.7,.2,1); --ease-in: cubic-bezier(.4,0,1,1);
+  --ease-expo: cubic-bezier(.16,1,.3,1); --ease-spring: cubic-bezier(.34,1.56,.64,1);
+  --accent: #52785e;
+}
+
+/* boot pre-hide (MotionRuntime removes mk-boot once the entry animations hold their from-state) */
+html.mk-boot main [data-mk-enter], html.mk-boot main [data-mk-wipe], html.mk-boot .venture-title,
+html.mk-boot .venture-orbit, html.mk-boot .venture-grid > li { opacity: 0; }
+
+/* ── cards: hover lift; shadow/border now transition (audit gap); press depth; arrow + logo micro-motion */
+.venture-grid > li > a {
+  transition: background-color var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out),
+    box-shadow var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-expo);
+}
+.venture-arrow { transition: transform var(--dur-3) var(--ease-spring), color var(--dur-2) var(--ease-out); }
+.venture-grid > li > a > div:first-child > span { transition: transform var(--dur-3) var(--ease-spring); }
+.vpd-ext-arrow, .vpd-back svg { transition: transform var(--dur-2) var(--ease-spring); }
+.vpd-lift { transition: transform var(--dur-3) var(--ease-expo), box-shadow var(--dur-3) var(--ease-out); }
+@media (hover: hover) {
+  .venture-grid > li > a:hover { transform: translateY(-4px); box-shadow: 0 14px 34px #243d1817; }
+  .venture-grid > li > a:hover .venture-arrow { transform: translate(3px, -3px) scale(1.12); color: #294d35; }
+  .dark .venture-grid > li > a:hover .venture-arrow { color: #b4cf91; }
+  .venture-grid > li > a:hover > div:first-child > span { transform: rotate(-6deg) scale(1.07); }
+  /* !important: MK.reveal/enter commitStyles() leave inline transform:none on revealed elements,
+     which would otherwise override these hover/press transforms (review fix 2026-10-12) */
+  .vpd-lift:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 26px #243d1812; }
+  .vpd-ext-btn:hover .vpd-ext-arrow { transform: translate(2px, -2px); }
+  .vpd-back:hover svg { transform: translateX(-3px); }
+}
+.venture-grid > li > a:active { transform: translateY(-1px) scale(.985); transition-duration: var(--dur-1); }
+
+/* ── press depth on every tappable control (button-like links included) */
+.venture-header a, .vpd-theme-btn, .vpd-ext-btn, .vpd-back, .vpd-filter-btn, .vpd-sheet-done, .vpd-sheet-close,
+.venture-directory select {
+  transition: transform var(--dur-1) var(--ease-out), background-color var(--dur-2) var(--ease-out),
+    color var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+}
+.venture-header a:active { transform: scale(.96); }
+.vpd-back:active { transform: scale(.96) !important; } /* .vpd-back is [data-mk-enter]: see .vpd-lift note */
+.vpd-theme-btn:active, .vpd-ext-btn:active, .vpd-filter-btn:active, .vpd-sheet-done:active,
+.vpd-sheet-close:active, .venture-directory button:active { transform: scale(.95); }
+.venture-directory select:active { transform: scale(.97); }
+.vpd-filter-btn:focus-visible, .vpd-sheet-done:focus-visible, .vpd-sheet-close:focus-visible {
+  outline: 2px solid #71717a; outline-offset: 2px;
+}
+
+/* theme icon swap spins in */
+html.mk-on.dark .vpd-sun, html.mk-on:not(.dark) .vpd-moon { animation: vpd-spin-in var(--dur-4) var(--ease-spring); }
+@keyframes vpd-spin-in { from { transform: rotate(-120deg) scale(.4); opacity: 0; } }
+
+/* header elevation once scrolled (is-scrolled is added by JS only when motion is on) */
+.venture-header { transition: box-shadow var(--dur-3) var(--ease-out); }
+.venture-header.is-scrolled { box-shadow: 0 8px 24px #10241612; }
+
+/* nav: current page is marked (aria-current) and underlined by a sliding indicator (motion on) */
+.vpd-nav a[aria-current] { color: #16291e; }
+.dark .vpd-nav a[aria-current] { color: #eef7e9; }
+.vpd-nav > .mk-indicator { background: #52785e; height: 2px; translate: 0 5px; }
+.dark .vpd-nav > .mk-indicator { background: #a3c991; }
+
+/* chips: sliding pill behind the pressed chip (has-ind + pill exist only when motion is on) */
+.vpd-chips > button { position: relative; z-index: 1; }
+.vpd-chips > .mk-indicator {
+  z-index: 0; height: 34px; border-radius: 8px; background: #294d35; box-shadow: 0 6px 16px #294d3533;
+  transition: transform var(--dur-3) var(--ease-expo), width var(--dur-3) var(--ease-expo), opacity var(--dur-2);
+}
+.venture-directory .vpd-chips.has-ind > button[aria-pressed=true] { background: transparent; border-color: transparent; }
+.vpd-count { display: inline-block; }
+
+/* hero signature: orbit canvas + pointer tilt + scroll parallax (vars set by JS, motion on only) */
+.vpd-orbit-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.venture-orbit span { position: relative; }
+html.mk-on .venture-orbit {
+  translate: 0 var(--py, 0px); rotate: var(--pr, 0deg);
+  transform: perspective(900px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
+  transition: transform var(--dur-4) var(--ease-out);
+}
+
+/* 360: the orbit (display:none under 600px in the static layout) returns as a faint background mark
+   behind the hero copy, only when motion is on — capture/reduced-motion layout is unchanged */
+@media (max-width: 600px) {
+  html.mk-on .venture-hero { isolation: isolate; }
+  html.mk-on .venture-orbit {
+    display: grid; z-index: -1; right: -64px; top: -36px; width: 230px; height: 230px; opacity: .55; pointer-events: none;
+  }
+  html.mk-on .venture-orbit::before { width: 120px; height: 120px; }
+  html.mk-on .venture-orbit span { display: none; }
+}
+
+/* about: history timeline line grows with scroll (scroll-driven), dots pop on hover */
+@supports (animation-timeline: view()) {
+  html.mk-on .vpd-tl-line {
+    transform-origin: top; animation: vpd-grow linear both;
+    animation-timeline: view(); animation-range: entry 10% cover 45%;
+  }
+}
+@keyframes vpd-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.vpd-tl-dot { transition: transform var(--dur-3) var(--ease-spring), background-color var(--dur-2); }
+html.mk-on .vpd-tl:hover .vpd-tl-dot { transform: scale(1.5); background: #52785e; }
+
+/* ── 360 recomposition: chip rows -> "Filters" button + bottom sheet; 44px touch targets */
+.vpd-filter-btn, .vpd-sheet-head, .vpd-sheet-done { display: none; }
+@media (max-width: 639px) {
+  .vpd-filter-btn {
+    display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; margin-left: auto;
+    border: 1px solid #dce3d8; border-radius: 10px; background: #fff; font-size: 13px; font-weight: 650; color: #1f3a2a;
+  }
+  .dark .vpd-filter-btn { background: #23321f; border-color: #526346; color: #e6eddf; }
+  .vpd-filter-count {
+    display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px;
+    background: #294d35; color: #fff; font-size: 11px; font-weight: 700;
+  }
+  .vpd-filters { display: none; }
+  .vpd-filters.is-open {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; max-height: 82dvh; overflow: auto;
+    overscroll-behavior: contain; background: #fff; border-radius: 20px 20px 0 0; gap: 18px;
+    padding: 8px 16px calc(16px + env(safe-area-inset-bottom)); box-shadow: 0 -14px 44px #0f1f142e;
+  }
+  .dark .vpd-filters.is-open { background: #1c2a1f; }
+  .vpd-filters.is-open .vpd-sheet-head {
+    display: flex; align-items: center; justify-content: space-between; position: relative; padding-top: 14px;
+    font-size: 16px; color: #16291e;
+  }
+  .dark .vpd-filters.is-open .vpd-sheet-head { color: #eef7e9; }
+  .vpd-sheet-grab {
+    position: absolute; left: 50%; top: 0; width: 40px; height: 4px; margin-left: -20px; border-radius: 4px; background: #cfd8cb;
+  }
+  .vpd-sheet-close {
+    display: inline-grid; place-items: center; width: 44px; height: 44px; margin-right: -10px; border: 0;
+    border-radius: 10px; background: none; color: inherit;
+  }
+  .vpd-filters.is-open .vpd-sheet-done {
+    display: flex; align-items: center; justify-content: center; min-height: 48px; border: 0; border-radius: 12px;
+    background: #294d35; color: #fff; font-size: 14px; font-weight: 700;
+  }
+  .vpd-sheet-backdrop { position: fixed; inset: 0; z-index: 69; background: #0f1a1266; }
+  .venture-directory .vpd-chips { gap: 8px; }
+  .venture-directory .vpd-chips > button { min-height: 44px; padding-left: 14px; padding-right: 14px; font-size: 13px; }
+  .vpd-chips > .mk-indicator { height: 44px; }
+}
+
+/* ── View Transitions: directional route slide (class set by JS), shared logo morph card <-> detail,
+   header held in place, theme switch circular reveal (WAAPI on the pseudo-element) */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  html.vt-route .venture-header { view-transition-name: vpd-header; }
+  html.vt-route .vpd-detail-logo { view-transition-name: vpd-logo; }
+  html.vt-fwd::view-transition-old(root) { animation: vpd-out-l var(--dur-3) var(--ease-in) both; }
+  html.vt-fwd::view-transition-new(root) { animation: vpd-in-r var(--dur-4) var(--ease-expo) both; }
+  html.vt-back::view-transition-old(root) { animation: vpd-out-r var(--dur-3) var(--ease-in) both; }
+  html.vt-back::view-transition-new(root) { animation: vpd-in-l var(--dur-4) var(--ease-expo) both; }
+  ::view-transition-group(vpd-logo) { animation-duration: var(--dur-4); animation-timing-function: var(--ease-expo); }
+  html.vt-theme::view-transition-old(root), html.vt-theme::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+}
+@keyframes vpd-out-l { to { opacity: 0; transform: translateX(-36px) scale(.985); } }
+@keyframes vpd-in-r { from { opacity: 0; transform: translateX(48px); } }
+@keyframes vpd-out-r { to { opacity: 0; transform: translateX(36px) scale(.985); } }
+@keyframes vpd-in-l { from { opacity: 0; transform: translateX(-48px); } }
+
+/* ── Floor 1: capture-mode — no animation/transition, nothing pre-hidden, JS-only motion layers gone */
+body.capture-mode *, body.capture-mode *::before, body.capture-mode *::after {
+  animation: none !important; transition: none !important; scroll-behavior: auto !important;
+}
+html.capture-mode::view-transition-group(*), html.capture-mode::view-transition-old(*),
+html.capture-mode::view-transition-new(*) { animation: none !important; }
+body.capture-mode .mk-pre, html.capture-mode main [data-mk-enter], html.capture-mode main [data-mk-wipe],
+html.capture-mode .venture-title, html.capture-mode .venture-orbit, html.capture-mode .venture-grid > li { opacity: 1 !important; }
+body.capture-mode .mk-indicator, body.capture-mode .mk-ripple { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .mk-pre, main [data-mk-enter], .venture-grid > li { opacity: 1 !important; }
+  .mk-indicator, .mk-ripple { display: none !important; }
+}

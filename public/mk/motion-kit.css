@@ -1,0 +1,60 @@
+/* motion-kit.css — companion styles for motion-kit.js (ADR 0065 Amend (3), 2026-10-12).
+   Load after the app's own stylesheet. Low-specificity (:where) so app rules win. */
+
+:where(:root) {
+  --dur-1: 120ms; --dur-2: 220ms; --dur-3: 360ms; --dur-4: 640ms; --dur-5: 1100ms; --stagger: 45ms;
+  --ease-out: cubic-bezier(.2,.7,.2,1); --ease-in-out: cubic-bezier(.65,0,.35,1);
+  --ease-spring: cubic-bezier(.34,1.56,.64,1); --ease-expo: cubic-bezier(.16,1,.3,1);
+}
+/* :where(:root) has zero specificity, so an app's own :root tokens always win regardless of load order. */
+
+/* press feedback — every tappable thing gets depth on press */
+:where(button, [role="button"], [role="tab"], .btn, .chip, a.card, .card[tabindex], summary) {
+  transition: transform var(--dur-1) var(--ease-out), background-color var(--dur-2) var(--ease-out),
+              color var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out),
+              box-shadow var(--dur-2) var(--ease-out), opacity var(--dur-2) var(--ease-out);
+}
+:where(button, [role="button"], [role="tab"], .btn, .chip, summary):active:not([disabled]):not([aria-disabled="true"]) {
+  transform: scale(.965);
+}
+:where(a.card, .card[tabindex]):active { transform: scale(.985); }
+
+/* ripple */
+.mk-ripple { position: absolute; border-radius: 50%; pointer-events: none; background: currentColor; transform: scale(0); }
+
+/* sliding tab indicator */
+.mk-indicator {
+  position: absolute; left: 0; top: 0; height: 2px; border-radius: 2px; background: var(--accent, currentColor);
+  pointer-events: none; transition: transform var(--dur-3) var(--ease-expo), width var(--dur-3) var(--ease-expo), opacity var(--dur-2);
+}
+
+/* pre-reveal: only ever added by JS when motion is on (floor 2) */
+.mk-pre { opacity: 0; }
+
+/* toasts */
+.mk-toasts { position: fixed; z-index: 9999; left: 50%; bottom: max(16px, env(safe-area-inset-bottom)); transform: translateX(-50%);
+  display: grid; gap: 8px; justify-items: center; pointer-events: none; width: min(92vw, 420px); }
+.mk-toast { pointer-events: auto; display: flex; gap: 12px; align-items: center; padding: 10px 14px; border-radius: 10px;
+  background: var(--ink, #1d2430); color: var(--bg, #fff); box-shadow: 0 10px 30px rgba(0,0,0,.18); font-size: .92em; }
+.mk-toast button { background: none; border: 0; color: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; padding: 4px; }
+.mk-check { vertical-align: -0.15em; }
+
+/* View Transitions: a stronger default cross-fade + slide for screen swaps */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) { animation: mk-vt-out var(--dur-2) cubic-bezier(.4,0,1,1) both; }
+  ::view-transition-new(root) { animation: mk-vt-in var(--dur-3) var(--ease-expo) both; }
+}
+@keyframes mk-vt-out { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes mk-vt-in { from { opacity: 0; transform: translateY(12px); } }
+
+/* Floor 1 — reduced motion and capture-mode: everything still, everything visible */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .mk-pre { opacity: 1 !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+body.capture-mode *, body.capture-mode *::before, body.capture-mode *::after {
+  animation: none !important; transition: none !important; scroll-behavior: auto !important; caret-color: transparent !important;
+}
+body.capture-mode .mk-pre { opacity: 1 !important; }
+body.capture-mode .mk-ripple, body.capture-mode .mk-toasts { display: none !important; }

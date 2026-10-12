@@ -191,10 +191,10 @@ export function AboutView({ locale }: { locale: Locale }) {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <h1 className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">{c.title}</h1>
+      <h1 data-mk-enter className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">{c.title}</h1>
       <div className="mt-5 space-y-4">
         {c.thesis.map((para) => (
-          <p key={para.slice(0, 32)} className="text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">
+          <p key={para.slice(0, 32)} data-mk-enter className="text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">
             {para}
           </p>
         ))}
@@ -205,7 +205,7 @@ export function AboutView({ locale }: { locale: Locale }) {
       </h2>
       <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
         {facts.map(([label, value]) => (
-          <div key={label} className="rounded-lg border border-zinc-200 bg-white px-3 py-2.5 dark:border-zinc-800 dark:bg-zinc-900">
+          <div key={label} data-mk-reveal className="rounded-lg border border-zinc-200 bg-white px-3 py-2.5 dark:border-zinc-800 dark:bg-zinc-900">
             <dt className="text-[11px] font-medium uppercase tracking-wide text-zinc-400 dark:text-zinc-500">{label}</dt>
             <dd className="mt-0.5 text-sm font-semibold text-zinc-900 dark:text-zinc-100">{value}</dd>
           </div>
@@ -215,7 +215,7 @@ export function AboutView({ locale }: { locale: Locale }) {
       <h2 className="mt-10 text-lg font-semibold text-zinc-900 dark:text-zinc-100">{c.teamTitle}</h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {TEAM.map((person) => (
-          <li key={person.name} className="flex gap-3 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
+          <li key={person.name} data-mk-reveal className="vpd-lift flex gap-3 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
             <InitialsAvatar name={person.name} />
             <div className="min-w-0">
               <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -232,11 +232,11 @@ export function AboutView({ locale }: { locale: Locale }) {
       <h2 className="mt-10 text-lg font-semibold text-zinc-900 dark:text-zinc-100">{c.historyTitle}</h2>
       <ol className="mt-4">
         {c.history.map((item, i) => (
-          <li key={item.year} className="relative flex gap-4">
+          <li key={item.year} data-mk-reveal className="vpd-tl relative flex gap-4">
             <div className="flex flex-col items-center">
-              <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-600" aria-hidden="true" />
+              <span className="vpd-tl-dot mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-600" aria-hidden="true" />
               {i < c.history.length - 1 && (
-                <span className="my-1 w-px flex-1 bg-zinc-200 dark:bg-zinc-800" aria-hidden="true" />
+                <span className="vpd-tl-line my-1 w-px flex-1 bg-zinc-200 dark:bg-zinc-800" aria-hidden="true" />
               )}
             </div>
             <div className="pb-5">
@@ -250,7 +250,7 @@ export function AboutView({ locale }: { locale: Locale }) {
       <h2 className="mt-10 text-lg font-semibold text-zinc-900 dark:text-zinc-100">{c.officesTitle}</h2>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {c.offices.map((office) => (
-          <div key={office.city} className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
+          <div key={office.city} data-mk-reveal className="vpd-lift rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{office.city}</h3>
             <p className="mt-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{office.address}</p>
           </div>
