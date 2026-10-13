@@ -1,4 +1,4 @@
-/* motion-kit.js — shared motion helpers for Moven demo apps (ADR 0065 Amend (3), 2026-10-12).
+/* motion-kit.js — shared motion helpers for the demo apps (ADR 0065 Amend (3), 2026-10-12).
  * Dependency-free, classic script (exposes window.MK) and ES-module friendly (MK is also returned).
  * Standard: demo-design.md section 10-3 — strong and impressive, never blocks input.
  * Floors (do not remove):
