@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { t, type Locale } from "@/lib/i18n";
+import { FirmMark } from "./FirmMark";
 import { LangSwitch } from "./LangSwitch";
 import { NavLinks } from "./NavLinks";
 import { ThemeToggle } from "./ThemeToggle";
@@ -14,17 +15,7 @@ export function Header({ locale }: { locale: Locale }) {
           href={p("/")}
           className="flex items-center gap-2 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500"
         >
-          <svg viewBox="0 0 48 48" className="h-6 w-6" aria-hidden="true">
-            <rect width="48" height="48" rx="10" className="fill-zinc-900 dark:fill-zinc-100" />
-            <path
-              d="M13 14 L24 36 L35 14"
-              fill="none"
-              className="stroke-zinc-100 dark:stroke-zinc-900"
-              strokeWidth="5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <FirmMark className="h-6 w-6" />
           <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             {s.brand}
           </span>

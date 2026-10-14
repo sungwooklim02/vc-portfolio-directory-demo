@@ -212,7 +212,7 @@ export function SearchBox({ locale, value, onChange, onFirstUse, options, help, 
                     onClick={() => openCompany(o.slug)}
                   >
                     <span className="vpd-sb-logo">
-                      <Logo slug={o.slug} name={o.name} className="max-h-5 max-w-6" />
+                      <Logo slug={o.slug} name={o.name} sector={o.sector} className="h-5 w-5" />
                     </span>
                     <span className="vpd-sb-text">
                       <span className="vpd-sb-name">

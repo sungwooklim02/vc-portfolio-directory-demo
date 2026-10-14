@@ -586,7 +586,7 @@ export function Directory({ locale, items, sectors, statuses, cities }: Props) {
                     </span>
                     <div className="flex items-center gap-3">
                       <span className="vpd-logo flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-200 dark:bg-zinc-800 dark:ring-zinc-700">
-                        <Logo slug={c.slug} name={c.name} className="max-h-8 max-w-9" />
+                        <Logo slug={c.slug} name={c.name} sector={c.sector} className="h-8 w-8" />
                       </span>
                       <div className="min-w-0">
                         <h3 className="truncate text-sm font-semibold text-zinc-900 group-hover:underline dark:text-zinc-100">

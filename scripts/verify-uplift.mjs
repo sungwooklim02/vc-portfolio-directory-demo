@@ -16,6 +16,8 @@
  *     source font is not served.
  *  5. Licence index lists every shipped third-party package and the licence texts exist.
  *  6. (WARN) Hangul visible on English pages is covered by the small kr-en font chunk.
+ *  7. Imagery: detail cover photos present/sized/alt, brand marks drawn, avatars local, metadata stripped,
+ *     trade name absent from image bytes, cover weight budget.
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, extname, join, relative, sep } from "node:path";
@@ -235,6 +237,98 @@ for (const p of walk(OUT, (name) => name === "_next" || name === "ko")) {
 }
 if (missing.size) warns.push(`${missing.size} Hangul glyph(s) on EN pages outside the kr-en chunk (first: ${[...missing.values()][0]})`);
 
+// ── 7. imagery (2026-10 2D rework) ──────────────────────────────────────────────────────────────
+//  - every detail page (EN + KO) has exactly one cover <img data-cover-photo> with alt, width/height, and every
+//    file in its src/srcset exists in out/; no old generated SVG cover remains
+//  - every brand mark is a drawn mark (no <text> monogram); team avatars are local images
+//  - raster images carry no EXIF/XMP/IPTC metadata, SVG images no <metadata>/<script>/external refs;
+//    image bytes are trade-name scanned too; cover weights stay within budget
+{
+  const data = JSON.parse(readFileSync(join(ROOT, "data", "companies.json"), "utf8"));
+  const srcFiles = (tag) => {
+    const list = [];
+    const src = tag.match(/\bsrc="([^"]+)"/i)?.[1];
+    if (src) list.push(src);
+    const set = tag.match(/\bsrcset="([^"]+)"/i)?.[1];
+    if (set) for (const part of set.split(",")) list.push(part.trim().split(/\s+/)[0]);
+    return list;
+  };
+  let covers = 0;
+  for (const c of data.companies) {
+    for (const page of [`companies/${c.slug}/index.html`, `ko/companies/${c.slug}/index.html`]) {
+      const fp = join(OUT, ...page.split("/"));
+      if (!existsSync(fp)) {
+        fails.push(`${page} missing`);
+        continue;
+      }
+      const html = readFileSync(fp, "utf8");
+      const imgs = [...html.matchAll(/<img\b[^>]*data-cover-photo="([^"]+)"[^>]*>/gi)];
+      if (imgs.length !== 1) {
+        fails.push(`${page}: expected 1 cover photo, found ${imgs.length}`);
+        continue;
+      }
+      const tag = imgs[0][0];
+      if (imgs[0][1] !== c.cover) fails.push(`${page}: cover ${imgs[0][1]} != dataset ${c.cover}`);
+      if (!/\balt="[^"]{8,}"/.test(tag)) fails.push(`${page}: cover alt missing`);
+      if (!/\bwidth="1600"/.test(tag) || !/\bheight="560"/.test(tag)) fails.push(`${page}: cover width/height attrs missing`);
+      const sources = [...html.matchAll(/<source\b[^>]*>/gi)].map((m) => m[0]).filter((t) => t.includes("/img/covers/"));
+      for (const u of [tag, ...sources].flatMap(srcFiles)) {
+        const p = outPath(u);
+        if (!p || !existsSync(p)) fails.push(`${page}: cover file ${u} not in out/`);
+      }
+      if (/Auto-generated cover artwork/.test(html)) fails.push(`${page}: old SVG cover art still rendered`);
+      covers++;
+    }
+  }
+  const home = readFileSync(join(OUT, "index.html"), "utf8");
+  const marks = [...home.matchAll(/<svg\b[^>]*aria-label="[^"]*fictional brand mark\)"[^>]*>([\s\S]*?)<\/svg>/gi)];
+  if (marks.length < 80) fails.push(`home: expected >= 80 brand marks, found ${marks.length}`);
+  for (const m of marks) if (/<text\b/i.test(m[1]) || !/<(?:path|circle|rect)\b/i.test(m[1])) fails.push("home: a brand mark is not a drawn mark");
+  for (const page of ["about/index.html", "ko/about/index.html"]) {
+    const html = readFileSync(join(OUT, ...page.split("/")), "utf8");
+    const av = [...html.matchAll(/<img\b[^>]*data-team-avatar[^>]*>/gi)].map((m) => m[0]);
+    if (av.length !== 5) fails.push(`${page}: expected 5 team avatars, found ${av.length}`);
+    for (const t of av) {
+      for (const u of srcFiles(t)) if (!outPath(u) || !existsSync(outPath(u))) fails.push(`${page}: avatar ${u} not in out/`);
+      if (!/\balt="[^"]{6,}"/.test(t)) fails.push(`${page}: avatar alt missing`);
+    }
+  }
+  const imgDir = join(OUT, "img");
+  const META = /Exif\x00\x00|<x:xmpmeta|ns\.adobe\.com\/xap|Photoshop 3\.0|8BIM/;
+  let rasters = 0;
+  let coverBytes = 0;
+  const coverByFmt = { ".avif": 0, ".webp": 0 };
+  if (!existsSync(imgDir)) fails.push("out/img missing");
+  else
+    for (const p of walk(imgDir)) {
+      const r = "out/" + relative(OUT, p).split(sep).join("/");
+      const ext = extname(p).toLowerCase();
+      const buf = readFileSync(p);
+      const latin = buf.toString("latin1");
+      if (NAME.test(latin) || NAME.test(buf.toString("utf8"))) fails.push(`trade name inside image bytes: ${r}`);
+      if (ext === ".webp" || ext === ".avif" || ext === ".jpg" || ext === ".png") {
+        rasters++;
+        if (META.test(latin) || /\bExif\b/.test(latin.slice(0, 4096))) fails.push(`image metadata not stripped: ${r}`);
+        if (r.includes("/img/covers/")) {
+          coverBytes += buf.length;
+          if (ext in coverByFmt) coverByFmt[ext] += buf.length;
+          const big = r.includes("-1600.");
+          const lim = big ? 120_000 : 60_000;
+          const soft = big ? 90_000 : 40_000;
+          if (buf.length > lim) fails.push(`${r}: ${fmt(buf.length)} B over ${fmt(lim)} B`);
+          else if (buf.length > soft) warns.push(`${r}: ${fmt(buf.length)} B over the ${fmt(soft)} B target`);
+        }
+      } else if (ext === ".svg") {
+        const t = buf.toString("utf8");
+        if (/<metadata|<script|<foreignObject|(?:href|src)="(?:https?:)?\/\/|url\((?:https?:)?\/\//i.test(t)) fails.push(`unsafe/unstripped SVG: ${r}`);
+      } else if (ext !== ".md") fails.push(`unexpected file type in out/img: ${r}`);
+    }
+  // a browser downloads one format, so the budget is per format (AVIF first, WebP fallback)
+  for (const [x, n] of Object.entries(coverByFmt)) if (n > 3_500_000) fails.push(`covers ${x} total ${fmt(n)} B > 3,500,000 B`);
+  if (!existsSync(join(OUT, "img", "CREDITS.md"))) fails.push("out/img/CREDITS.md missing");
+  console.log(`imagery: ${covers} detail covers, ${marks.length} brand marks on home, ${rasters} raster files (covers ${fmt(coverBytes)} B)`);
+}
+
 // ── result ───────────────────────────────────────────────────────────────────────────────────
 for (const w of warns) console.warn(`WARN ${w}`);
 if (fails.length) {
@@ -243,5 +337,5 @@ if (fails.length) {
   process.exit(1);
 }
 console.log(
-  `verify-uplift PASS — budgets, no external runtime requests, trade-name 0, generated assets, licences${warns.length ? ` (${warns.length} warning(s))` : ""}`,
+  `verify-uplift PASS — budgets, no external runtime requests, trade-name 0, generated assets, licences, imagery${warns.length ? ` (${warns.length} warning(s))` : ""}`,
 );

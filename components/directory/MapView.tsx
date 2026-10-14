@@ -667,7 +667,7 @@ export function MapView(p: Props) {
               <li key={c.slug}>
                 <Link href={locale === "en" ? `/companies/${c.slug}/` : `/ko/companies/${c.slug}/`} className="vpd-map-item">
                   <span className="vpd-logo vpd-map-logo">
-                    <Logo slug={c.slug} name={c.name} className="max-h-5 max-w-6" />
+                    <Logo slug={c.slug} name={c.name} sector={c.sector} className="h-5 w-5" />
                   </span>
                   <span className="min-w-0">
                     <span className="vpd-map-name">{c.name}</span>

@@ -124,6 +124,15 @@ export function startOrbit2D(
       ctx.beginPath();
       ctx.arc(x, y, rad, 0, Math.PI * 2);
       ctx.fill();
+      // a small specular glint, so the flat fallback reads like the glossy beads of the 3D scene
+      if (rad > 2.2) {
+        ctx.globalAlpha = alpha * 0.5;
+        ctx.fillStyle = "#ffffff";
+        ctx.beginPath();
+        ctx.arc(x - rad * 0.35, y - rad * 0.35, rad * 0.36, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.globalAlpha = alpha;
+      }
       if (dark) {
         ctx.globalAlpha = alpha * 0.8;
         ctx.strokeStyle = color;

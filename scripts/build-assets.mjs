@@ -5,6 +5,8 @@
  *   2. Vendor bundles (esbuild, IIFE globals)   public/vendor/three-lite-<v>.min.js, echarts-lite-<v>.min.js
  *   3. Local geodata                            public/vendor/geo/countries-110m-<v>.json (no tile server)
  *   4. Licence texts of everything shipped      public/vendor/licenses/*
+ *   5. Favicon from lib/firm-mark.mjs           public/favicon.svg
+ *   6. Team avatars (DiceBear Notionists, CC0)  public/img/team/*.svg (scripts/gen-avatars.mjs)
  *
  * Generated files are gitignored (see .gitignore) except the licence texts, which are committed and
  * re-copied here so a version bump updates them. Nothing is fetched from the network: the inputs are
@@ -39,7 +41,7 @@ const bundles = [
     entry: "scripts/vendor/three.entry.js",
     global: "THREE_LITE",
     out: `three-lite-${version("three")}.min.js`,
-    banner: `three.js ${version("three")} (core + OrbitControls) | MIT | licenses/three-LICENSE.txt`,
+    banner: `three.js ${version("three")} (core + OrbitControls, RoomEnvironment, RoundedBoxGeometry) | MIT | licenses/three-LICENSE.txt`,
   },
   {
     entry: "scripts/vendor/echarts.entry.js",
@@ -105,4 +107,12 @@ for (const [pkg, file, out] of licences) {
   writeFileSync(join(LIC, out), text.endsWith("\n") ? text : text + "\n", "utf8");
 }
 console.log(`  licences ${licences.length} files -> public/vendor/licenses/`);
+// 5. favicon from the single firm-mark source (lib/firm-mark.mjs) so header and tab icon never drift
+const { firmMarkSvg } = await import("../lib/firm-mark.mjs");
+writeFileSync(join(ROOT, "public", "favicon.svg"), firmMarkSvg(), "utf8");
+console.log("  favicon public/favicon.svg (from lib/firm-mark.mjs)");
+
+// 6. illustrated team avatars (CC0 Notionists via DiceBear) -> public/img/team/*.svg
+await import("./gen-avatars.mjs");
+
 console.log(`build-assets done in ${((Date.now() - t0) / 1000).toFixed(1)}s`);

@@ -308,7 +308,9 @@
 /* ── hero orbit, 3D: the WebGL canvas cross-fades in over the CSS rings + core (which stay as the skeleton) */
 .venture-orbit > i, .venture-orbit::before { transition: opacity var(--dur-4) var(--ease-out); }
 .venture-orbit.is-3d > i, .venture-orbit.is-3d::before, .dark .venture-orbit.is-3d::before { opacity: 0; }
-.venture-orbit > span { z-index: 2; pointer-events: none; }
+.venture-orbit > span { z-index: 2; pointer-events: none; transition: opacity var(--dur-4) var(--ease-out); }
+/* 3D mode: the "V." is a modelled emblem on the core (OrbitScene.ts), so the flat HTML letter steps aside */
+.venture-orbit.is-3d > span { opacity: 0; }
 .vpd-orbit-gl {
   position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; opacity: 0; pointer-events: none;
   transition: opacity var(--dur-4) var(--ease-out);
@@ -348,3 +350,23 @@
 .vpd-related-name { display: block; font-size: 14px; font-weight: 680; }
 .vpd-related-line { display: -webkit-box; margin-top: 2px; overflow: hidden; font-size: 12px; line-height: 1.5; color: var(--vpd-ink-3); -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .vpd-related-card > svg { flex: none; margin-left: auto; color: var(--vpd-ink-3); }
+
+/* ── brand marks (components/Logo.tsx): colours arrive per company as --lg-a/b/c inline vars */
+.vpd-lg-solid { fill: var(--lg-a); }
+.vpd-lg-tint { fill: var(--lg-b); fill-opacity: .42; }
+.vpd-lg-on { fill: #fff; }
+.vpd-lg-on2 { fill: #fff; fill-opacity: .58; }
+.vpd-lg-ink { fill: var(--lg-a); }
+.vpd-lg-ink2 { fill: var(--lg-b); }
+.dark .vpd-lg-ink { fill: var(--lg-c); }
+.dark .vpd-lg-ink2 { fill: var(--lg-c); fill-opacity: .5; }
+.dark .vpd-lg-tint { fill: var(--lg-c); fill-opacity: .16; }
+.dark .vpd-lg-solid { fill: var(--lg-a); }
+
+/* ── firm mark (components/FirmMark.tsx; colours mirror lib/firm-mark.mjs) */
+.vpd-fm-tile { fill: #294d35; }
+.vpd-fm-v { stroke: #f4f8f1; }
+.vpd-fm-dot { fill: #a3c991; }
+.dark .vpd-fm-tile { fill: #a3c991; }
+.dark .vpd-fm-v { stroke: #19231b; }
+.dark .vpd-fm-dot { fill: #294d35; }

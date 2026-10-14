@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BackToDirectory } from "@/components/BackToDirectory";
-import { CoverArt } from "@/components/CoverArt";
+import { CoverPhoto } from "@/components/CoverPhoto";
 import { StatusBadge } from "@/components/Directory";
 import { ExternalLinkButton } from "@/components/ExternalLinkButton";
 import { Icon, Icons, SectorIcon } from "@/components/icons";
@@ -53,7 +53,7 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
 
       <header className="mt-5 flex items-start gap-4" data-mk-enter>
         <span className="vpd-detail-logo flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-zinc-50 ring-1 ring-inset ring-zinc-200 dark:bg-zinc-800 dark:ring-zinc-700">
-          <Logo slug={c.slug} name={c.name} className="max-h-11 max-w-12" />
+          <Logo slug={c.slug} name={c.name} sector={c.sector} className="h-12 w-12" />
         </span>
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
@@ -70,7 +70,7 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
       <p data-mk-enter className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">{copy.oneLiner}</p>
 
       <figure className="mt-6" data-mk-wipe>
-        <CoverArt slug={c.slug} className="h-44 w-full rounded-xl sm:h-56" />
+        <CoverPhoto id={c.cover} locale={locale} className="h-44 w-full rounded-xl sm:h-56" />
         <figcaption className="mt-1.5 text-xs text-zinc-400 dark:text-zinc-500">{s.coverCaption}</figcaption>
       </figure>
 
@@ -108,7 +108,7 @@ export function CompanyView({ locale, slug }: { locale: Locale; slug: string }) 
               <li key={r.slug}>
                 <Link href={detailHref(r.slug)} className="vpd-related-card">
                   <span className="vpd-related-logo">
-                    <Logo slug={r.slug} name={r.name} className="max-h-7 max-w-8" />
+                    <Logo slug={r.slug} name={r.name} sector={r.sector} className="h-7 w-7" />
                   </span>
                   <span className="min-w-0">
                     <span className="vpd-related-name">

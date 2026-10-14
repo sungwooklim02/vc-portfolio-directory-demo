@@ -21,11 +21,11 @@ static site in two languages (English main at `/`, Korean at `/ko/`).
 | Search that forgives typos and understands Korean input | Search box: fuzzy match (Fuse.js), Korean initial consonants (`ㄹㅈㄹ`), English-keyboard Korean (`fpwjfls` → suggestion), highlighted matches, keyboard suggestions (`/`, ↑↓, Enter, Esc) — `npm test` covers the matcher |
 | Shareable filter state | Every filter, the sort, the view and the year range live in the URL (`?sector=…&city=…&from=…`); reload, back/forward and the language switch keep them |
 | Map view + charts | "Map" view: HQ cities on a local world map (Apache ECharts, SVG), companies-by-sector bars, founding-year histogram with a range slider — all wired to the same filters as the grid |
-| 3D hero | The hero mark is a three.js scene (80 companies on three orbits, lit, drag-rotate with limits, hover + click to a company, reset view); 2D fallback with `?webgl=0`, without WebGL and on phones (under 601px, where it is a background mark); hovering a dot marks its card; reduced motion draws one still frame; `?capture=1` loads the scene at once and sets `<html data-orbit-ready="1">` on the final frame |
+| 3D hero | The hero mark is a three.js scene (80 companies as glossy beads on three metal orbit bands around a glazed core with the "V." mark modelled into it; image-based studio light from three's procedural RoomEnvironment, ACES tone mapping, sRGB output, a soft drop shadow; motion trails, 3D exit rings and curved link tubes for the filter; every model and texture is generated in code, about 42k triangles still / 49k with motion; drag-rotate with limits, hover + click to a company, reset view); 2D fallback with `?webgl=0`, without WebGL and on phones (under 601px, where it is a background mark); hovering a dot marks its card; reduced motion draws one still frame; `?capture=1` loads the scene at once and sets `<html data-orbit-ready="1">` on the final frame |
 | Detail pages ×80×2 languages from one data file | `scripts/gen-companies.mjs` → `data/companies.json` → `generateStaticParams` (166 static HTML pages) |
 | Standard explicit-path i18n | EN root + `/ko/` subpath, per-page language switch, `hreflang` en/ko/`x-default` link tags on every page (view-source), `og:locale`, sitemap with alternates |
 | Overseas latency posture | Static generation + edge CDN (GitHub Pages/Fastly). Multi-region TTFB measured below |
-| Performance budget (2026-07, GitHub Pages build) | Zero webfonts (100% system font stack), zero raster images (all logos/covers are deterministic inline SVG), first-load JS ≈ 111 kB raw before compression |
+| Performance budget (2026-07, GitHub Pages build) | Zero webfonts (100% system font stack), zero raster images (all logos/covers were deterministic inline SVG; since 2026-10 the detail covers are licensed stock photos, see public/img/CREDITS.md), first-load JS ≈ 111 kB raw before compression |
 | Performance budget (2026-10 renewal build, measured with `npm run build`) | See [Renewal build budget](#renewal-build-budget-2026-10) — self-hosted subset webfont, heavy libraries loaded only when used, `scripts/verify-uplift.mjs` fails the build over budget |
 
 Honest scope: **visitor-facing screens only.** No admin CMS, no accounts, no
@@ -72,12 +72,12 @@ compression level was not measured). Fonts are woff2 file sizes.
 
 | What | When it loads | Size |
 |---|---|---|
-| Home first-screen JS (modern chunks + motion kit, EN = KO) | first paint | 142,775 B |
-| three.js bundle (core + OrbitControls) + 3D scene code | home at 601px and wider, on idle after first paint (phones draw the orbit with the 2D canvas instead) | +143,588 B + 3,774 B → 290,137 B with the first screen (budget 300,000 B) |
+| Home first-screen JS (modern chunks + motion kit, EN = KO) | first paint | 144,339 B |
+| three.js bundle (core + OrbitControls, RoomEnvironment, RoundedBoxGeometry) + 3D scene code | home at 601px and wider, on idle after first paint (phones draw the orbit with the 2D canvas instead) | +143,902 B + 5,835 B → 294,077 B with the first screen (budget 300,000 B) |
 | Fuse.js + es-hangul chunks | first focus of the search box | 7,648 B + 7,149 B |
 | Apache ECharts bundle + map view code + world map data | first open of the map view | 201,205 B + 6,724 B + 38,063 B |
 | Company page first-screen JS | first paint | 140,505 B |
-| All JavaScript in the build (37 files, legacy polyfills included) | — | 664,590 B (budget 1,000,000 B) |
+| All JavaScript in the build (37 files, legacy polyfills included) | — | 668,591 B (budget 1,000,000 B) |
 | Webfont, English pages | first paint | 47,644 B (Latin) + 6,088 B (the few Hangul glyphs on English pages) |
 | Webfont, Korean pages | first paint | + 99,044 B (Hangul used by the site) |
 | Webfont, other Hangul | only when such text is typed into search | 337,920 B |

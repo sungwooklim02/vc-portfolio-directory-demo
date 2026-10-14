@@ -23,6 +23,8 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@dicebear/core": "9.4.3",
+    "@dicebear/notionists": "9.4.3",
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.1.0",

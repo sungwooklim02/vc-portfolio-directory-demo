@@ -1,57 +1,53 @@
 import { hashString } from "@/lib/hash";
+import { MARKS, SECTOR_COLOURS, type MarkShape } from "./logo/marks";
 
 /**
- * Deterministic SVG monogram "logo". Aspect ratios vary on purpose so the
- * card frame demonstrates logo normalization — mismatched source logos
- * absorbed by a uniform container.
+ * Deterministic brand mark for a FICTIONAL company: one of 24 hand-drawn abstract marks (components/logo/
+ * marks.ts) in one of three sector-tied brand colours, presented in one of four container styles — solid
+ * rounded square, solid circle, bare mark, or tinted tile. The mix is intentional: real portfolio logos
+ * never arrive in one format, and the uniform card frame normalises them into one grid.
+ * The company name is set as text next to the mark wherever the logo appears, so the tile shows the mark only.
  */
-const PALETTE = [
-  { bg: "#e7e0d8", fg: "#57534e" }, // warm stone
-  { bg: "#dbe4dd", fg: "#3f6152" }, // sage
-  { bg: "#dde3ea", fg: "#3e5468" }, // slate blue
-  { bg: "#e8dee6", fg: "#5f4460" }, // mauve
-  { bg: "#e9e2d0", fg: "#6b5d34" }, // olive sand
-  { bg: "#dee6e8", fg: "#38585e" }, // teal mist
-  { bg: "#eadedc", fg: "#6b4540" }, // clay
-  { bg: "#e2e2e9", fg: "#4b4b63" }, // periwinkle grey
-];
-const RATIOS: Array<[number, number]> = [
-  [48, 48],
-  [64, 40],
-  [40, 64],
-  [72, 32],
-  [56, 44],
-];
+type Container = "squircle" | "circle" | "bare" | "tint";
+const CONTAINERS: Container[] = ["squircle", "circle", "bare", "tint"];
 
-export function Logo({ slug, name, className }: { slug: string; name: string; className?: string }) {
+function Shape({ s, fill }: { s: MarkShape; fill: string }) {
+  if (s.k === "circle") return <circle cx={s.cx} cy={s.cy} r={s.r} className={fill} />;
+  if (s.k === "rect") return <rect x={s.x} y={s.y} width={s.w} height={s.h} rx={s.rx} className={fill} />;
+  return <path d={s.d} className={fill} fillRule={s.evenOdd ? "evenodd" : undefined} clipRule={s.evenOdd ? "evenodd" : undefined} />;
+}
+
+export function Logo({ slug, name, sector, className }: { slug: string; name: string; sector: string; className?: string }) {
   const h = hashString(slug);
-  const p = PALETTE[h % PALETTE.length];
-  const [w, ht] = RATIOS[(h >>> 3) % RATIOS.length];
-  const wide = w / ht >= 1.5;
-  const label = wide ? name.slice(0, 3).toUpperCase() : name.charAt(0).toUpperCase();
-  const fontSize = wide ? ht * 0.42 : Math.min(w, ht) * 0.5;
-  const rounded = (h >>> 6) % 2 === 0;
+  const shades = SECTOR_COLOURS[sector] ?? SECTOR_COLOURS.deeptech;
+  const [base, tint, light] = shades[(h >>> 7) % shades.length];
+  const mark = MARKS[h % MARKS.length];
+  const container = CONTAINERS[(h >>> 11) % CONTAINERS.length];
+  const style = { "--lg-a": base, "--lg-b": tint, "--lg-c": light } as React.CSSProperties;
+  const label = `${name} logo (fictional brand mark)`;
+
+  if (container === "bare") {
+    return (
+      <svg viewBox="0 0 24 24" role="img" aria-label={label} className={className} style={style} data-logo-mark="bare">
+        {mark.map((s, i) => (
+          <Shape key={i} s={s} fill={s.tone === 0 ? "vpd-lg-ink" : "vpd-lg-ink2"} />
+        ))}
+      </svg>
+    );
+  }
+  const solid = container === "squircle" || container === "circle";
   return (
-    <svg
-      viewBox={`0 0 ${w} ${ht}`}
-      role="img"
-      aria-label={`${name} logo (auto-generated monogram)`}
-      className={className}
-    >
-      <rect width={w} height={ht} rx={rounded ? Math.min(w, ht) * 0.22 : Math.min(w, ht) * 0.5} fill={p.bg} />
-      <text
-        x="50%"
-        y="54%"
-        dominantBaseline="middle"
-        textAnchor="middle"
-        fontFamily="ui-sans-serif, system-ui, sans-serif"
-        fontWeight="700"
-        letterSpacing={wide ? 1 : 0}
-        fontSize={fontSize}
-        fill={p.fg}
-      >
-        {label}
-      </text>
+    <svg viewBox="0 0 36 36" role="img" aria-label={label} className={className} style={style} data-logo-mark={container}>
+      {container === "circle" ? (
+        <circle cx="18" cy="18" r="18" className="vpd-lg-solid" />
+      ) : (
+        <rect width="36" height="36" rx="9.5" className={solid ? "vpd-lg-solid" : "vpd-lg-tint"} />
+      )}
+      <g transform="translate(6 6)">
+        {mark.map((s, i) => (
+          <Shape key={i} s={s} fill={solid ? (s.tone === 0 ? "vpd-lg-on" : "vpd-lg-on2") : s.tone === 0 ? "vpd-lg-ink" : "vpd-lg-ink2"} />
+        ))}
+      </g>
     </svg>
   );
 }

@@ -28,7 +28,7 @@ const copy = {
       },
       {
         title: "Logo normalization",
-        body: "The generated logos intentionally vary in aspect ratio — square, wide, tall. The card frame absorbs the differences into a uniform grid. In a real build, this is the difference between a directory that looks curated and one that looks pasted together, because real companies never deliver logos in one format.",
+        body: "The fictional brand marks intentionally arrive in different formats — solid rounded square, circle, bare mark, tinted tile — in each sector's own colours. The card frame absorbs the differences into a uniform grid. In a real build, this is the difference between a directory that looks curated and one that looks pasted together, because real companies never deliver logos in one format.",
       },
       {
         title: "Both-languages-complete seeding",
@@ -60,7 +60,7 @@ const copy = {
       },
       {
         title: "로고 정규화",
-        body: "생성된 로고들은 일부러 비율이 제각각입니다 — 정사각, 가로형, 세로형. 카드 프레임이 그 차이를 흡수해 균일한 그리드를 유지합니다. 실제 기업들이 로고를 한 가지 규격으로 주는 일은 없기 때문에, 이 처리가 '정돈된 디렉토리'와 '붙여 넣은 디렉토리'를 가릅니다.",
+        body: "가상 브랜드 마크들은 일부러 형식이 제각각입니다 — 채운 사각형, 원형, 마크 단독, 옅은 타일 — 색도 섹터별로 다릅니다. 카드 프레임이 그 차이를 흡수해 균일한 그리드를 유지합니다. 실제 기업들이 로고를 한 가지 규격으로 주는 일은 없기 때문에, 이 처리가 '정돈된 디렉토리'와 '붙여 넣은 디렉토리'를 가릅니다.",
       },
       {
         title: "양 언어 완비 시딩",

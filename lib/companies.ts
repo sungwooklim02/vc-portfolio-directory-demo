@@ -34,6 +34,8 @@ export interface Company {
   domain: string;
   featured: boolean;
   location: { id: string; en: string; ko: string };
+  /** stock cover photo id "<sector>-<n>" (public/img/covers, lib/covers.ts) */
+  cover: string;
   en: { oneLiner: string; body: string[] };
   ko: { oneLiner: string; body: string[] };
 }

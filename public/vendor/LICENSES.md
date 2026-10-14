@@ -9,7 +9,7 @@ Full licence texts are in [`licenses/`](./licenses/) (copied from each package b
 
 | Package | Version | Licence | Where it ships | Used for | Source |
 |---|---|---|---|---|---|
-| three | 0.186.1 | MIT | `vendor/three-lite-0.186.1.min.js` (core subset + OrbitControls, loaded on idle after first paint) | 3D portfolio orbit in the home hero | https://github.com/mrdoob/three.js |
+| three | 0.186.1 | MIT | `vendor/three-lite-0.186.1.min.js` (core subset + the `examples/jsm` add-ons OrbitControls, RoomEnvironment and RoundedBoxGeometry, loaded on idle after first paint) | 3D portfolio orbit in the home hero. All models and textures in it are generated in code (no model, texture or HDR file ships); the studio light is the procedural RoomEnvironment | https://github.com/mrdoob/three.js |
 | echarts | 6.1.0 | Apache-2.0 (+ `licenses/echarts-NOTICE.txt`) | `vendor/echarts-lite-6.1.0.min.js` (core + bar/scatter/effectScatter, geo/grid/tooltip/aria, label layout, SVG renderer; loaded when the map view opens) | Map view and its two charts | https://github.com/apache/echarts |
 | zrender | 6.1.0 | BSD-3-Clause | inside the ECharts bundle | ECharts rendering engine | https://github.com/ecomfe/zrender |
 | tslib | 2.8.1 | 0BSD | inside the ECharts bundle | ECharts helper runtime | https://github.com/microsoft/tslib |
@@ -31,3 +31,11 @@ Full licence texts are in [`licenses/`](./licenses/) (copied from each package b
 | fontverter | 2.0.0 | BSD-3-Clause | sfnt ↔ woff2 conversion | https://github.com/odensc/fontverter |
 | wawoff2 | 2.0.1 | MIT | (dependency of fontverter) | https://github.com/fontello/wawoff2 |
 | @types/three | 0.186.0 | MIT | Type definitions | https://github.com/three-types/three-ts-types |
+| @dicebear/core | 9.4.3 | MIT | Rendering the five team avatars at build time (`scripts/gen-avatars.mjs`) | https://github.com/dicebear/dicebear |
+| @dicebear/notionists | 9.4.3 | MIT (code) · artwork "Notionists" by Zoish, CC0 1.0 | Avatar style used for the fictional team | https://www.dicebear.com/styles/notionists/ |
+
+## Images and artwork
+
+Cover photographs, illustrated avatars and their licences (CC0 / public domain, with source page, author
+and retrieval date per file) are listed in [`../img/CREDITS.md`](../img/CREDITS.md). Company brand marks,
+the firm mark and the favicon are original vector artwork made for this demo.

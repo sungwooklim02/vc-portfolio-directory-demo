@@ -88,6 +88,8 @@ html,body{font-family:var(--font-sans)}body{background:#f7f8fa;color:#131821}
   /* hero orbit (three.js scene + 2D fallback); --vpd-orbit-dot is the dot fill used in dark mode only */
   --vpd-orbit-core: #a8c99f; --vpd-orbit-glow: #1d3324; --vpd-orbit-hull: #5d7f68; --vpd-orbit-ring: #71957f;
   --vpd-orbit-dim: #c9d3c6; --vpd-orbit-dot: #e9f1de;
+  /* 3D orbit only: the "V." emblem set into the core, and the rim light / fresnel edge colour */
+  --vpd-orbit-emblem: #203e2c; --vpd-orbit-rim: #e7f3dc;
   --vpd-radius: 10px;
 }
 .dark {
@@ -104,6 +106,7 @@ html,body{font-family:var(--font-sans)}body{background:#f7f8fa;color:#131821}
   --vpd-focus: #a3c991; --vpd-selection: #a3c99140;
   --vpd-orbit-core: #3f5f49; --vpd-orbit-glow: #13241a; --vpd-orbit-hull: #a3c991; --vpd-orbit-ring: #8fb597;
   --vpd-orbit-dim: #3a4a3b; --vpd-orbit-dot: #e9f1de;
+  --vpd-orbit-emblem: #c9dcbd; --vpd-orbit-rim: #a3c991;
 }
 ::selection { background: var(--vpd-selection); color: inherit; }
 :focus-visible { outline-color: var(--vpd-focus); }

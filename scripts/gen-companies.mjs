@@ -434,6 +434,21 @@ for (const sector of SECTORS) {
   }
 }
 
+/* --------------------------------------------------------------- covers */
+// Each sector has 4 licensed stock photos (public/img/covers/<sector>-<n>.*, credits in public/img/CREDITS.md).
+// Within a sector, companies are ordered by a hash of the slug and dealt the photos round-robin, so every
+// photo is used 2–3 times, the choice is stable across builds, and it is visible/testable in the dataset.
+const COVERS_PER_SECTOR = 4;
+for (const sector of SECTORS) {
+  const inSector = companies.filter((c) => c.sector === sector.id);
+  inSector
+    .map((c) => ({ c, k: fnv1a(`${c.slug}:cover`) }))
+    .sort((a, b) => a.k - b.k || a.c.slug.localeCompare(b.c.slug))
+    .forEach(({ c }, i) => {
+      c.cover = `${sector.id}-${(i % COVERS_PER_SECTOR) + 1}`;
+    });
+}
+
 /* ------------------------------------------------------------ validate */
 const counts = { active: 0, acquired: 0, ipo: 0 };
 for (const c of companies) counts[c.status]++;
@@ -443,6 +458,7 @@ if (slugs.size !== 80) throw new Error("duplicate slugs detected");
 // existing dataset shape must not drift (map uplift only adds location ids/coordinates)
 if (counts.active !== 64 || counts.acquired !== 10 || counts.ipo !== 6) throw new Error(`status counts changed: ${JSON.stringify(counts)}`);
 if (new Set(LOCATIONS.map((l) => l.id)).size !== LOCATIONS.length) throw new Error("duplicate location ids");
+if (companies.some((c) => !c.cover)) throw new Error("every company needs a cover photo id");
 if (new Set(companies.map((c) => c.location.id)).size !== LOCATIONS.length) throw new Error("every location must be used");
 console.log(`companies: ${companies.length} | sectors: ${SECTORS.length} | status:`, counts);
 

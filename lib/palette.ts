@@ -27,6 +27,8 @@ export interface Palette {
   orbitRing: string;
   orbitDim: string;
   orbitDot: string;
+  orbitEmblem: string;
+  orbitRim: string;
   sectors: string[];
   font: string;
 }
@@ -60,6 +62,8 @@ export function readPalette(): Palette {
     orbitRing: v("--vpd-orbit-ring", "#71957f"),
     orbitDim: v("--vpd-orbit-dim", "#c9d3c6"),
     orbitDot: v("--vpd-orbit-dot", "#e9f1de"),
+    orbitEmblem: v("--vpd-orbit-emblem", "#203e2c"),
+    orbitRim: v("--vpd-orbit-rim", "#e7f3dc"),
     sectors: FALLBACK_SECTORS.map((fb, i) => v(`--vpd-sector-${i + 1}`, fb)),
     font: v("--font-sans", "'Renewal Sans', system-ui, sans-serif"),
   };
