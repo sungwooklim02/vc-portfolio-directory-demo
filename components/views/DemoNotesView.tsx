@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Icon, Icons } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
 import { REPO_URL } from "@/lib/site";
@@ -104,7 +105,7 @@ export function DemoNotesView({ locale }: { locale: Locale }) {
       <ul className="mt-4 space-y-2">
         {c.scope.map((item) => (
           <li key={item.slice(0, 24)} data-mk-reveal className="flex gap-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            <span aria-hidden="true" className="mt-0.5 text-zinc-400 dark:text-zinc-600">—</span>
+            <Icon icon={Icons.minus} className="mt-[3px] shrink-0 text-zinc-400 dark:text-zinc-600" />
             {item}
           </li>
         ))}

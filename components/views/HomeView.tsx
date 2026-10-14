@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Directory } from "@/components/Directory";
+import { OrbitLegend } from "@/components/orbit/OrbitLegend";
 import { PortfolioOrbit } from "@/components/PortfolioOrbit";
-import { cardData, companies, sectors, statuses, stats } from "@/lib/companies";
+import { cardData, cityOptions, companies, sectorLabel, sectors, statusLabel, statuses, stats } from "@/lib/companies";
 import { t, type Locale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
 
@@ -31,7 +32,14 @@ export function HomeView({ locale }: { locale: Locale }) {
       <section className="venture-hero pb-6 pt-8 sm:pt-10">
         <p className="venture-eyebrow" data-mk-enter>BUILDING WHAT'S NEXT</p>
         <PortfolioOrbit
-          dots={companies.map((c) => ({ slug: c.slug, sector: c.sector, status: c.status }))}
+          locale={locale}
+          label={s.orbitLabel.replace("{n}", String(stats.companies)).replace("{s}", String(stats.sectors)).replace("{x}", String(stats.exits))}
+          dots={companies.map((c) => ({
+            slug: c.slug,
+            sector: c.sector,
+            status: c.status,
+            label: `${c.name}${locale === "ko" ? ` ${c.koName}` : ""} · ${sectorLabel(c.sector, locale)} · ${statusLabel(c.status, locale)}`,
+          }))}
           sectorIds={sectors.map((x) => x.id)}
         />
         <p
@@ -61,6 +69,10 @@ export function HomeView({ locale }: { locale: Locale }) {
           ))}
         </dl>
       </section>
+      <OrbitLegend
+        locale={locale}
+        sectors={sectors.map((x) => ({ id: x.id, label: x[locale], count: companies.filter((c) => c.sector === x.id).length }))}
+      />
 
       <div className="venture-directory pb-16">
         <div className="venture-section-label" data-mk-reveal><span>{locale === "en" ? "Explore our companies" : "포트폴리오 둘러보기"}</span><span>01 — {stats.companies}</span></div>
@@ -69,6 +81,7 @@ export function HomeView({ locale }: { locale: Locale }) {
           items={cardData(locale)}
           sectors={sectors.map((x) => ({ id: x.id, label: x[locale] }))}
           statuses={statuses.map((x) => ({ id: x.id, label: x[locale] }))}
+          cities={cityOptions(locale)}
         />
       </div>
     </div>

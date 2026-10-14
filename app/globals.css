@@ -4,10 +4,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* 100% system font stack — zero webfont bytes (KR glyphs from OS fonts).
-     A production build would self-host via next/font instead. */
+  /* Self-hosted "Renewal Sans" (subset of Pretendard 1.3.9, OFL-1.1 — app/fonts.generated.css, split by
+     unicode-range so a page downloads only the chunks it renders); system fonts are the fallback. */
   --font-sans:
-    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Renewal Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Malgun Gothic",
     "Noto Sans KR", sans-serif;
 }
@@ -47,15 +47,14 @@ body{background:#f6f5ef;color:#233a2e}
 
 /* honor reduced motion globally */
 /* V2: modern venture platform with deliberate space and clear sans typography. */
-@font-face{font-family:'Renewal Sans';src:url('/vc-portfolio-directory-demo/fonts/PretendardVariable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
-html,body{font-family:'Renewal Sans',Arial,sans-serif}body{background:#f7f8fa;color:#131821}
+html,body{font-family:var(--font-sans)}body{background:#f7f8fa;color:#131821}
 .venture-header{background:#ffffffed;border-color:#e4e7ec}.venture-header>div{padding-top:20px;padding-bottom:20px}.venture-header span.text-sm{font-size:19px;letter-spacing:-.06em;font-weight:750}
 .venture-home{max-width:1330px}.venture-hero{margin-top:20px;padding:45px 42% 44px 34px;border:0;border-radius:24px;background:#eaf0eb;overflow:hidden;min-height:370px}
 .venture-eyebrow{font:700 10px 'Renewal Sans',sans-serif;letter-spacing:.14em;color:#466753;margin-bottom:18px}.venture-title{font-family:'Renewal Sans',Arial,sans-serif;font-size:clamp(36px,4.2vw,62px);font-weight:760;line-height:1.07;letter-spacing:-.055em;color:#152e23;margin-top:20px}.venture-title em{font-style:normal;font-weight:760;color:#52785e}.venture-deck{font-size:14px;line-height:1.65;margin-top:22px;color:#516759}
 .venture-stats{position:static;margin-top:28px;gap:34px}.venture-stats>div{padding:0;border:0}.venture-stats dd{font:700 28px 'Renewal Sans',sans-serif;letter-spacing:-.04em;color:#233e2c}.venture-stats dt{font-size:11px;color:#5f7467;margin-top:5px}
 .venture-orbit{position:absolute;right:45px;top:40px;width:320px;height:320px;display:grid;place-items:center;color:#203e2c}.venture-orbit i{position:absolute;inset:20px;border:1px solid #71958280;border-radius:50%;transform:rotate(-28deg) scaleX(.56)}.venture-orbit i:nth-child(2){transform:rotate(32deg) scaleX(.56)}.venture-orbit i:nth-child(3){transform:rotate(90deg) scaleX(.56)}.venture-orbit span{font-size:88px;font-weight:800;letter-spacing:-.08em;z-index:1}.venture-orbit:before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#d5ebbc,#9abe94 60%,#658a71);box-shadow:30px 30px 70px #34534330}
 .venture-section-label{font-size:20px;font-weight:700;letter-spacing:-.04em;margin-bottom:22px;color:#16291e}.venture-section-label span:last-child{font-size:12px;font-weight:500;letter-spacing:0;color:#6a796e}
-.venture-directory{padding-top:36px}.venture-grid{gap:16px;border:0;margin-top:24px}.venture-grid>li{border:0}.venture-grid>li>a{position:relative;border:1px solid #e3e8e1;border-radius:14px;background:#fff;padding:24px;min-height:236px;box-shadow:0 2px 4px #152b1403}.venture-grid>li>a:hover{background:#fff;border-color:#a0b39c;box-shadow:0 8px 26px #243d1810}.venture-grid>li>a>div:first-child{gap:20px}.venture-grid h3{font-size:18px;font-weight:720;letter-spacing:-.03em}.venture-grid>li>a>div:first-child>span{border-radius:12px;background:#f3f6f0;width:48px;height:48px}.venture-arrow{position:absolute;right:20px;top:20px;font-size:21px;color:#7e8d79}.venture-grid>li>a>p{font-size:13px;line-height:1.65;color:#647060}
+.venture-directory{padding-top:36px}.venture-grid{gap:16px;border:0;margin-top:24px;grid-template-columns:repeat(auto-fill,minmax(min(272px,100%),1fr))}.venture-grid>li{border:0}.venture-grid>li>a{position:relative;border:1px solid #e3e8e1;border-radius:14px;background:#fff;padding:24px;min-height:236px;box-shadow:none}.venture-grid>li>a:hover{background:#fff;border-color:transparent;box-shadow:0 8px 26px #243d1810}.venture-grid>li>a>div:first-child{gap:20px}.venture-grid h3{font-size:18px;font-weight:720;letter-spacing:-.03em}.venture-grid>li>a>div:first-child>span{border-radius:12px;background:#f3f6f0;width:48px;height:48px}.venture-arrow{position:absolute;right:20px;top:20px;display:inline-flex;color:#7e8d79}.venture-grid>li>a>p{font-size:13px;line-height:1.65;color:#647060}
 .venture-directory input[type=search]{border-radius:10px;background:#fff;border-color:#dce3d8;font-family:inherit}.venture-directory button,.venture-directory select{font-family:inherit;min-height:34px}.venture-directory button[aria-pressed=true]{background:#294d35;border-color:#294d35;border-radius:8px}
 .dark .venture-hero{background:#21362a}.dark .venture-title{color:#eef7e9}.dark .venture-title em{color:#a3c991}.dark .venture-orbit{color:#e9f1de}.dark .venture-orbit:before{opacity:.55}.dark .venture-grid>li>a{background:#202c22;border-color:#3c503b}.dark .venture-grid>li>a:hover{background:#293b2a}.dark .venture-grid>li>a>p{color:#adbca5}.dark .venture-section-label{color:#e6eddf}
 @media(max-width:1050px){.venture-hero{padding-right:36%;padding-left:26px}.venture-orbit{right:5px;width:270px;height:270px;top:60px}.venture-title{font-size:45px}.venture-stats{gap:25px}}
@@ -71,3 +70,41 @@ html,body{font-family:'Renewal Sans',Arial,sans-serif}body{background:#f7f8fa;co
     scroll-behavior: auto !important;
   }
 }
+
+/* ── Design tokens (completeness uplift 2026-10-14). One source for CSS, the three.js orbit, the ECharts
+   map/charts and the legend: lib/palette.ts reads these with getComputedStyle and re-reads on theme change. */
+:root {
+  --vpd-ink: #131821; --vpd-ink-2: #516759; --vpd-ink-3: #6a796e;
+  --vpd-page: #f7f8fa; --vpd-surface: #ffffff; --vpd-surface-2: #f3f6f0; --vpd-line: #e3e8e1; --vpd-line-2: #cfd9cc;
+  --vpd-accent: #52785e; --vpd-accent-strong: #294d35; --vpd-accent-soft: #e4ede3; --vpd-hero: #eaf0eb;
+  --vpd-land: #dfe7dd; --vpd-land-line: #c3cfc1; --vpd-sea: #f1f5f0;
+  --vpd-mark: #f4e3a6; --vpd-mark-ink: #2a2a12;
+  --vpd-sector-1: #2f6b4f; --vpd-sector-2: #5b7fa6; --vpd-sector-3: #7aa86b; --vpd-sector-4: #b5644f;
+  --vpd-sector-5: #c08a3e; --vpd-sector-6: #3f9b8f; --vpd-sector-7: #8a6bb0; --vpd-sector-8: #4f6e8a;
+  --vpd-status-active-bg: #e3f0e4; --vpd-status-active-fg: #24603d; --vpd-status-active-ring: #2f6b4f40;
+  --vpd-status-acquired-bg: #e4ebf2; --vpd-status-acquired-fg: #3c5872; --vpd-status-acquired-ring: #4f6e8a40;
+  --vpd-status-ipo-bg: #f6ecd8; --vpd-status-ipo-fg: #85591b; --vpd-status-ipo-ring: #c08a3e50;
+  --vpd-focus: #52785e; --vpd-selection: #52785e33;
+  /* hero orbit (three.js scene + 2D fallback); --vpd-orbit-dot is the dot fill used in dark mode only */
+  --vpd-orbit-core: #a8c99f; --vpd-orbit-glow: #1d3324; --vpd-orbit-hull: #5d7f68; --vpd-orbit-ring: #71957f;
+  --vpd-orbit-dim: #c9d3c6; --vpd-orbit-dot: #e9f1de;
+  --vpd-radius: 10px;
+}
+.dark {
+  --vpd-ink: #eef7e9; --vpd-ink-2: #adbca5; --vpd-ink-3: #93a58a;
+  --vpd-page: #19231b; --vpd-surface: #202c22; --vpd-surface-2: #263428; --vpd-line: #3c503b; --vpd-line-2: #526346;
+  --vpd-accent: #a3c991; --vpd-accent-strong: #c4dfb2; --vpd-accent-soft: #2c3f2c; --vpd-hero: #21362a;
+  --vpd-land: #2b3d2d; --vpd-land-line: #3e5440; --vpd-sea: #1d2a1f;
+  --vpd-mark: #5d5a2a; --vpd-mark-ink: #fbf6d8;
+  --vpd-sector-1: #6fb08c; --vpd-sector-2: #8fb0d6; --vpd-sector-3: #a6cf94; --vpd-sector-4: #e09a85;
+  --vpd-sector-5: #e2b36c; --vpd-sector-6: #74c7bb; --vpd-sector-7: #b9a0dc; --vpd-sector-8: #8eaac4;
+  --vpd-status-active-bg: #23402c; --vpd-status-active-fg: #b5dcc0; --vpd-status-active-ring: #6fb08c40;
+  --vpd-status-acquired-bg: #26364a; --vpd-status-acquired-fg: #bcd0e6; --vpd-status-acquired-ring: #8fb0d640;
+  --vpd-status-ipo-bg: #45361c; --vpd-status-ipo-fg: #f0d29c; --vpd-status-ipo-ring: #e2b36c40;
+  --vpd-focus: #a3c991; --vpd-selection: #a3c99140;
+  --vpd-orbit-core: #3f5f49; --vpd-orbit-glow: #13241a; --vpd-orbit-hull: #a3c991; --vpd-orbit-ring: #8fb597;
+  --vpd-orbit-dim: #3a4a3b; --vpd-orbit-dot: #e9f1de;
+}
+::selection { background: var(--vpd-selection); color: inherit; }
+:focus-visible { outline-color: var(--vpd-focus); }
+.dark .venture-grid>li>a:hover{border-color:transparent;box-shadow:0 12px 30px #0000004d}

@@ -13,6 +13,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { mk, type MotionKit } from "@/lib/mk";
+import { cameFrom } from "@/lib/nav";
 import { BASE_PATH } from "@/lib/site";
 
 type VTDoc = Document & {
@@ -100,9 +101,13 @@ export function MotionRuntime() {
   const first = useRef(true);
   const pending = useRef<(() => void) | null>(null);
   const backSlug = useRef<string | null>(null);
+  const prevPath = useRef<string | null>(null);
 
   // per-route: capture floor, choreography, finish any pending View Transition
   useLayoutEffect(() => {
+    // previous in-app route (read by BackToDirectory to go back in history instead of reloading the directory)
+    (window as Window & { __vpdPrevPath?: string }).__vpdPrevPath = prevPath.current ?? undefined;
+    prevPath.current = pathname;
     const html = document.documentElement;
     if (isCapture()) {
       document.body.classList.add("capture-mode");
@@ -157,6 +162,7 @@ export function MotionRuntime() {
       const toDetail = next.includes("/companies/");
       const fromDetail = cur.includes("/companies/");
       const dir = !toDetail && fromDetail ? "vt-back" : "vt-fwd";
+      const back = a.hasAttribute("data-back") && cameFrom(next);
       const logo = a.querySelector<HTMLElement>(".vpd-logo");
       if (toDetail && logo) logo.style.viewTransitionName = "vpd-logo";
       backSlug.current = fromDetail ? (cur.split("/companies/")[1] || "").replace(/\/$/, "") : null;
@@ -172,7 +178,8 @@ export function MotionRuntime() {
                 resolve();
               }
             }, 3000);
-            router.push(next + url.search);
+            if (back) window.history.back();
+            else router.push(next + url.search);
           }),
       );
       vt.finished.finally(() => {
@@ -200,10 +207,7 @@ export function MotionRuntime() {
       const y = window.scrollY;
       document.querySelector(".venture-header")?.classList.toggle("is-scrolled", y > 8);
       const orbit = document.querySelector<HTMLElement>(".venture-orbit");
-      if (orbit) {
-        orbit.style.setProperty("--py", `${Math.min(y * 0.22, 140).toFixed(1)}px`);
-        orbit.style.setProperty("--pr", `${Math.min(y * 0.04, 24).toFixed(2)}deg`);
-      }
+      if (orbit) orbit.style.setProperty("--py", `${Math.min(y * 0.22, 140).toFixed(1)}px`);
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);

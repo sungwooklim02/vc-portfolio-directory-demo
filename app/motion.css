@@ -51,7 +51,7 @@ html.mk-boot .venture-orbit, html.mk-boot .venture-grid > li { opacity: 0; }
 .vpd-sheet-close:active, .venture-directory button:active { transform: scale(.95); }
 .venture-directory select:active { transform: scale(.97); }
 .vpd-filter-btn:focus-visible, .vpd-sheet-done:focus-visible, .vpd-sheet-close:focus-visible {
-  outline: 2px solid #71717a; outline-offset: 2px;
+  outline: 2px solid var(--vpd-focus); outline-offset: 2px;
 }
 
 /* theme icon swap spins in */
@@ -77,14 +77,12 @@ html.mk-on.dark .vpd-sun, html.mk-on:not(.dark) .vpd-moon { animation: vpd-spin-
 .venture-directory .vpd-chips.has-ind > button[aria-pressed=true] { background: transparent; border-color: transparent; }
 .vpd-count { display: inline-block; }
 
-/* hero signature: orbit canvas + pointer tilt + scroll parallax (vars set by JS, motion on only) */
+/* hero signature: 2D fallback canvas + scroll parallax (var set by JS, motion on only). The CSS
+   perspective tilt / scroll rotation was removed with the three.js orbit (2026-10-14): the 3D scene has
+   real depth and drag-rotate, and a CSS-transformed host would skew its pointer picking. */
 .vpd-orbit-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .venture-orbit span { position: relative; }
-html.mk-on .venture-orbit {
-  translate: 0 var(--py, 0px); rotate: var(--pr, 0deg);
-  transform: perspective(900px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
-  transition: transform var(--dur-4) var(--ease-out);
-}
+html.mk-on .venture-orbit { translate: 0 var(--py, 0px); }
 
 /* 360: the orbit (display:none under 600px in the static layout) returns as a faint background mark
    behind the hero copy, only when motion is on — capture/reduced-motion layout is unchanged */

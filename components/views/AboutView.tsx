@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Icon, Icons } from "@/components/icons";
 import { stats } from "@/lib/companies";
 import { hashString } from "@/lib/hash";
 import type { Locale } from "@/lib/i18n";
@@ -179,14 +180,23 @@ const factRows = {
   ],
 };
 
+const FACT_ICONS = [Icons.calendar, Icons.mapPin, Icons.trendingUp, Icons.wallet, Icons.briefcase, Icons.shapes] as const;
+
 export function AboutView({ locale }: { locale: Locale }) {
   const c = copy[locale];
-  const facts = factRows[locale].map(([label, value]) => {
+  // numbers that come from the dataset count up on entry (motion on only; the HTML holds the final value)
+  const num = (n: number) => (
+    <span data-mk-count className="vpd-count tabular-nums">
+      {n}
+    </span>
+  );
+  const facts = factRows[locale].map(([label, value], i): readonly [string, React.ReactNode, (typeof FACT_ICONS)[number]] => {
+    const icon = FACT_ICONS[i];
     if (label === "Portfolio" || label === "포트폴리오")
-      return [label, `${stats.companies} ${c.portfolioLabel}`] as const;
+      return [label, <>{num(stats.companies)} {c.portfolioLabel}</>, icon] as const;
     if (label === "Sectors" || label === "섹터")
-      return [label, `${stats.sectors}${locale === "ko" ? c.sectorsLabel : ` ${c.sectorsLabel}`}`] as const;
-    return [label, value] as const;
+      return [label, <>{num(stats.sectors)}{locale === "ko" ? c.sectorsLabel : ` ${c.sectorsLabel}`}</>, icon] as const;
+    return [label, value, icon] as const;
   });
 
   return (
@@ -204,9 +214,12 @@ export function AboutView({ locale }: { locale: Locale }) {
         {c.factsTitle}
       </h2>
       <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {facts.map(([label, value]) => (
+        {facts.map(([label, value, icon]) => (
           <div key={label} data-mk-reveal className="rounded-lg border border-zinc-200 bg-white px-3 py-2.5 dark:border-zinc-800 dark:bg-zinc-900">
-            <dt className="text-[11px] font-medium uppercase tracking-wide text-zinc-400 dark:text-zinc-500">{label}</dt>
+            <dt className="text-[11px] font-medium uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+              <Icon icon={icon} className="vpd-fact-ico" />
+              {label}
+            </dt>
             <dd className="mt-0.5 text-sm font-semibold text-zinc-900 dark:text-zinc-100">{value}</dd>
           </div>
         ))}
@@ -251,7 +264,10 @@ export function AboutView({ locale }: { locale: Locale }) {
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {c.offices.map((office) => (
           <div key={office.city} data-mk-reveal className="vpd-lift rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{office.city}</h3>
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <Icon icon={Icons.mapPin} className="vpd-fact-ico" />
+              {office.city}
+            </h3>
             <p className="mt-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{office.address}</p>
           </div>
         ))}

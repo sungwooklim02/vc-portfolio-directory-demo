@@ -13,6 +13,8 @@ export interface MotionKit {
   EASE: Record<"out" | "inOut" | "spring" | "expo" | "in", string>;
   anim(el: Element | null, frames: Keyframe[], opts?: KeyframeAnimationOptions): Animation | null;
   stop(el: Element | null): void;
+  swap(update: () => void, incoming: Element | null | (() => Element | null), opts?: { dir?: 1 | -1; stagger?: string; noVT?: boolean }): Promise<unknown>;
+  countUp(el: Element | null, to: number, opts?: { from?: number; dur?: number; decimals?: number; fmt?: (v: number) => string }): Promise<unknown>;
   enter(targets: Targets, opts?: { y?: number; scale?: number; delay?: number; dur?: number; step?: number; max?: number; blur?: number }): Promise<unknown>;
   overlayIn(el: Element | null, kind?: "pop" | "sheet" | "drawer" | "fade", backdrop?: Element | null): Promise<unknown>;
   overlayOut(el: Element | null, kind: "pop" | "sheet" | "drawer" | "fade", hide?: () => void, backdrop?: Element | null): Promise<unknown>;

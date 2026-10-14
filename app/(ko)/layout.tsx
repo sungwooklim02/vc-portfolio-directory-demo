@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import "../fonts.generated.css";
 import "../globals.css";
 import "../motion.css";
+import "../uplift.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MotionRuntime } from "@/components/MotionRuntime";
 import { ThemeScript } from "@/components/ThemeScript";
+import { FONT_PRELOAD } from "@/lib/fonts.generated";
 import { withBase } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -21,6 +24,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
+        {/* self-hosted subset webfont (scripts/fonts/build-fonts.mjs): preload the faces this locale paints first */}
+        {FONT_PRELOAD.ko.map((href) => (
+          <link key={href} rel="preload" href={href} as="font" type="font/woff2" crossOrigin="" />
+        ))}
         {/* shared motion kit (local, no CDN) — loaded after the app stylesheet; script is a classic sync script exposing window.MK */}
         <link rel="stylesheet" href={withBase("/mk/motion-kit.css")} />
       </head>

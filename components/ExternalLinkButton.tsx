@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Icon, Icons } from "@/components/icons";
 import { t, type Locale } from "@/lib/i18n";
 import { mk } from "@/lib/mk";
 
@@ -49,9 +50,7 @@ export function ExternalLinkButton({ locale }: { locale: Locale }) {
         className="vpd-ext-btn group inline-flex items-center gap-1.5 rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800"
       >
         {s.visitWebsite}
-        <svg viewBox="0 0 24 24" className="vpd-ext-arrow h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M7 17 17 7M8 7h9v9" />
-        </svg>
+        <Icon icon={Icons.arrowUpRight} className="vpd-ext-arrow" />
       </button>
       <div
         role="status"

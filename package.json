@@ -5,13 +5,19 @@
   "description": "Bilingual (EN/KO) VC portfolio directory built as a static Next.js export. All companies and data are fictional.",
   "scripts": {
     "gen": "node scripts/gen-companies.mjs",
+    "assets": "node scripts/build-assets.mjs",
+    "predev": "node scripts/gen-companies.mjs && node scripts/build-assets.mjs",
     "dev": "next dev",
     "start": "node server.mjs",
-    "build": "node scripts/gen-companies.mjs && next build && node scripts/post-export.mjs && node scripts/verify-out.mjs",
-    "verify": "node scripts/verify-out.mjs",
+    "build": "node scripts/gen-companies.mjs && node scripts/build-assets.mjs && next build && node scripts/post-export.mjs && node scripts/verify-out.mjs && node scripts/verify-uplift.mjs",
+    "verify": "node scripts/verify-out.mjs && node scripts/verify-uplift.mjs",
+    "test": "node --test scripts/test-search.mjs scripts/test-server.mjs",
     "deploy": "npm run build && gh-pages -d out --dotfiles"
   },
   "dependencies": {
+    "es-hangul": "2.4.0",
+    "fuse.js": "7.5.0",
+    "lucide-react": "1.56.0",
     "next": "^15.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
@@ -21,9 +27,17 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
+    "@types/three": "0.186.0",
+    "echarts": "6.1.0",
+    "esbuild": "0.28.2",
+    "fontverter": "2.0.0",
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.0",
+    "subset-font": "2.9.0",
     "tailwindcss": "^4.1.0",
-    "typescript": "^5.8.0"
+    "three": "0.186.1",
+    "topojson-client": "3.1.0",
+    "typescript": "^5.8.0",
+    "world-atlas": "2.0.2"
   }
 }

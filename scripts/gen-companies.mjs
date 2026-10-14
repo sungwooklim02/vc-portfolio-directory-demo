@@ -73,24 +73,26 @@ const STATUSES = [
 ];
 
 /* -------------------------------------------------------------- locations */
+// id/lat/lon feed the directory map view (city coordinates are public geography; which fictional
+// company sits in which city is part of the fictional dataset).
 const LOCATIONS = [
-  { en: "Seoul, South Korea", ko: "대한민국 서울", region: "asia" },
-  { en: "Busan, South Korea", ko: "대한민국 부산", region: "asia" },
-  { en: "Tokyo, Japan", ko: "일본 도쿄", region: "asia" },
-  { en: "Singapore", ko: "싱가포르", region: "asia" },
-  { en: "Taipei, Taiwan", ko: "대만 타이베이", region: "asia" },
-  { en: "Sydney, Australia", ko: "호주 시드니", region: "apac" },
-  { en: "Berlin, Germany", ko: "독일 베를린", region: "europe" },
-  { en: "London, United Kingdom", ko: "영국 런던", region: "europe" },
-  { en: "Amsterdam, Netherlands", ko: "네덜란드 암스테르담", region: "europe" },
-  { en: "Rotterdam, Netherlands", ko: "네덜란드 로테르담", region: "europe" },
-  { en: "Helsinki, Finland", ko: "핀란드 헬싱키", region: "europe" },
-  { en: "Stockholm, Sweden", ko: "스웨덴 스톡홀름", region: "europe" },
-  { en: "Toronto, Canada", ko: "캐나다 토론토", region: "na" },
-  { en: "New York, USA", ko: "미국 뉴욕", region: "na" },
-  { en: "San Francisco, USA", ko: "미국 샌프란시스코", region: "na" },
-  { en: "Boston, USA", ko: "미국 보스턴", region: "na" },
-  { en: "Austin, USA", ko: "미국 오스틴", region: "na" },
+  { id: "seoul", en: "Seoul, South Korea", ko: "대한민국 서울", region: "asia", lat: 37.5665, lon: 126.978 },
+  { id: "busan", en: "Busan, South Korea", ko: "대한민국 부산", region: "asia", lat: 35.1796, lon: 129.0756 },
+  { id: "tokyo", en: "Tokyo, Japan", ko: "일본 도쿄", region: "asia", lat: 35.6762, lon: 139.6503 },
+  { id: "singapore", en: "Singapore", ko: "싱가포르", region: "asia", lat: 1.3521, lon: 103.8198 },
+  { id: "taipei", en: "Taipei, Taiwan", ko: "대만 타이베이", region: "asia", lat: 25.033, lon: 121.5654 },
+  { id: "sydney", en: "Sydney, Australia", ko: "호주 시드니", region: "apac", lat: -33.8688, lon: 151.2093 },
+  { id: "berlin", en: "Berlin, Germany", ko: "독일 베를린", region: "europe", lat: 52.52, lon: 13.405 },
+  { id: "london", en: "London, United Kingdom", ko: "영국 런던", region: "europe", lat: 51.5074, lon: -0.1278 },
+  { id: "amsterdam", en: "Amsterdam, Netherlands", ko: "네덜란드 암스테르담", region: "europe", lat: 52.3676, lon: 4.9041 },
+  { id: "rotterdam", en: "Rotterdam, Netherlands", ko: "네덜란드 로테르담", region: "europe", lat: 51.9244, lon: 4.4777 },
+  { id: "helsinki", en: "Helsinki, Finland", ko: "핀란드 헬싱키", region: "europe", lat: 60.1699, lon: 24.9384 },
+  { id: "stockholm", en: "Stockholm, Sweden", ko: "스웨덴 스톡홀름", region: "europe", lat: 59.3293, lon: 18.0686 },
+  { id: "toronto", en: "Toronto, Canada", ko: "캐나다 토론토", region: "na", lat: 43.6532, lon: -79.3832 },
+  { id: "new-york", en: "New York, USA", ko: "미국 뉴욕", region: "na", lat: 40.7128, lon: -74.006 },
+  { id: "san-francisco", en: "San Francisco, USA", ko: "미국 샌프란시스코", region: "na", lat: 37.7749, lon: -122.4194 },
+  { id: "boston", en: "Boston, USA", ko: "미국 보스턴", region: "na", lat: 42.3601, lon: -71.0589 },
+  { id: "austin", en: "Austin, USA", ko: "미국 오스틴", region: "na", lat: 30.2672, lon: -97.7431 },
 ];
 
 const REGION_PHRASE = {
@@ -425,7 +427,7 @@ for (const sector of SECTORS) {
       teamSize,
       domain: `${slug}.example`,
       featured: Boolean(featured),
-      location: { en: loc.en, ko: loc.ko },
+      location: { id: loc.id, en: loc.en, ko: loc.ko },
       en: { oneLiner: olEn, body: bodyEn },
       ko: { oneLiner: olKo, body: bodyKo },
     });
@@ -438,12 +440,18 @@ for (const c of companies) counts[c.status]++;
 if (companies.length !== 80) throw new Error(`expected 80 companies, got ${companies.length}`);
 const slugs = new Set(companies.map((c) => c.slug));
 if (slugs.size !== 80) throw new Error("duplicate slugs detected");
+// existing dataset shape must not drift (map uplift only adds location ids/coordinates)
+if (counts.active !== 64 || counts.acquired !== 10 || counts.ipo !== 6) throw new Error(`status counts changed: ${JSON.stringify(counts)}`);
+if (new Set(LOCATIONS.map((l) => l.id)).size !== LOCATIONS.length) throw new Error("duplicate location ids");
+if (new Set(companies.map((c) => c.location.id)).size !== LOCATIONS.length) throw new Error("every location must be used");
 console.log(`companies: ${companies.length} | sectors: ${SECTORS.length} | status:`, counts);
 
 const payload = {
   note: "FICTIONAL DATASET — every company, brand, and figure here is invented. Names are synthetic coinages.",
   sectors: SECTORS.map(({ id, en, ko }) => ({ id, en, ko })),
   statuses: STATUSES,
+  regions: Object.entries(REGION_PHRASE).map(([id]) => ({ id })),
+  locations: LOCATIONS.map(({ id, en, ko, region, lat, lon }) => ({ id, en, ko, region, lat, lon })),
   companies,
 };
 

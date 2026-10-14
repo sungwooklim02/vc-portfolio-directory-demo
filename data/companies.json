@@ -59,6 +59,158 @@
       "ko": "상장"
     }
   ],
+  "regions": [
+    {
+      "id": "asia"
+    },
+    {
+      "id": "apac"
+    },
+    {
+      "id": "europe"
+    },
+    {
+      "id": "na"
+    }
+  ],
+  "locations": [
+    {
+      "id": "seoul",
+      "en": "Seoul, South Korea",
+      "ko": "대한민국 서울",
+      "region": "asia",
+      "lat": 37.5665,
+      "lon": 126.978
+    },
+    {
+      "id": "busan",
+      "en": "Busan, South Korea",
+      "ko": "대한민국 부산",
+      "region": "asia",
+      "lat": 35.1796,
+      "lon": 129.0756
+    },
+    {
+      "id": "tokyo",
+      "en": "Tokyo, Japan",
+      "ko": "일본 도쿄",
+      "region": "asia",
+      "lat": 35.6762,
+      "lon": 139.6503
+    },
+    {
+      "id": "singapore",
+      "en": "Singapore",
+      "ko": "싱가포르",
+      "region": "asia",
+      "lat": 1.3521,
+      "lon": 103.8198
+    },
+    {
+      "id": "taipei",
+      "en": "Taipei, Taiwan",
+      "ko": "대만 타이베이",
+      "region": "asia",
+      "lat": 25.033,
+      "lon": 121.5654
+    },
+    {
+      "id": "sydney",
+      "en": "Sydney, Australia",
+      "ko": "호주 시드니",
+      "region": "apac",
+      "lat": -33.8688,
+      "lon": 151.2093
+    },
+    {
+      "id": "berlin",
+      "en": "Berlin, Germany",
+      "ko": "독일 베를린",
+      "region": "europe",
+      "lat": 52.52,
+      "lon": 13.405
+    },
+    {
+      "id": "london",
+      "en": "London, United Kingdom",
+      "ko": "영국 런던",
+      "region": "europe",
+      "lat": 51.5074,
+      "lon": -0.1278
+    },
+    {
+      "id": "amsterdam",
+      "en": "Amsterdam, Netherlands",
+      "ko": "네덜란드 암스테르담",
+      "region": "europe",
+      "lat": 52.3676,
+      "lon": 4.9041
+    },
+    {
+      "id": "rotterdam",
+      "en": "Rotterdam, Netherlands",
+      "ko": "네덜란드 로테르담",
+      "region": "europe",
+      "lat": 51.9244,
+      "lon": 4.4777
+    },
+    {
+      "id": "helsinki",
+      "en": "Helsinki, Finland",
+      "ko": "핀란드 헬싱키",
+      "region": "europe",
+      "lat": 60.1699,
+      "lon": 24.9384
+    },
+    {
+      "id": "stockholm",
+      "en": "Stockholm, Sweden",
+      "ko": "스웨덴 스톡홀름",
+      "region": "europe",
+      "lat": 59.3293,
+      "lon": 18.0686
+    },
+    {
+      "id": "toronto",
+      "en": "Toronto, Canada",
+      "ko": "캐나다 토론토",
+      "region": "na",
+      "lat": 43.6532,
+      "lon": -79.3832
+    },
+    {
+      "id": "new-york",
+      "en": "New York, USA",
+      "ko": "미국 뉴욕",
+      "region": "na",
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    {
+      "id": "san-francisco",
+      "en": "San Francisco, USA",
+      "ko": "미국 샌프란시스코",
+      "region": "na",
+      "lat": 37.7749,
+      "lon": -122.4194
+    },
+    {
+      "id": "boston",
+      "en": "Boston, USA",
+      "ko": "미국 보스턴",
+      "region": "na",
+      "lat": 42.3601,
+      "lon": -71.0589
+    },
+    {
+      "id": "austin",
+      "en": "Austin, USA",
+      "ko": "미국 오스틴",
+      "region": "na",
+      "lat": 30.2672,
+      "lon": -97.7431
+    }
+  ],
   "companies": [
     {
       "slug": "ledgerine",
@@ -71,6 +223,7 @@
       "domain": "ledgerine.example",
       "featured": true,
       "location": {
+        "id": "seoul",
         "en": "Seoul, South Korea",
         "ko": "대한민국 서울"
       },
@@ -100,6 +253,7 @@
       "domain": "payvorn.example",
       "featured": false,
       "location": {
+        "id": "seoul",
         "en": "Seoul, South Korea",
         "ko": "대한민국 서울"
       },
@@ -129,6 +283,7 @@
       "domain": "finomere.example",
       "featured": false,
       "location": {
+        "id": "san-francisco",
         "en": "San Francisco, USA",
         "ko": "미국 샌프란시스코"
       },
@@ -158,6 +313,7 @@
       "domain": "trestapay.example",
       "featured": false,
       "location": {
+        "id": "seoul",
         "en": "Seoul, South Korea",
         "ko": "대한민국 서울"
       },
@@ -187,6 +343,7 @@
       "domain": "vaultrine.example",
       "featured": false,
       "location": {
+        "id": "london",
         "en": "London, United Kingdom",
         "ko": "영국 런던"
       },
@@ -216,6 +373,7 @@
       "domain": "credorna.example",
       "featured": false,
       "location": {
+        "id": "singapore",
         "en": "Singapore",
         "ko": "싱가포르"
       },
@@ -245,6 +403,7 @@
       "domain": "remitello.example",
       "featured": false,
       "location": {
+        "id": "toronto",
         "en": "Toronto, Canada",
         "ko": "캐나다 토론토"
       },
@@ -274,6 +433,7 @@
       "domain": "bursella.example",
       "featured": false,
       "location": {
+        "id": "singapore",
         "en": "Singapore",
         "ko": "싱가포르"
       },
@@ -303,6 +463,7 @@
       "domain": "yieldarn.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -332,6 +493,7 @@
       "domain": "monvarra.example",
       "featured": false,
       "location": {
+        "id": "london",
         "en": "London, United Kingdom",
         "ko": "영국 런던"
       },
@@ -361,6 +523,7 @@
       "domain": "opslune.example",
       "featured": true,
       "location": {
+        "id": "singapore",
         "en": "Singapore",
         "ko": "싱가포르"
       },
@@ -390,6 +553,7 @@
       "domain": "taskovia.example",
       "featured": false,
       "location": {
+        "id": "london",
         "en": "London, United Kingdom",
         "ko": "영국 런던"
       },
@@ -419,6 +583,7 @@
       "domain": "quorvane.example",
       "featured": false,
       "location": {
+        "id": "sydney",
         "en": "Sydney, Australia",
         "ko": "호주 시드니"
       },
@@ -448,6 +613,7 @@
       "domain": "formyra.example",
       "featured": false,
       "location": {
+        "id": "helsinki",
         "en": "Helsinki, Finland",
         "ko": "핀란드 헬싱키"
       },
@@ -477,6 +643,7 @@
       "domain": "docurella.example",
       "featured": false,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -506,6 +673,7 @@
       "domain": "meetrino.example",
       "featured": false,
       "location": {
+        "id": "sydney",
         "en": "Sydney, Australia",
         "ko": "호주 시드니"
       },
@@ -535,6 +703,7 @@
       "domain": "planovae.example",
       "featured": false,
       "location": {
+        "id": "rotterdam",
         "en": "Rotterdam, Netherlands",
         "ko": "네덜란드 로테르담"
       },
@@ -564,6 +733,7 @@
       "domain": "deskarna.example",
       "featured": false,
       "location": {
+        "id": "taipei",
         "en": "Taipei, Taiwan",
         "ko": "대만 타이베이"
       },
@@ -593,6 +763,7 @@
       "domain": "flowbern.example",
       "featured": false,
       "location": {
+        "id": "toronto",
         "en": "Toronto, Canada",
         "ko": "캐나다 토론토"
       },
@@ -622,6 +793,7 @@
       "domain": "stagerly.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -651,6 +823,7 @@
       "domain": "modelyn.example",
       "featured": true,
       "location": {
+        "id": "berlin",
         "en": "Berlin, Germany",
         "ko": "독일 베를린"
       },
@@ -680,6 +853,7 @@
       "domain": "vectorna.example",
       "featured": false,
       "location": {
+        "id": "san-francisco",
         "en": "San Francisco, USA",
         "ko": "미국 샌프란시스코"
       },
@@ -709,6 +883,7 @@
       "domain": "inferrix.example",
       "featured": false,
       "location": {
+        "id": "sydney",
         "en": "Sydney, Australia",
         "ko": "호주 시드니"
       },
@@ -738,6 +913,7 @@
       "domain": "tensorel.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -767,6 +943,7 @@
       "domain": "datyrra.example",
       "featured": false,
       "location": {
+        "id": "toronto",
         "en": "Toronto, Canada",
         "ko": "캐나다 토론토"
       },
@@ -796,6 +973,7 @@
       "domain": "corveil.example",
       "featured": false,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -825,6 +1003,7 @@
       "domain": "annotara.example",
       "featured": false,
       "location": {
+        "id": "berlin",
         "en": "Berlin, Germany",
         "ko": "독일 베를린"
       },
@@ -854,6 +1033,7 @@
       "domain": "queryna.example",
       "featured": false,
       "location": {
+        "id": "boston",
         "en": "Boston, USA",
         "ko": "미국 보스턴"
       },
@@ -883,6 +1063,7 @@
       "domain": "embedra.example",
       "featured": false,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -912,6 +1093,7 @@
       "domain": "synthemis.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -941,6 +1123,7 @@
       "domain": "medrovia.example",
       "featured": true,
       "location": {
+        "id": "boston",
         "en": "Boston, USA",
         "ko": "미국 보스턴"
       },
@@ -970,6 +1153,7 @@
       "domain": "curalyn.example",
       "featured": false,
       "location": {
+        "id": "toronto",
         "en": "Toronto, Canada",
         "ko": "캐나다 토론토"
       },
@@ -999,6 +1183,7 @@
       "domain": "genotrella.example",
       "featured": false,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -1028,6 +1213,7 @@
       "domain": "vitarnelle.example",
       "featured": false,
       "location": {
+        "id": "rotterdam",
         "en": "Rotterdam, Netherlands",
         "ko": "네덜란드 로테르담"
       },
@@ -1057,6 +1243,7 @@
       "domain": "somnovia.example",
       "featured": false,
       "location": {
+        "id": "busan",
         "en": "Busan, South Korea",
         "ko": "대한민국 부산"
       },
@@ -1086,6 +1273,7 @@
       "domain": "nurvatek.example",
       "featured": false,
       "location": {
+        "id": "boston",
         "en": "Boston, USA",
         "ko": "미국 보스턴"
       },
@@ -1115,6 +1303,7 @@
       "domain": "wellstrome.example",
       "featured": false,
       "location": {
+        "id": "stockholm",
         "en": "Stockholm, Sweden",
         "ko": "스웨덴 스톡홀름"
       },
@@ -1144,6 +1333,7 @@
       "domain": "rehalyn.example",
       "featured": false,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -1173,6 +1363,7 @@
       "domain": "dosierra.example",
       "featured": false,
       "location": {
+        "id": "san-francisco",
         "en": "San Francisco, USA",
         "ko": "미국 샌프란시스코"
       },
@@ -1202,6 +1393,7 @@
       "domain": "panomedra.example",
       "featured": false,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -1231,6 +1423,7 @@
       "domain": "snackerly.example",
       "featured": true,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -1260,6 +1453,7 @@
       "domain": "wardovia.example",
       "featured": false,
       "location": {
+        "id": "sydney",
         "en": "Sydney, Australia",
         "ko": "호주 시드니"
       },
@@ -1289,6 +1483,7 @@
       "domain": "playmerra.example",
       "featured": false,
       "location": {
+        "id": "new-york",
         "en": "New York, USA",
         "ko": "미국 뉴욕"
       },
@@ -1318,6 +1513,7 @@
       "domain": "tastelyn.example",
       "featured": false,
       "location": {
+        "id": "singapore",
         "en": "Singapore",
         "ko": "싱가포르"
       },
@@ -1347,6 +1543,7 @@
       "domain": "roomverra.example",
       "featured": false,
       "location": {
+        "id": "boston",
         "en": "Boston, USA",
         "ko": "미국 보스턴"
       },
@@ -1376,6 +1573,7 @@
       "domain": "petarno.example",
       "featured": false,
       "location": {
+        "id": "sydney",
         "en": "Sydney, Australia",
         "ko": "호주 시드니"
       },
@@ -1405,6 +1603,7 @@
       "domain": "fandelle.example",
       "featured": false,
       "location": {
+        "id": "tokyo",
         "en": "Tokyo, Japan",
         "ko": "일본 도쿄"
       },
@@ -1434,6 +1633,7 @@
       "domain": "grocevia.example",
       "featured": false,
       "location": {
+        "id": "amsterdam",
         "en": "Amsterdam, Netherlands",
         "ko": "네덜란드 암스테르담"
       },
@@ -1463,6 +1663,7 @@
       "domain": "trippara.example",
       "featured": false,
       "location": {
+        "id": "stockholm",
         "en": "Stockholm, Sweden",
         "ko": "스웨덴 스톡홀름"
       },
@@ -1492,6 +1693,7 @@
       "domain": "souvenelle.example",
       "featured": false,
       "location": {
+        "id": "helsinki",
         "en": "Helsinki, Finland",
         "ko": "핀란드 헬싱키"
       },
@@ -1521,6 +1723,7 @@
       "domain": "voltarna.example",
       "featured": true,
       "location": {
+        "id": "helsinki",
         "en": "Helsinki, Finland",
         "ko": "핀란드 헬싱키"
       },
@@ -1550,6 +1753,7 @@
       "domain": "sunverra.example",
       "featured": false,
       "location": {
+        "id": "london",
         "en": "London, United Kingdom",
         "ko": "영국 런던"
       },
@@ -1579,6 +1783,7 @@
       "domain": "gridelle.example",
       "featured": false,
       "location": {
+        "id": "helsinki",
         "en": "Helsinki, Finland",
         "ko": "핀란드 헬싱키"
       },
@@ -1608,6 +1813,7 @@
       "domain": "emberlyn.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -1637,6 +1843,7 @@
       "domain": "thermovia.example",
       "featured": false,
       "location": {
+        "id": "singapore",
         "en": "Singapore",
         "ko": "싱가포르"
       },
@@ -1666,6 +1873,7 @@
       "domain": "aeolyra.example",
       "featured": false,
       "location": {
+        "id": "amsterdam",
         "en": "Amsterdam, Netherlands",
         "ko": "네덜란드 암스테르담"
       },
@@ -1695,6 +1903,7 @@
       "domain": "hydrenna.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -1724,6 +1933,7 @@
       "domain": "circulyn.example",
       "featured": false,
       "location": {
+        "id": "singapore",
         "en": "Singapore",
         "ko": "싱가포르"
       },
@@ -1753,6 +1963,7 @@
       "domain": "fluxella.example",
       "featured": false,
       "location": {
+        "id": "berlin",
         "en": "Berlin, Germany",
         "ko": "독일 베를린"
       },
@@ -1782,6 +1993,7 @@
       "domain": "kelverra.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -1811,6 +2023,7 @@
       "domain": "fleetara.example",
       "featured": true,
       "location": {
+        "id": "rotterdam",
         "en": "Rotterdam, Netherlands",
         "ko": "네덜란드 로테르담"
       },
@@ -1840,6 +2053,7 @@
       "domain": "cargolyn.example",
       "featured": false,
       "location": {
+        "id": "london",
         "en": "London, United Kingdom",
         "ko": "영국 런던"
       },
@@ -1869,6 +2083,7 @@
       "domain": "routella.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -1898,6 +2113,7 @@
       "domain": "dockverra.example",
       "featured": false,
       "location": {
+        "id": "busan",
         "en": "Busan, South Korea",
         "ko": "대한민국 부산"
       },
@@ -1927,6 +2143,7 @@
       "domain": "lanevia.example",
       "featured": false,
       "location": {
+        "id": "stockholm",
         "en": "Stockholm, Sweden",
         "ko": "스웨덴 스톡홀름"
       },
@@ -1956,6 +2173,7 @@
       "domain": "portelyn.example",
       "featured": false,
       "location": {
+        "id": "berlin",
         "en": "Berlin, Germany",
         "ko": "독일 베를린"
       },
@@ -1985,6 +2203,7 @@
       "domain": "movarra.example",
       "featured": false,
       "location": {
+        "id": "rotterdam",
         "en": "Rotterdam, Netherlands",
         "ko": "네덜란드 로테르담"
       },
@@ -2014,6 +2233,7 @@
       "domain": "transelle.example",
       "featured": false,
       "location": {
+        "id": "taipei",
         "en": "Taipei, Taiwan",
         "ko": "대만 타이베이"
       },
@@ -2043,6 +2263,7 @@
       "domain": "haulenna.example",
       "featured": false,
       "location": {
+        "id": "helsinki",
         "en": "Helsinki, Finland",
         "ko": "핀란드 헬싱키"
       },
@@ -2072,6 +2293,7 @@
       "domain": "velomerra.example",
       "featured": false,
       "location": {
+        "id": "sydney",
         "en": "Sydney, Australia",
         "ko": "호주 시드니"
       },
@@ -2101,6 +2323,7 @@
       "domain": "quantrelle.example",
       "featured": true,
       "location": {
+        "id": "toronto",
         "en": "Toronto, Canada",
         "ko": "캐나다 토론토"
       },
@@ -2130,6 +2353,7 @@
       "domain": "photonyra.example",
       "featured": false,
       "location": {
+        "id": "berlin",
         "en": "Berlin, Germany",
         "ko": "독일 베를린"
       },
@@ -2159,6 +2383,7 @@
       "domain": "nanovelle.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -2188,6 +2413,7 @@
       "domain": "semilyra.example",
       "featured": false,
       "location": {
+        "id": "london",
         "en": "London, United Kingdom",
         "ko": "영국 런던"
       },
@@ -2217,6 +2443,7 @@
       "domain": "orbitanna.example",
       "featured": false,
       "location": {
+        "id": "taipei",
         "en": "Taipei, Taiwan",
         "ko": "대만 타이베이"
       },
@@ -2246,6 +2473,7 @@
       "domain": "lidarelle.example",
       "featured": false,
       "location": {
+        "id": "taipei",
         "en": "Taipei, Taiwan",
         "ko": "대만 타이베이"
       },
@@ -2275,6 +2503,7 @@
       "domain": "fuselyn.example",
       "featured": false,
       "location": {
+        "id": "san-francisco",
         "en": "San Francisco, USA",
         "ko": "미국 샌프란시스코"
       },
@@ -2304,6 +2533,7 @@
       "domain": "cryovanna.example",
       "featured": false,
       "location": {
+        "id": "austin",
         "en": "Austin, USA",
         "ko": "미국 오스틴"
       },
@@ -2333,6 +2563,7 @@
       "domain": "matterine.example",
       "featured": false,
       "location": {
+        "id": "boston",
         "en": "Boston, USA",
         "ko": "미국 보스턴"
       },
@@ -2362,6 +2593,7 @@
       "domain": "servomere.example",
       "featured": false,
       "location": {
+        "id": "san-francisco",
         "en": "San Francisco, USA",
         "ko": "미국 샌프란시스코"
       },
